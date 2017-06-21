@@ -28,7 +28,6 @@
 # define MOVE(it)		(C_PS(it)->move)
 
 # define NB_MOVE		(push_swap()->nb_move)
-# define NB_MOVE_SAVE	(push_swap_save()->nb_move)
 # define NB_ELEM		(push_swap()->nb_elem)
 # define NB_ELEM_A		(stack_a()->nb_elem)
 # define NB_ELEM_B		(stack_b()->nb_elem)
@@ -106,7 +105,7 @@ t_head		*stack_b(void);
 /*
 ** Exec prototypes
 */
-void		ft_exec_parse(int ac, char **av, int **array);
+void		ft_exec_parse(int ac, char **av);
 
 
 //
