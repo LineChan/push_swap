@@ -93,7 +93,6 @@ typedef struct		s_result
 
 int			*clean(void);
 t_info		*push_swap(void);
-t_info		*push_swap_save(void);
 t_head		*stack_a(void);
 t_head		*stack_b(void);
 
@@ -139,28 +138,27 @@ void		ft_exec_init(void);
 */
 void		ft_ps_sort(void);
 void		ft_ps_sort_three(void);
-int			ft_ps_head_is_reverse_sorted(node head);
-
-
-
-
+void		ft_ps_sort_seven(void);
+void		ft_ps_select_sort(void);
+void		ft_ps_quick_sort(void);
+void		ft_ps_quick_a(void);
+void		ft_ps_quick_b(void);
 
 void		ft_ps_find_shortest_path(node head, int ref);
 void		ft_ps_find_where_to_push(node head, int ref);
+int			ft_ps_count_step(node head, int ref);
+int			ft_ps_head_is_reverse_sorted(node head);
 
-void		ft_ps_sort_seven(void);
-void		ft_ps_select_sort(node head);
+
+//
+
+
 void		ft_ps_reverse_sort(node head);
 void		ft_ps_merge_sort_tmp(node head);
 void		ft_ps_merge_sort(void);
-void		ft_ps_quick_sort(void);
-void		ft_quick_b(void);
-void		ft_quick_a(void);
 void		ft_quick_select(int *push, int *pivot);
 void		ft_ps_clean_result(void);
 
-int			ft_ps_is_reverse_sorted(node head);
-int			ft_ps_count_step(node head, int ref);
 
 
 
