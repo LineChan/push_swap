@@ -24,6 +24,4 @@ void			ft_ps_sort(void)
 		ft_ps_select_sort();
 	else
 		ft_ps_quick_sort();
-	PRINT_AB("RESULT");
-	ft_printf("NB_MOVE : %d\n", NB_MOVE);
 }

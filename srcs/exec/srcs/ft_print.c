@@ -34,14 +34,9 @@ void			ft_print_ab(char const *str)
 void		ft_print_result_list(node it)
 {
 	ft_printf("%s\n", MOVE(it));
-	//PRINT_A; PRINT_B;
-	//getchar();
 }
-/*
-** 0 -> quicksort, 1->selectsort
-*/
-void		ft_print_result_ps(int _bool)
+
+void		ft_print_result_ps(void)
 {
-	if (_bool)
-		ft_lst_foreach(&(push_swap()->lst_info), &ft_print_result_list);
+	ft_lst_foreach(&(push_swap()->lst_info), &ft_print_result_list);
 }

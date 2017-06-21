@@ -28,7 +28,7 @@
 # define MOVE(it)		(C_PS(it)->move)
 
 # define NB_MOVE		(push_swap()->nb_move)
-# define NB_ELEM		(push_swap()->nb_elem)
+//# define NB_ELEM		(push_swap()->nb_elem)
 # define NB_ELEM_A		(stack_a()->nb_elem)
 # define NB_ELEM_B		(stack_b()->nb_elem)
 
@@ -91,7 +91,7 @@ typedef struct		s_result
 */
 //int			*nb_elem(void);
 
-int			*clean(void);
+//int			*clean(void);
 t_info		*push_swap(void);
 t_head		*stack_a(void);
 t_head		*stack_b(void);
@@ -106,7 +106,6 @@ t_head		*stack_b(void);
 */
 void		ft_exec_parse(int ac, char **av);
 void		ft_exec_push(int nb);
-void		ft_exec_del_move(t_result **ptr);
 int			ft_exec_head_is_sorted(node head);
 
 void		ft_exec_ra(void);
@@ -124,6 +123,7 @@ void		ft_exec_rrr(void);
 
 void		ft_print(node head);
 void		ft_print_ab(char const *str);
+void		ft_print_result_ps(void);
 //
 
 
