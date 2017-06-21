@@ -11,5 +11,6 @@ int					main(int ac, char **av)
 	++av;
 	--ac;
 	ft_exec_parse(ac, av);
+	ft_ps_sort();
 	return (0);
 }

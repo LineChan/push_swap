@@ -106,18 +106,8 @@ t_head		*stack_b(void);
 ** Exec prototypes
 */
 void		ft_exec_parse(int ac, char **av);
-
-
-//
-
-
-void		ft_exec_init(void);
-void		ft_exec_setup(int **array);
-void		ft_exec_push(int **array, int count);
-void		ft_exec_add_move(char const *move);
-void		ft_del_move(t_result **ptr);
-void		ft_print(node head);
-
+void		ft_exec_push(int nb);
+void		ft_exec_del_move(t_result **ptr);
 void		ft_exec_ra(void);
 void		ft_exec_rb(void);
 void		ft_exec_rr(void);
@@ -130,6 +120,17 @@ void		ft_exec_rra(void);
 void		ft_exec_rrb(void);
 void		ft_exec_rrr(void);
 
+
+//
+
+
+void		ft_exec_init(void);
+void		ft_exec_setup(int **array);
+void		ft_exec_add_move(char const *move);
+void		ft_del_move(t_result **ptr);
+void		ft_print(node head);
+
+
 void		ft_print_ab(char const *str);
 void		ft_print_result_ps(int _bool);
 
@@ -137,7 +138,13 @@ int			ft_exec_head_is_sorted(node head);
 /*
 ** Push Swap prototypes
 */
-void		ft_ps_sort(int **array);
+void		ft_ps_sort(void);
+
+
+
+
+
+
 void		ft_ps_find_shortest_path(node head, int ref);
 void		ft_ps_find_where_to_push(node head, int ref);
 
