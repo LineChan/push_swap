@@ -1,0 +1,56 @@
+\hypertarget{ft__intlen_8c}{}\section{srcs/string/ft\+\_\+intlen.c File Reference}
+\label{ft__intlen_8c}\index{srcs/string/ft\+\_\+intlen.\+c@{srcs/string/ft\+\_\+intlen.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+intlen.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__intlen_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__intlen_8c_a12058df99f2ad9fb7d6c76c238d1fd5f}{ft\+\_\+intlen} (long long int nb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__intlen_8c_a12058df99f2ad9fb7d6c76c238d1fd5f}\label{ft__intlen_8c_a12058df99f2ad9fb7d6c76c238d1fd5f}} 
+\index{ft\+\_\+intlen.\+c@{ft\+\_\+intlen.\+c}!ft\+\_\+intlen@{ft\+\_\+intlen}}
+\index{ft\+\_\+intlen@{ft\+\_\+intlen}!ft\+\_\+intlen.\+c@{ft\+\_\+intlen.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+intlen()}{ft\_intlen()}}
+{\footnotesize\ttfamily int ft\+\_\+intlen (\begin{DoxyParamCaption}\item[{long long int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+intlen.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{int} len;
+18 
+19     len = 0;
+20     \textcolor{keywordflow}{if} (nb < 0)
+21     \{
+22         len++;
+23         nb *= -1;
+24     \}
+25     \textcolor{keywordflow}{while} (nb > 9)
+26     \{
+27         nb /= 10;
+28         len++;
+29     \}
+30     \textcolor{keywordflow}{return} ((nb == LONG\_MIN) ? 11 : ++len);
+31 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{ft__intlen_8c_a12058df99f2ad9fb7d6c76c238d1fd5f_icgraph}
+\end{center}
+\end{figure}

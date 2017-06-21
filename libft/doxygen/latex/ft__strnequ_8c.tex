@@ -1,0 +1,56 @@
+\hypertarget{ft__strnequ_8c}{}\section{srcs/string/ft\+\_\+strnequ.c File Reference}
+\label{ft__strnequ_8c}\index{srcs/string/ft\+\_\+strnequ.\+c@{srcs/string/ft\+\_\+strnequ.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strnequ.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strnequ_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307}{ft\+\_\+strnequ} (char const $\ast$s1, char const $\ast$s2, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307}\label{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307}} 
+\index{ft\+\_\+strnequ.\+c@{ft\+\_\+strnequ.\+c}!ft\+\_\+strnequ@{ft\+\_\+strnequ}}
+\index{ft\+\_\+strnequ@{ft\+\_\+strnequ}!ft\+\_\+strnequ.\+c@{ft\+\_\+strnequ.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strnequ()}{ft\_strnequ()}}
+{\footnotesize\ttfamily int ft\+\_\+strnequ (\begin{DoxyParamCaption}\item[{char const $\ast$}]{s1,  }\item[{char const $\ast$}]{s2,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strnequ.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{if} (s1 && s2)
+18     \{
+19         \textcolor{keywordflow}{if} (!(\hyperlink{ft__strncmp_8c_a9d2fe792187aa4ed08e5864fb2c4d6dc}{ft\_strncmp}(s1, s2, n)))
+20             \textcolor{keywordflow}{return} (1);
+21     \}
+22     \textcolor{keywordflow}{return} (0);
+23 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,65 @@
+\hypertarget{ft__putnbr_8c}{}\section{srcs/string/ft\+\_\+putnbr.c File Reference}
+\label{ft__putnbr_8c}\index{srcs/string/ft\+\_\+putnbr.\+c@{srcs/string/ft\+\_\+putnbr.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+putnbr.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__putnbr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401}{ft\+\_\+putnbr} (int nb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401}\label{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401}} 
+\index{ft\+\_\+putnbr.\+c@{ft\+\_\+putnbr.\+c}!ft\+\_\+putnbr@{ft\+\_\+putnbr}}
+\index{ft\+\_\+putnbr@{ft\+\_\+putnbr}!ft\+\_\+putnbr.\+c@{ft\+\_\+putnbr.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+putnbr()}{ft\_putnbr()}}
+{\footnotesize\ttfamily void ft\+\_\+putnbr (\begin{DoxyParamCaption}\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+putnbr.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} buff;
+18 
+19     buff = (\textcolor{keywordtype}{long} int)nb;
+20     \textcolor{keywordflow}{if} (buff < 0)
+21     \{
+22         \hyperlink{ft__putchar_8c_ad5be1665b379489304b89bdc6381d1eb}{ft\_putchar}(\textcolor{charliteral}{'-'});
+23         buff = -buff;
+24     \}
+25     \textcolor{keywordflow}{if} (buff < 10)
+26         \hyperlink{ft__putchar_8c_ad5be1665b379489304b89bdc6381d1eb}{ft\_putchar}(buff % 10 + \textcolor{charliteral}{'0'});
+27     \textcolor{keywordflow}{else}
+28     \{
+29         \hyperlink{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401}{ft\_putnbr}(buff / 10);
+30         \hyperlink{ft__putchar_8c_ad5be1665b379489304b89bdc6381d1eb}{ft\_putchar}(buff % 10 + \textcolor{charliteral}{'0'});
+31     \}
+32 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{ft__putnbr_8c_ad860e806eb2fc179324ff15194745401_icgraph}
+\end{center}
+\end{figure}

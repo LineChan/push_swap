@@ -1,0 +1,96 @@
+\hypertarget{ft__printf__find__type_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+find\+\_\+type.c File Reference}
+\label{ft__printf__find__type_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+find\+\_\+type.\+c@{srcs/printf/ft\+\_\+printf\+\_\+find\+\_\+type.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+find\+\_\+type.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__find__type_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__find__type_8c_a9bf9bf3f56aff83f6c2796a8735abc6f}{ft\+\_\+printf\+\_\+find\+\_\+type} (char c, \hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{ft__printf_8h_ab3864b9e90c7f0e6c80086b2fcb00bdf}{t\+\_\+printf} \hyperlink{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}{g\+\_\+printf} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__find__type_8c_a9bf9bf3f56aff83f6c2796a8735abc6f}\label{ft__printf__find__type_8c_a9bf9bf3f56aff83f6c2796a8735abc6f}} 
+\index{ft\+\_\+printf\+\_\+find\+\_\+type.\+c@{ft\+\_\+printf\+\_\+find\+\_\+type.\+c}!ft\+\_\+printf\+\_\+find\+\_\+type@{ft\+\_\+printf\+\_\+find\+\_\+type}}
+\index{ft\+\_\+printf\+\_\+find\+\_\+type@{ft\+\_\+printf\+\_\+find\+\_\+type}!ft\+\_\+printf\+\_\+find\+\_\+type.\+c@{ft\+\_\+printf\+\_\+find\+\_\+type.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+find\+\_\+type()}{ft\_printf\_find\_type()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+find\+\_\+type (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file ft\+\_\+printf\+\_\+find\+\_\+type.\+c.
+
+
+\begin{DoxyCode}
+42 \{
+43     \textcolor{keywordtype}{int} i;
+44 
+45     i = -1;
+46     \textcolor{keywordflow}{if} (!c)
+47         return ;
+48     \textcolor{keywordflow}{while} (\hyperlink{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}{g\_printf}[i++].c)
+49         \textcolor{keywordflow}{if} (\hyperlink{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}{g\_printf}[i].c == c)
+50         \{
+51             arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} = c;
+52             \hyperlink{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}{g\_printf}[i].\hyperlink{structs__printf_a22ec20d088af8188f34f5ea7cbde7423}{func}(arg);
+53             break ;
+54         \}
+55 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__find__type_8c_a9bf9bf3f56aff83f6c2796a8735abc6f_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}\label{ft__printf__find__type_8c_a274c4f5735e847a69453e3831b39ec43}} 
+\index{ft\+\_\+printf\+\_\+find\+\_\+type.\+c@{ft\+\_\+printf\+\_\+find\+\_\+type.\+c}!g\+\_\+printf@{g\+\_\+printf}}
+\index{g\+\_\+printf@{g\+\_\+printf}!ft\+\_\+printf\+\_\+find\+\_\+type.\+c@{ft\+\_\+printf\+\_\+find\+\_\+type.\+c}}
+\subsubsection{\texorpdfstring{g\+\_\+printf}{g\_printf}}
+{\footnotesize\ttfamily const \hyperlink{ft__printf_8h_ab3864b9e90c7f0e6c80086b2fcb00bdf}{t\+\_\+printf} g\+\_\+printf\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \{\textcolor{charliteral}{'s'}, &\hyperlink{ft__printf__string_8c_a684ce90d542f973cc6afd72900a075af}{ft\_printf\_string}\},
+    \{\textcolor{charliteral}{'S'}, &\hyperlink{ft__printf__string_8c_a684ce90d542f973cc6afd72900a075af}{ft\_printf\_string}\},
+    \{\textcolor{charliteral}{'p'}, &\hyperlink{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b}{ft\_printf\_pointer}\},
+    \{\textcolor{charliteral}{'d'}, &\hyperlink{ft__printf__int_8c_a35fb48a674934cc368281552359eb142}{ft\_printf\_int}\},
+    \{\textcolor{charliteral}{'D'}, &\hyperlink{ft__printf__int_8c_a35fb48a674934cc368281552359eb142}{ft\_printf\_int}\},
+    \{\textcolor{charliteral}{'i'}, &\hyperlink{ft__printf__int_8c_a35fb48a674934cc368281552359eb142}{ft\_printf\_int}\},
+    \{\textcolor{charliteral}{'o'}, &\hyperlink{ft__printf__octal_8c_af96a7005b3f51194bb7a8b914e377c35}{ft\_printf\_octal}\},
+    \{\textcolor{charliteral}{'O'}, &\hyperlink{ft__printf__octal_8c_af96a7005b3f51194bb7a8b914e377c35}{ft\_printf\_octal}\},
+    \{\textcolor{charliteral}{'u'}, &\hyperlink{ft__printf__unsigned_8c_ab70d9e0319d64c3f6a7e7c66b6dd0822}{ft\_printf\_unsigned}\},
+    \{\textcolor{charliteral}{'U'}, &\hyperlink{ft__printf__unsigned_8c_ab70d9e0319d64c3f6a7e7c66b6dd0822}{ft\_printf\_unsigned}\},
+    \{\textcolor{charliteral}{'x'}, &\hyperlink{ft__printf__hexa_8c_ad5ecbd0312bed1ad5521a4c6b5534cd7}{ft\_printf\_hexa}\},
+    \{\textcolor{charliteral}{'X'}, &\hyperlink{ft__printf__hexa_8c_ad5ecbd0312bed1ad5521a4c6b5534cd7}{ft\_printf\_hexa}\},
+    \{\textcolor{charliteral}{'c'}, &\hyperlink{ft__printf__string_8c_a684ce90d542f973cc6afd72900a075af}{ft\_printf\_string}\},
+    \{\textcolor{charliteral}{'C'}, &\hyperlink{ft__printf__string_8c_a684ce90d542f973cc6afd72900a075af}{ft\_printf\_string}\},
+    \{\textcolor{charliteral}{'b'}, &\hyperlink{ft__printf__binary_8c_a068a28f0d9ce9fc31c0e2075a7185231}{ft\_printf\_binary}\},
+    \{\textcolor{charliteral}{'B'}, &\hyperlink{ft__printf__binary_8c_a068a28f0d9ce9fc31c0e2075a7185231}{ft\_printf\_binary}\},
+    \{\textcolor{charliteral}{'%'}, &\hyperlink{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9}{ft\_printf\_modulo}\},
+    \{0, 0\}
+\}
+\end{DoxyCode}
+
+
+Definition at line 19 of file ft\+\_\+printf\+\_\+find\+\_\+type.\+c.
+

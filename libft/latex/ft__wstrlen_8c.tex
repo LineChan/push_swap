@@ -1,0 +1,56 @@
+\hypertarget{ft__wstrlen_8c}{}\section{srcs/string/ft\+\_\+wstrlen.c File Reference}
+\label{ft__wstrlen_8c}\index{srcs/string/ft\+\_\+wstrlen.\+c@{srcs/string/ft\+\_\+wstrlen.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+wstrlen.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__wstrlen_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__wstrlen_8c_a5c0ca2ab2909d51707b51ef3a7a9e1ef}{ft\+\_\+wstrlen} (wchar\+\_\+t $\ast$ws)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__wstrlen_8c_a5c0ca2ab2909d51707b51ef3a7a9e1ef}\label{ft__wstrlen_8c_a5c0ca2ab2909d51707b51ef3a7a9e1ef}} 
+\index{ft\+\_\+wstrlen.\+c@{ft\+\_\+wstrlen.\+c}!ft\+\_\+wstrlen@{ft\+\_\+wstrlen}}
+\index{ft\+\_\+wstrlen@{ft\+\_\+wstrlen}!ft\+\_\+wstrlen.\+c@{ft\+\_\+wstrlen.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+wstrlen()}{ft\_wstrlen()}}
+{\footnotesize\ttfamily int ft\+\_\+wstrlen (\begin{DoxyParamCaption}\item[{wchar\+\_\+t $\ast$}]{ws }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+wstrlen.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{int}     len;
+18 
+19     len = 0;
+20     \textcolor{keywordflow}{while} (*ws)
+21         len += \hyperlink{ft__wclen_8c_a8a2ec5a2131ba06799db6b823daf756e}{ft\_wclen}(*ws++);
+22     \textcolor{keywordflow}{return} (len);
+23 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{ft__wstrlen_8c_a5c0ca2ab2909d51707b51ef3a7a9e1ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__wstrlen_8c_a5c0ca2ab2909d51707b51ef3a7a9e1ef_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,53 @@
+\hypertarget{ft__printf__write__buff_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+write\+\_\+buff.c File Reference}
+\label{ft__printf__write__buff_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+write\+\_\+buff.\+c@{srcs/printf/ft\+\_\+printf\+\_\+write\+\_\+buff.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+write\+\_\+buff.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__write__buff_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\+\_\+printf\+\_\+write\+\_\+buff} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}\label{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}} 
+\index{ft\+\_\+printf\+\_\+write\+\_\+buff.\+c@{ft\+\_\+printf\+\_\+write\+\_\+buff.\+c}!ft\+\_\+printf\+\_\+write\+\_\+buff@{ft\+\_\+printf\+\_\+write\+\_\+buff}}
+\index{ft\+\_\+printf\+\_\+write\+\_\+buff@{ft\+\_\+printf\+\_\+write\+\_\+buff}!ft\+\_\+printf\+\_\+write\+\_\+buff.\+c@{ft\+\_\+printf\+\_\+write\+\_\+buff.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+write\+\_\+buff()}{ft\_printf\_write\_buff()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+write\+\_\+buff (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file ft\+\_\+printf\+\_\+write\+\_\+buff.\+c.
+
+
+\begin{DoxyCode}
+21 \{
+22     *\hyperlink{ft__printf__singleton_8c_a52cc68b9f9d5b854d0fdb68153580ead}{ret}() += write(1, arg->\hyperlink{structs__struct_adcd00abc87c5d6f476aea0789f7c93cf}{buff}, \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE});
+23     \hyperlink{ft__memset_8c_ac340ddbfddbbf2c8de3c36f0f28c336d}{ft\_memset}((\textcolor{keywordtype}{void} *)arg->\hyperlink{structs__struct_adcd00abc87c5d6f476aea0789f7c93cf}{buff}, \textcolor{charliteral}{'\(\backslash\)0'}, \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE});
+24     arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p} = arg->\hyperlink{structs__struct_adcd00abc87c5d6f476aea0789f7c93cf}{buff};
+25 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c_icgraph}
+\end{center}
+\end{figure}

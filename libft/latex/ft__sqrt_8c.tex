@@ -1,0 +1,46 @@
+\hypertarget{ft__sqrt_8c}{}\section{srcs/string/ft\+\_\+sqrt.c File Reference}
+\label{ft__sqrt_8c}\index{srcs/string/ft\+\_\+sqrt.\+c@{srcs/string/ft\+\_\+sqrt.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+sqrt.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__sqrt_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__sqrt_8c_aa3c2ad7cc79d4bb0bef980221fe210c3}{ft\+\_\+sqrt} (int nb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__sqrt_8c_aa3c2ad7cc79d4bb0bef980221fe210c3}\label{ft__sqrt_8c_aa3c2ad7cc79d4bb0bef980221fe210c3}} 
+\index{ft\+\_\+sqrt.\+c@{ft\+\_\+sqrt.\+c}!ft\+\_\+sqrt@{ft\+\_\+sqrt}}
+\index{ft\+\_\+sqrt@{ft\+\_\+sqrt}!ft\+\_\+sqrt.\+c@{ft\+\_\+sqrt.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+sqrt()}{ft\_sqrt()}}
+{\footnotesize\ttfamily int ft\+\_\+sqrt (\begin{DoxyParamCaption}\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+sqrt.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{int} i;
+18 
+19     i = 0;
+20     \textcolor{keywordflow}{if} (nb < 0)
+21         \textcolor{keywordflow}{return} (0);
+22     \textcolor{keywordflow}{while} (i <= nb / 2 && i < 46341)
+23     \{
+24         \textcolor{keywordflow}{if} (i * i == nb)
+25             \textcolor{keywordflow}{return} (i);
+26         i++;
+27     \}
+28     \textcolor{keywordflow}{return} (0);
+29 \}
+\end{DoxyCode}

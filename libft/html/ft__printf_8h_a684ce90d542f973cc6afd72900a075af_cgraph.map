@@ -1,0 +1,18 @@
+<map id="ft_printf_string" name="ft_printf_string">
+<area shape="rect" id="node2" href="$ft__printf__wild_8c.html#a27bd4e964841956e4d72f979c8c9b658" title="ft_printf_wild" alt="" coords="159,7,255,32"/>
+<area shape="rect" id="node3" href="$ft__printf__string_8c.html#ad725f28ace08d5089089433da66a4d2d" title="ft_printf_s" alt="" coords="167,56,247,81"/>
+<area shape="rect" id="node9" href="$ft__printf__string_8c.html#a0907e5beb3b3e4a98b35e6d1d3057b16" title="ft_printf_c" alt="" coords="343,107,423,132"/>
+<area shape="rect" id="node10" href="$ft__printf__unicode_8c.html#ab46a7147a64302ec574ff988414facf2" title="ft_printf_lc" alt="" coords="166,157,249,183"/>
+<area shape="rect" id="node11" href="$ft__printf__ls_8c.html#a28d15a3671a539ce82c8a1b25e58f312" title="ft_printf_ls" alt="" coords="166,208,249,233"/>
+<area shape="rect" id="node4" href="$ft__printf__string_8c.html#a4cda6814ecfac01bada64682c82f61e2" title="ft_printf_set_buff_s" alt="" coords="316,5,451,31"/>
+<area shape="rect" id="node6" href="$ft__printf__write__buff_8c.html#a4d23ff0763304b4e401aedde9172a78c" title="ft_printf_write_buff" alt="" coords="512,107,643,132"/>
+<area shape="rect" id="node5" href="$ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title="ft_strlen" alt="" coords="543,5,612,31"/>
+<area shape="rect" id="node7" href="$ft__printf__singleton_8c.html#a52cc68b9f9d5b854d0fdb68153580ead" title="ret" alt="" coords="714,83,753,108"/>
+<area shape="rect" id="node8" href="$ft__memset_8c.html#ac340ddbfddbbf2c8de3c36f0f28c336d" title="ft_memset" alt="" coords="692,132,775,157"/>
+<area shape="rect" id="node12" href="$ft__printf__ls_8c.html#aa8664b90ceb8b95e253bb15cf9cd9162" title="ft_printf_set_buff_ls" alt="" coords="315,208,452,233"/>
+<area shape="rect" id="node14" href="$ft__wclen_8c.html#a8a2ec5a2131ba06799db6b823daf756e" title="ft_wclen" alt="" coords="698,208,769,233"/>
+<area shape="rect" id="node16" href="$ft__printf__unicode_8c.html#aeb554109b84c7883f3ae4e837cb5903c" title="ft_printf_unicode_string" alt="" coords="303,309,463,335"/>
+<area shape="rect" id="node13" href="$ft__wstrlen_8c.html#a5c0ca2ab2909d51707b51ef3a7a9e1ef" title="ft_wstrlen" alt="" coords="538,159,617,184"/>
+<area shape="rect" id="node15" href="$ft__printf__ls_8c.html#a5479708199bbe2d69051039742180164" title="ft_printf_adapt_dot" alt="" coords="511,208,644,233"/>
+<area shape="rect" id="node17" href="$ft__printf__unicode_8c.html#abcc74e67e89f538444db3de08d8bf42e" title="ft_norme" alt="" coords="541,309,615,335"/>
+</map>

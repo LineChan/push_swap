@@ -1,0 +1,53 @@
+\hypertarget{ft__strncpy_8c}{}\section{srcs/string/ft\+\_\+strncpy.c File Reference}
+\label{ft__strncpy_8c}\index{srcs/string/ft\+\_\+strncpy.\+c@{srcs/string/ft\+\_\+strncpy.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strncpy.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strncpy_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0}{ft\+\_\+strncpy} (char $\ast$dst, const char $\ast$src, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0}\label{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0}} 
+\index{ft\+\_\+strncpy.\+c@{ft\+\_\+strncpy.\+c}!ft\+\_\+strncpy@{ft\+\_\+strncpy}}
+\index{ft\+\_\+strncpy@{ft\+\_\+strncpy}!ft\+\_\+strncpy.\+c@{ft\+\_\+strncpy.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strncpy()}{ft\_strncpy()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+strncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strncpy.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{size\_t}  count;
+18 
+19     count = 0;
+20     \textcolor{keywordflow}{while} (count < len && src[count])
+21     \{
+22         dst[count] = src[count];
+23         count++;
+24     \}
+25     \textcolor{keywordflow}{while} (count < len)
+26         dst[count++] = \textcolor{charliteral}{'\(\backslash\)0'};
+27     \textcolor{keywordflow}{return} (dst);
+28 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0_icgraph}
+\end{center}
+\end{figure}

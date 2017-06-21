@@ -1,0 +1,53 @@
+\hypertarget{ft__memmove_8c}{}\section{srcs/memory/ft\+\_\+memmove.c File Reference}
+\label{ft__memmove_8c}\index{srcs/memory/ft\+\_\+memmove.\+c@{srcs/memory/ft\+\_\+memmove.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+memmove.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__memmove_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{ft__memmove_8c_ad7ffc8e46aa6ec16209436c18c7e01ea}{ft\+\_\+memmove} (void $\ast$dst, const void $\ast$src, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__memmove_8c_ad7ffc8e46aa6ec16209436c18c7e01ea}\label{ft__memmove_8c_ad7ffc8e46aa6ec16209436c18c7e01ea}} 
+\index{ft\+\_\+memmove.\+c@{ft\+\_\+memmove.\+c}!ft\+\_\+memmove@{ft\+\_\+memmove}}
+\index{ft\+\_\+memmove@{ft\+\_\+memmove}!ft\+\_\+memmove.\+c@{ft\+\_\+memmove.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+memmove()}{ft\_memmove()}}
+{\footnotesize\ttfamily void$\ast$ ft\+\_\+memmove (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+memmove.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char}    *tmp;
+18     \textcolor{keywordtype}{char}    *d;
+19 
+20     tmp = (\textcolor{keywordtype}{char} *)src;
+21     d = (\textcolor{keywordtype}{char} *)dst;
+22     \textcolor{keywordflow}{if} (dst < src && dst)
+23         \hyperlink{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce}{ft\_memcpy}(dst, src, len);
+24     \textcolor{keywordflow}{else}
+25         \textcolor{keywordflow}{while} (len--)
+26             *(d + len) = *(tmp + len);
+27     \textcolor{keywordflow}{return} (dst);
+28 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{ft__memmove_8c_ad7ffc8e46aa6ec16209436c18c7e01ea_cgraph}
+\end{center}
+\end{figure}

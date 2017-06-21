@@ -1,0 +1,48 @@
+\hypertarget{ft__memcmp_8c}{}\section{srcs/memory/ft\+\_\+memcmp.c File Reference}
+\label{ft__memcmp_8c}\index{srcs/memory/ft\+\_\+memcmp.\+c@{srcs/memory/ft\+\_\+memcmp.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+memcmp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__memcmp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__memcmp_8c_a08f665a1828c402f2ffe2e2187f135fc}{ft\+\_\+memcmp} (const void $\ast$s1, const void $\ast$s2, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__memcmp_8c_a08f665a1828c402f2ffe2e2187f135fc}\label{ft__memcmp_8c_a08f665a1828c402f2ffe2e2187f135fc}} 
+\index{ft\+\_\+memcmp.\+c@{ft\+\_\+memcmp.\+c}!ft\+\_\+memcmp@{ft\+\_\+memcmp}}
+\index{ft\+\_\+memcmp@{ft\+\_\+memcmp}!ft\+\_\+memcmp.\+c@{ft\+\_\+memcmp.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+memcmp()}{ft\_memcmp()}}
+{\footnotesize\ttfamily int ft\+\_\+memcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{s1,  }\item[{const void $\ast$}]{s2,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+memcmp.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{size\_t}          j;
+18     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}   *str1;
+19     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}   *str2;
+20 
+21     j = 0;
+22     str1 = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)s1;
+23     str2 = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)s2;
+24     \textcolor{keywordflow}{while} (n--)
+25     \{
+26         \textcolor{keywordflow}{if} (str1[j] != str2[j])
+27             \textcolor{keywordflow}{return} (str1[j] - str2[j]);
+28         j++;
+29     \}
+30     \textcolor{keywordflow}{return} (0);
+31 \}
+\end{DoxyCode}

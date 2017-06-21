@@ -1,0 +1,11 @@
+<map id="ft_strncpy" name="ft_strncpy">
+<area shape="rect" id="node2" href="$libft_8h.html#a1ffe071ef5820b0022a02ddad7622f25" title="ft_strcpy" alt="" coords="137,83,209,108"/>
+<area shape="rect" id="node8" href="$libft_8h.html#a870b44135d89e976a7859a6f9a4087bc" title="ft_strndup" alt="" coords="132,132,213,157"/>
+<area shape="rect" id="node9" href="$libft_8h.html#a87994ca583339cbfe4ec3ebde8396850" title="ft_strsub" alt="" coords="137,181,209,207"/>
+<area shape="rect" id="node3" href="$libft_8h.html#aada5f5ba69c0c2c97a1322b4e2554709" title="ft_strdup" alt="" coords="262,56,335,81"/>
+<area shape="rect" id="node6" href="$libft_8h.html#a5c1c26f8be9bc527cfe69a3555124795" title="ft_strjoin" alt="" coords="263,107,334,132"/>
+<area shape="rect" id="node4" href="$get__next__line_8c.html#a2a0cce441220d416c1a7a7c26d87fee2" title="give_line" alt="" coords="384,5,458,31"/>
+<area shape="rect" id="node5" href="$libft_8h.html#ab20831df58070fa98472f95285c72311" title="get_next_line" alt="" coords="506,81,606,107"/>
+<area shape="rect" id="node7" href="$get__next__line_8c.html#a06f312f16c45c42009336d033d5dd6f9" title="read_fd" alt="" coords="387,107,454,132"/>
+<area shape="rect" id="node10" href="$libft_8h.html#a8a3082db71e8c3f236041af6d5453f13" title="ft_strsplit" alt="" coords="261,208,336,233"/>
+</map>

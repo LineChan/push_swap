@@ -1,0 +1,48 @@
+\hypertarget{ft__memset_8c}{}\section{srcs/memory/ft\+\_\+memset.c File Reference}
+\label{ft__memset_8c}\index{srcs/memory/ft\+\_\+memset.\+c@{srcs/memory/ft\+\_\+memset.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+memset.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__memset_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{ft__memset_8c_ac340ddbfddbbf2c8de3c36f0f28c336d}{ft\+\_\+memset} (void $\ast$b, int c, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__memset_8c_ac340ddbfddbbf2c8de3c36f0f28c336d}\label{ft__memset_8c_ac340ddbfddbbf2c8de3c36f0f28c336d}} 
+\index{ft\+\_\+memset.\+c@{ft\+\_\+memset.\+c}!ft\+\_\+memset@{ft\+\_\+memset}}
+\index{ft\+\_\+memset@{ft\+\_\+memset}!ft\+\_\+memset.\+c@{ft\+\_\+memset.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+memset()}{ft\_memset()}}
+{\footnotesize\ttfamily void$\ast$ ft\+\_\+memset (\begin{DoxyParamCaption}\item[{void $\ast$}]{b,  }\item[{int}]{c,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+memset.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char} *memory;
+18 
+19     memory = b;
+20     \textcolor{keywordflow}{while} (len--)
+21         *memory++ = (char)c;
+22     \textcolor{keywordflow}{return} (b);
+23 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__memset_8c_ac340ddbfddbbf2c8de3c36f0f28c336d_icgraph}
+\end{center}
+\end{figure}

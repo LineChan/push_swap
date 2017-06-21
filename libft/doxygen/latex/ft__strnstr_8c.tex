@@ -1,0 +1,62 @@
+\hypertarget{ft__strnstr_8c}{}\section{srcs/string/ft\+\_\+strnstr.c File Reference}
+\label{ft__strnstr_8c}\index{srcs/string/ft\+\_\+strnstr.\+c@{srcs/string/ft\+\_\+strnstr.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strnstr.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strnstr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__strnstr_8c_a05dd89e8ed060499196ed74b12848b98}{ft\+\_\+strnstr} (const char $\ast$str, const char $\ast$to\+\_\+find, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strnstr_8c_a05dd89e8ed060499196ed74b12848b98}\label{ft__strnstr_8c_a05dd89e8ed060499196ed74b12848b98}} 
+\index{ft\+\_\+strnstr.\+c@{ft\+\_\+strnstr.\+c}!ft\+\_\+strnstr@{ft\+\_\+strnstr}}
+\index{ft\+\_\+strnstr@{ft\+\_\+strnstr}!ft\+\_\+strnstr.\+c@{ft\+\_\+strnstr.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strnstr()}{ft\_strnstr()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+strnstr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{to\+\_\+find,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strnstr.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{size\_t}      i;
+18     \textcolor{keywordtype}{size\_t}      j;
+19     \textcolor{keywordtype}{size\_t}      n;
+20 
+21     i = 0;
+22     n = \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(to\_find);
+23     \textcolor{keywordflow}{if} (*to\_find == \textcolor{charliteral}{'\(\backslash\)0'} && str)
+24         \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{char} *)str);
+25     \textcolor{keywordflow}{while} (str[i])
+26     \{
+27         j = 0;
+28         \textcolor{keywordflow}{while} (to\_find[j] == str[i + j] && i + j < len)
+29         \{
+30             \textcolor{keywordflow}{if} (!(to\_find[j + 1]))
+31                 \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{char} *)str + i);
+32             j++;
+33         \}
+34         i++;
+35     \}
+36     \textcolor{keywordflow}{return} (NULL);
+37 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{ft__strnstr_8c_a05dd89e8ed060499196ed74b12848b98_cgraph}
+\end{center}
+\end{figure}

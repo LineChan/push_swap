@@ -1,0 +1,158 @@
+\hypertarget{ft__printf__colors_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+colors.c File Reference}
+\label{ft__printf__colors_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+colors.\+c@{srcs/printf/ft\+\_\+printf\+\_\+colors.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+colors.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__colors_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__colors_8c_a6a7193149bd81bf97ac248a2a850d271}{ft\+\_\+printf\+\_\+colors} (char $\ast$$\ast$s, \hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\item 
+void \hyperlink{ft__printf__colors_8c_ac1bcce5b6cf53c76f52124a377635f93}{ft\+\_\+printf\+\_\+end\+\_\+colors} (char $\ast$$\ast$s, \hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char const  $\ast$ \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\+\_\+save\+\_\+colors} \mbox{[}\hyperlink{ft__printf_8h_a80f8741f5125076afe3d391e8630b2d5}{N\+B\+\_\+\+C\+O\+L\+O\+R\+S\+\_\+\+M\+AX}+1\mbox{]} = \{0\}
+\item 
+static char const  $\ast$ \hyperlink{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}{g\+\_\+colors\+\_\+lst} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__colors_8c_a6a7193149bd81bf97ac248a2a850d271}\label{ft__printf__colors_8c_a6a7193149bd81bf97ac248a2a850d271}} 
+\index{ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}!ft\+\_\+printf\+\_\+colors@{ft\+\_\+printf\+\_\+colors}}
+\index{ft\+\_\+printf\+\_\+colors@{ft\+\_\+printf\+\_\+colors}!ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+colors()}{ft\_printf\_colors()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+colors (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{s,  }\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file ft\+\_\+printf\+\_\+colors.\+c.
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordtype}{size\_t}      size;
+35     \textcolor{keywordtype}{size\_t}      len;
+36 
+37     size = \hyperlink{libft_8h_adb5bdad0c0d045cf0679648a4f3b19ed}{SIZEOF}(\hyperlink{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}{g\_colors\_lst}) - 2;
+38     \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[0] = \textcolor{stringliteral}{"\(\backslash\)033[0m"};
+39     \textcolor{keywordflow}{while} ((\textcolor{keywordtype}{int})size >= 0)
+40     \{
+41         len = \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(\hyperlink{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}{g\_colors\_lst}[size]);
+42         \textcolor{keywordflow}{if} (!\hyperlink{ft__strncmp_8c_a9d2fe792187aa4ed08e5864fb2c4d6dc}{ft\_strncmp}(\hyperlink{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}{g\_colors\_lst}[size], *s, len))
+43         \{
+44             \hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}++ < \hyperlink{ft__printf_8h_a80f8741f5125076afe3d391e8630b2d5}{NB\_COLORS\_MAX} ? size++ : 0;
+45             \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[\hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}] = \hyperlink{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}{g\_colors\_lst}[size];
+46             \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} + len) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+47             arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p} = \hyperlink{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78}{ft\_stpcpy}(arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}, \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[
+      \hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}]);
+48             *s += len - 1;
+49             *\hyperlink{ft__printf__singleton_8c_a52cc68b9f9d5b854d0fdb68153580ead}{ret}() -= \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(\hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[\hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}]) - 1;
+50             return ;
+51         \}
+52         size -= 2;
+53     \}
+54     *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = **s++;
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__colors_8c_a6a7193149bd81bf97ac248a2a850d271_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__colors_8c_a6a7193149bd81bf97ac248a2a850d271_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__printf__colors_8c_ac1bcce5b6cf53c76f52124a377635f93}\label{ft__printf__colors_8c_ac1bcce5b6cf53c76f52124a377635f93}} 
+\index{ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}!ft\+\_\+printf\+\_\+end\+\_\+colors@{ft\+\_\+printf\+\_\+end\+\_\+colors}}
+\index{ft\+\_\+printf\+\_\+end\+\_\+colors@{ft\+\_\+printf\+\_\+end\+\_\+colors}!ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+end\+\_\+colors()}{ft\_printf\_end\_colors()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+end\+\_\+colors (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{s,  }\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file ft\+\_\+printf\+\_\+colors.\+c.
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR} && *(*s - 1) != \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})
+60     \{
+61         \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[\hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}--] = 0;
+62         arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p} = \hyperlink{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78}{ft\_stpcpy}(arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}, \hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[
+      \hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}]);
+63         *\hyperlink{ft__printf__singleton_8c_a52cc68b9f9d5b854d0fdb68153580ead}{ret}() -= \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(\hyperlink{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}{g\_save\_colors}[\hyperlink{ft__printf_8h_ab5405bef50d9d47930710114064b7e5a}{NB\_COLOR}]) + 1;
+64     \}
+65     \textcolor{keywordflow}{else}
+66         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = **s++;
+67 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__colors_8c_ac1bcce5b6cf53c76f52124a377635f93_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__colors_8c_ac1bcce5b6cf53c76f52124a377635f93_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}\label{ft__printf__colors_8c_a09703636bcd7cb3fa198801d21522bda}} 
+\index{ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}!g\+\_\+colors\+\_\+lst@{g\+\_\+colors\+\_\+lst}}
+\index{g\+\_\+colors\+\_\+lst@{g\+\_\+colors\+\_\+lst}!ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}}
+\subsubsection{\texorpdfstring{g\+\_\+colors\+\_\+lst}{g\_colors\_lst}}
+{\footnotesize\ttfamily char const$\ast$ g\+\_\+colors\+\_\+lst\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \textcolor{stringliteral}{"\{RED:"}, \textcolor{stringliteral}{"\(\backslash\)033[31;1m"},
+    \textcolor{stringliteral}{"\{GREEN:"}, \textcolor{stringliteral}{"\(\backslash\)033[32;1m"},
+    \textcolor{stringliteral}{"\{YELLOW:"}, \textcolor{stringliteral}{"\(\backslash\)033[33;1m"},
+    \textcolor{stringliteral}{"\{BLUE:"}, \textcolor{stringliteral}{"\(\backslash\)033[34;1m"},
+    \textcolor{stringliteral}{"\{red:"}, \textcolor{stringliteral}{"\(\backslash\)033[31m"},
+    \textcolor{stringliteral}{"\{green:"}, \textcolor{stringliteral}{"\(\backslash\)033[32m"},
+    \textcolor{stringliteral}{"\{yellow:"}, \textcolor{stringliteral}{"\(\backslash\)033[33m"},
+    \textcolor{stringliteral}{"\{blue:"}, \textcolor{stringliteral}{"\(\backslash\)033[34m"},
+\}
+\end{DoxyCode}
+
+
+Definition at line 20 of file ft\+\_\+printf\+\_\+colors.\+c.
+
+\mbox{\Hypertarget{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}\label{ft__printf__colors_8c_a4d8c7bb8f1d49f0a3b648c5f66814349}} 
+\index{ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}!g\+\_\+save\+\_\+colors@{g\+\_\+save\+\_\+colors}}
+\index{g\+\_\+save\+\_\+colors@{g\+\_\+save\+\_\+colors}!ft\+\_\+printf\+\_\+colors.\+c@{ft\+\_\+printf\+\_\+colors.\+c}}
+\subsubsection{\texorpdfstring{g\+\_\+save\+\_\+colors}{g\_save\_colors}}
+{\footnotesize\ttfamily char const$\ast$ g\+\_\+save\+\_\+colors\mbox{[}\hyperlink{ft__printf_8h_a80f8741f5125076afe3d391e8630b2d5}{N\+B\+\_\+\+C\+O\+L\+O\+R\+S\+\_\+\+M\+AX}+1\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 18 of file ft\+\_\+printf\+\_\+colors.\+c.
+

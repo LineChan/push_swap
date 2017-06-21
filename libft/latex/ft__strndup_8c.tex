@@ -1,0 +1,48 @@
+\hypertarget{ft__strndup_8c}{}\section{srcs/string/ft\+\_\+strndup.c File Reference}
+\label{ft__strndup_8c}\index{srcs/string/ft\+\_\+strndup.\+c@{srcs/string/ft\+\_\+strndup.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strndup.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strndup_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__strndup_8c_a4db3471ded376c6e46a56840ae7f2176}{ft\+\_\+strndup} (const char $\ast$str, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strndup_8c_a4db3471ded376c6e46a56840ae7f2176}\label{ft__strndup_8c_a4db3471ded376c6e46a56840ae7f2176}} 
+\index{ft\+\_\+strndup.\+c@{ft\+\_\+strndup.\+c}!ft\+\_\+strndup@{ft\+\_\+strndup}}
+\index{ft\+\_\+strndup@{ft\+\_\+strndup}!ft\+\_\+strndup.\+c@{ft\+\_\+strndup.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strndup()}{ft\_strndup()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+strndup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strndup.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char} *dup;
+18 
+19     \textcolor{keywordflow}{if} (!(dup = \hyperlink{ft__strnew_8c_a75a803747e7ff7d15a9d1faefe45a92b}{ft\_strnew}(n)))
+20         \textcolor{keywordflow}{return} (NULL);
+21     \hyperlink{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0}{ft\_strncpy}(dup, str, n);
+22     \textcolor{keywordflow}{return} (dup);
+23 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__strndup_8c_a4db3471ded376c6e46a56840ae7f2176_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,60 @@
+\hypertarget{ft__strlcat_8c}{}\section{srcs/string/ft\+\_\+strlcat.c File Reference}
+\label{ft__strlcat_8c}\index{srcs/string/ft\+\_\+strlcat.\+c@{srcs/string/ft\+\_\+strlcat.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strlcat.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strlcat_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{ft__strlcat_8c_a87a42176d750415c82eb7d453abb39ee}{ft\+\_\+strlcat} (char $\ast$dest, const char $\ast$src, size\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strlcat_8c_a87a42176d750415c82eb7d453abb39ee}\label{ft__strlcat_8c_a87a42176d750415c82eb7d453abb39ee}} 
+\index{ft\+\_\+strlcat.\+c@{ft\+\_\+strlcat.\+c}!ft\+\_\+strlcat@{ft\+\_\+strlcat}}
+\index{ft\+\_\+strlcat@{ft\+\_\+strlcat}!ft\+\_\+strlcat.\+c@{ft\+\_\+strlcat.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strlcat()}{ft\_strlcat()}}
+{\footnotesize\ttfamily size\+\_\+t ft\+\_\+strlcat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strlcat.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{size\_t}      len\_dest;
+18     \textcolor{keywordtype}{size\_t}      len\_src;
+19     \textcolor{keywordtype}{size\_t}      limit;
+20 
+21     len\_dest = \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(dest);
+22     len\_src = \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(src);
+23     \textcolor{keywordflow}{if} (size <= len\_dest)
+24         \textcolor{keywordflow}{return} (size + len\_src);
+25     limit = 0;
+26     dest += len\_dest;
+27     \textcolor{keywordflow}{while} (*src && (len\_dest + limit) < (size - 1))
+28     \{
+29         *dest++ = *src++;
+30         limit++;
+31     \}
+32     \textcolor{keywordflow}{if} (limit < size)
+33         *dest = \textcolor{charliteral}{'\(\backslash\)0'};
+34     \textcolor{keywordflow}{return} (len\_dest + len\_src);
+35 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{ft__strlcat_8c_a87a42176d750415c82eb7d453abb39ee_cgraph}
+\end{center}
+\end{figure}

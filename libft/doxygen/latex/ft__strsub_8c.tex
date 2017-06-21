@@ -1,0 +1,57 @@
+\hypertarget{ft__strsub_8c}{}\section{srcs/string/ft\+\_\+strsub.c File Reference}
+\label{ft__strsub_8c}\index{srcs/string/ft\+\_\+strsub.\+c@{srcs/string/ft\+\_\+strsub.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strsub.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strsub_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850}{ft\+\_\+strsub} (char const $\ast$s, unsigned int start, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850}\label{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850}} 
+\index{ft\+\_\+strsub.\+c@{ft\+\_\+strsub.\+c}!ft\+\_\+strsub@{ft\+\_\+strsub}}
+\index{ft\+\_\+strsub@{ft\+\_\+strsub}!ft\+\_\+strsub.\+c@{ft\+\_\+strsub.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strsub()}{ft\_strsub()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+strsub (\begin{DoxyParamCaption}\item[{char const $\ast$}]{s,  }\item[{unsigned int}]{start,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strsub.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char} *memory;
+18 
+19     \textcolor{keywordflow}{if} (!(memory = \hyperlink{ft__strnew_8c_a75a803747e7ff7d15a9d1faefe45a92b}{ft\_strnew}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * len)) || !s)
+20         \textcolor{keywordflow}{return} (NULL);
+21     \hyperlink{ft__strncpy_8c_a0a1134108bea167b4a4d0fa7f7d359d0}{ft\_strncpy}(memory, &s[start], len);
+22     memory[len] = \textcolor{charliteral}{'\(\backslash\)0'};
+23     \textcolor{keywordflow}{return} (memory);
+24 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,54 @@
+\hypertarget{ft__stpcpy_8c}{}\section{srcs/string/ft\+\_\+stpcpy.c File Reference}
+\label{ft__stpcpy_8c}\index{srcs/string/ft\+\_\+stpcpy.\+c@{srcs/string/ft\+\_\+stpcpy.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+stpcpy.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__stpcpy_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78}{ft\+\_\+stpcpy} (char $\ast$dst, const char $\ast$src)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78}\label{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78}} 
+\index{ft\+\_\+stpcpy.\+c@{ft\+\_\+stpcpy.\+c}!ft\+\_\+stpcpy@{ft\+\_\+stpcpy}}
+\index{ft\+\_\+stpcpy@{ft\+\_\+stpcpy}!ft\+\_\+stpcpy.\+c@{ft\+\_\+stpcpy.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+stpcpy()}{ft\_stpcpy()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+stpcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file ft\+\_\+stpcpy.\+c.
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keywordtype}{size\_t}  len;
+26 
+27     len = \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(src);
+28     \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{char} *)\hyperlink{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce}{ft\_memcpy}(dst, src, len + 1) + len);
+29 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__stpcpy_8c_a5327a1207883acf873f3d8ca5fda1d78_icgraph}
+\end{center}
+\end{figure}

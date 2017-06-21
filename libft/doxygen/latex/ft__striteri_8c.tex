@@ -1,0 +1,40 @@
+\hypertarget{ft__striteri_8c}{}\section{srcs/string/ft\+\_\+striteri.c File Reference}
+\label{ft__striteri_8c}\index{srcs/string/ft\+\_\+striteri.\+c@{srcs/string/ft\+\_\+striteri.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+striteri.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__striteri_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__striteri_8c_ada722cffd2c6c8169ae339afd0f9763c}{ft\+\_\+striteri} (char $\ast$s, void($\ast$f)(unsigned int, char $\ast$))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__striteri_8c_ada722cffd2c6c8169ae339afd0f9763c}\label{ft__striteri_8c_ada722cffd2c6c8169ae339afd0f9763c}} 
+\index{ft\+\_\+striteri.\+c@{ft\+\_\+striteri.\+c}!ft\+\_\+striteri@{ft\+\_\+striteri}}
+\index{ft\+\_\+striteri@{ft\+\_\+striteri}!ft\+\_\+striteri.\+c@{ft\+\_\+striteri.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+striteri()}{ft\_striteri()}}
+{\footnotesize\ttfamily void ft\+\_\+striteri (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{void($\ast$)(unsigned int, char $\ast$)}]{f }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+striteri.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i;
+18 
+19     i = 0;
+20     \textcolor{keywordflow}{if} (s && f)
+21         \textcolor{keywordflow}{while} (*s)
+22             f(i++, s++);
+23 \}
+\end{DoxyCode}

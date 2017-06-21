@@ -1,0 +1,259 @@
+\hypertarget{ft__printf__pointer_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+pointer.c File Reference}
+\label{ft__printf__pointer_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+pointer.\+c@{srcs/printf/ft\+\_\+printf\+\_\+pointer.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+pointer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__pointer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f}{ft\+\_\+printf\+\_\+putnbr\+\_\+p} (unsigned long long p, \hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\item 
+static void \hyperlink{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104}{ft\+\_\+printf\+\_\+p\+\_\+padd} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg, int len, unsigned long long p)
+\item 
+static void \hyperlink{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18}{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg, int len, unsigned long long p)
+\item 
+static void \hyperlink{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28}{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg, int len, int p)
+\item 
+void \hyperlink{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b}{ft\+\_\+printf\+\_\+pointer} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104}\label{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104}} 
+\index{ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}!ft\+\_\+printf\+\_\+p\+\_\+padd@{ft\+\_\+printf\+\_\+p\+\_\+padd}}
+\index{ft\+\_\+printf\+\_\+p\+\_\+padd@{ft\+\_\+printf\+\_\+p\+\_\+padd}!ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+p\+\_\+padd()}{ft\_printf\_p\_padd()}}
+{\footnotesize\ttfamily static void ft\+\_\+printf\+\_\+p\+\_\+padd (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg,  }\item[{int}]{len,  }\item[{unsigned long long}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 30 of file ft\+\_\+printf\+\_\+pointer.\+c.
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ac328e551bde3d39b6d7b8cc9e048d941}{ZERO} && !\hyperlink{ft__printf_8h_a8a5043e7ab655e37e903ffbd8b95d6b2}{DOT})
+35         return ;
+36     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_a8a5043e7ab655e37e903ffbd8b95d6b2}{DOT})
+37     \{
+38         \textcolor{keywordflow}{if} (!p)
+39             len ^= len;
+40         \textcolor{keywordflow}{if} (!arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot})
+41             \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}-- - arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} - len - 2) > 0)
+42             \{
+43                 *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{' '};
+44                 \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : 
+      \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+45             \}
+46         \textcolor{keywordflow}{else}
+47             \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}-- - arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} - 2) > 0)
+48             \{
+49                 *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{' '};
+50                 \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : 
+      \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+51             \}
+52     \}
+53     \textcolor{keywordflow}{else}
+54         \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}-- - len - 2) > 0)
+55         \{
+56             *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{' '};
+57             \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+58         \}
+59 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b}\label{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b}} 
+\index{ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}!ft\+\_\+printf\+\_\+pointer@{ft\+\_\+printf\+\_\+pointer}}
+\index{ft\+\_\+printf\+\_\+pointer@{ft\+\_\+printf\+\_\+pointer}!ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+pointer()}{ft\_printf\_pointer()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+pointer (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file ft\+\_\+printf\+\_\+pointer.\+c.
+
+
+\begin{DoxyCode}
+94 \{
+95     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}          p;
+96     \textcolor{keywordtype}{int}                         len;
+97 
+98     (\hyperlink{ft__printf_8h_ae4139daa03e89a213df324dc08a428f0}{WILD} || \hyperlink{ft__printf_8h_ab852d1ecf376906ba14e067cfb436f32}{WILD\_D}) ? \hyperlink{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658}{ft\_printf\_wild}(arg) : 0;
+99     p = (\hyperlink{ft__printf_8h_aaecc43af33d06f506a9509a7eb6d814f}{ULL})va\_arg(arg->\hyperlink{structs__struct_a921fac3a3ba8b5061b0b67186db0ffbe}{ap}, \textcolor{keywordtype}{void} *);
+100     \textcolor{keywordflow}{if} (!p && (arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'x'} || arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'X'}))
+101     \{
+102         \hyperlink{ft__printf__hexa_8c_ab0608f3ba97dedb44effa7a99696162e}{ft\_printf\_hexa\_zero}(arg);
+103         return ;
+104     \}
+105     len = \hyperlink{ft__uintlen_8c_a838795bd702a07990aedfe36e92ee550}{ft\_uintlen}(p, 16);
+106     \hyperlink{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18}{ft\_printf\_set\_buff\_p}(arg, len, p);
+107     *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{'0'};
+108     *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'X'} ? \textcolor{charliteral}{'X'} : \textcolor{charliteral}{'x'};
+109     \hyperlink{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28}{ft\_printf\_set\_buff\_p\_after}(arg, len, p);
+110     (p || !\hyperlink{ft__printf_8h_a8a5043e7ab655e37e903ffbd8b95d6b2}{DOT}) ? \hyperlink{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f}{ft\_printf\_putnbr\_p}(p, arg) : 0;
+111     \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}-- - len - 2) > 0)
+112     \{
+113         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{' '};
+114         \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+115     \}
+116 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{ft__printf__pointer_8c_add6f92f4f074a1014281a1623e27751b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f}\label{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f}} 
+\index{ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}!ft\+\_\+printf\+\_\+putnbr\+\_\+p@{ft\+\_\+printf\+\_\+putnbr\+\_\+p}}
+\index{ft\+\_\+printf\+\_\+putnbr\+\_\+p@{ft\+\_\+printf\+\_\+putnbr\+\_\+p}!ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+putnbr\+\_\+p()}{ft\_printf\_putnbr\_p()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+putnbr\+\_\+p (\begin{DoxyParamCaption}\item[{unsigned long long}]{p,  }\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file ft\+\_\+printf\+\_\+pointer.\+c.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordflow}{if} (p < 16)
+22         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = (arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'X'} ? \hyperlink{ft__printf_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP} : \hyperlink{ft__printf_8h_ab811d8c6ff3a505312d3276590444289}{LOW})[p % 16];
+23     \textcolor{keywordflow}{else}
+24     \{
+25         \hyperlink{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f}{ft\_printf\_putnbr\_p}(p / 16, arg);
+26         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = (arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'X'} ? \hyperlink{ft__printf_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP} : \hyperlink{ft__printf_8h_ab811d8c6ff3a505312d3276590444289}{LOW})[p % 16];
+27     \}
+28 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_af0260faee8864bc85a90bd762aba837f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18}\label{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18}} 
+\index{ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}!ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p@{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p}}
+\index{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p@{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p}!ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p()}{ft\_printf\_set\_buff\_p()}}
+{\footnotesize\ttfamily static void ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg,  }\item[{int}]{len,  }\item[{unsigned long long}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 61 of file ft\+\_\+printf\+\_\+pointer.\+c.
+
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{keywordflow}{if} (arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} < len)
+66         arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} ^= arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot};
+67     \textcolor{keywordflow}{if} (arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd} && !\hyperlink{ft__printf_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS})
+68         \hyperlink{ft__printf__pointer_8c_a9e69443b8568e7eabbb114f19cf5c104}{ft\_printf\_p\_padd}(arg, len, p);
+69 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a61a69bcc6e4b03adc3b12e67c1d6ba18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28}\label{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28}} 
+\index{ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}!ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after@{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after}}
+\index{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after@{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after}!ft\+\_\+printf\+\_\+pointer.\+c@{ft\+\_\+printf\+\_\+pointer.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after()}{ft\_printf\_set\_buff\_p\_after()}}
+{\footnotesize\ttfamily static void ft\+\_\+printf\+\_\+set\+\_\+buff\+\_\+p\+\_\+after (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg,  }\item[{int}]{len,  }\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 71 of file ft\+\_\+printf\+\_\+pointer.\+c.
+
+
+\begin{DoxyCode}
+72 \{
+73     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ac328e551bde3d39b6d7b8cc9e048d941}{ZERO} && !\hyperlink{ft__printf_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS})
+74         \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}-- - len - 2) > 0)
+75         \{
+76             *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{'0'};
+77             arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot}--;
+78             \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+79         \}
+80     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_a8a5043e7ab655e37e903ffbd8b95d6b2}{DOT} && arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot})
+81     \{
+82         \textcolor{keywordflow}{if} (!p)
+83             len ^= len;
+84         \textcolor{keywordflow}{while} ((arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot}-- - len) > 0)
+85         \{
+86             *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = \textcolor{charliteral}{'0'};
+87             arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd}--;
+88             \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - len - 2) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+89         \}
+90     \}
+91 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__pointer_8c_a7cedacc21109cbfe931746690d018f28_icgraph}
+\end{center}
+\end{figure}

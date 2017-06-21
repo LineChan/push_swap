@@ -1,0 +1,48 @@
+\hypertarget{ft__strcmp_8c}{}\section{srcs/string/ft\+\_\+strcmp.c File Reference}
+\label{ft__strcmp_8c}\index{srcs/string/ft\+\_\+strcmp.\+c@{srcs/string/ft\+\_\+strcmp.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strcmp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strcmp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ft__strcmp_8c_a1f2ff2312e5994560c9537cd9173be94}{ft\+\_\+strcmp} (const char $\ast$s1, const char $\ast$s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strcmp_8c_a1f2ff2312e5994560c9537cd9173be94}\label{ft__strcmp_8c_a1f2ff2312e5994560c9537cd9173be94}} 
+\index{ft\+\_\+strcmp.\+c@{ft\+\_\+strcmp.\+c}!ft\+\_\+strcmp@{ft\+\_\+strcmp}}
+\index{ft\+\_\+strcmp@{ft\+\_\+strcmp}!ft\+\_\+strcmp.\+c@{ft\+\_\+strcmp.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strcmp()}{ft\_strcmp()}}
+{\footnotesize\ttfamily int ft\+\_\+strcmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strcmp.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{while} (*s1 && *s2 && *s1 == *s2)
+18     \{
+19         s1++;
+20         s2++;
+21     \}
+22     \textcolor{keywordflow}{return} (*(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)s1 - *(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)s2);
+23 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__strcmp_8c_a1f2ff2312e5994560c9537cd9173be94_icgraph}
+\end{center}
+\end{figure}

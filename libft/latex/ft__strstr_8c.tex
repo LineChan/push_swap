@@ -1,0 +1,51 @@
+\hypertarget{ft__strstr_8c}{}\section{srcs/string/ft\+\_\+strstr.c File Reference}
+\label{ft__strstr_8c}\index{srcs/string/ft\+\_\+strstr.\+c@{srcs/string/ft\+\_\+strstr.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strstr.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strstr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ft__strstr_8c_a138ed84ae33485ef84fd189ce2c7863e}{ft\+\_\+strstr} (const char $\ast$str, const char $\ast$to\+\_\+find)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strstr_8c_a138ed84ae33485ef84fd189ce2c7863e}\label{ft__strstr_8c_a138ed84ae33485ef84fd189ce2c7863e}} 
+\index{ft\+\_\+strstr.\+c@{ft\+\_\+strstr.\+c}!ft\+\_\+strstr@{ft\+\_\+strstr}}
+\index{ft\+\_\+strstr@{ft\+\_\+strstr}!ft\+\_\+strstr.\+c@{ft\+\_\+strstr.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strstr()}{ft\_strstr()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+strstr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{to\+\_\+find }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strstr.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{if} (!(to\_find[0]))
+18         \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{char} *)str);
+19     \textcolor{keywordflow}{while} (*str)
+20     \{
+21         \textcolor{keywordflow}{if} (\hyperlink{ft__strnequ_8c_a44390aa3d7e9321348dcb259195fa307}{ft\_strnequ}(str, to\_find, \hyperlink{ft__strlen_8c_abbb8c6c4ed85d892e7f1509f65f5768a}{ft\_strlen}(to\_find)))
+22             \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{char} *)str);
+23         str++;
+24     \}
+25     \textcolor{keywordflow}{return} (NULL);
+26 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{ft__strstr_8c_a138ed84ae33485ef84fd189ce2c7863e_cgraph}
+\end{center}
+\end{figure}

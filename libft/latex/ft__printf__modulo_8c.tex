@@ -1,0 +1,64 @@
+\hypertarget{ft__printf__modulo_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+modulo.c File Reference}
+\label{ft__printf__modulo_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+modulo.\+c@{srcs/printf/ft\+\_\+printf\+\_\+modulo.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+modulo.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__modulo_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9}{ft\+\_\+printf\+\_\+modulo} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9}\label{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9}} 
+\index{ft\+\_\+printf\+\_\+modulo.\+c@{ft\+\_\+printf\+\_\+modulo.\+c}!ft\+\_\+printf\+\_\+modulo@{ft\+\_\+printf\+\_\+modulo}}
+\index{ft\+\_\+printf\+\_\+modulo@{ft\+\_\+printf\+\_\+modulo}!ft\+\_\+printf\+\_\+modulo.\+c@{ft\+\_\+printf\+\_\+modulo.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+modulo()}{ft\_printf\_modulo()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+modulo (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file ft\+\_\+printf\+\_\+modulo.\+c.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordtype}{char}    padd;
+22 
+23     (\hyperlink{ft__printf_8h_ae4139daa03e89a213df324dc08a428f0}{WILD} || \hyperlink{ft__printf_8h_ab852d1ecf376906ba14e067cfb436f32}{WILD\_D}) ? \hyperlink{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658}{ft\_printf\_wild}(arg) : 0;
+24     padd = \hyperlink{ft__printf_8h_ac328e551bde3d39b6d7b8cc9e048d941}{ZERO} && !\hyperlink{ft__printf_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS} ? \textcolor{charliteral}{'0'} : \textcolor{charliteral}{' '};
+25     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS})
+26         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = arg->\hyperlink{structs__struct_ae9c5f8011938c4b363b04995563a2fc6}{rdm} ? arg->\hyperlink{structs__struct_ae9c5f8011938c4b363b04995563a2fc6}{rdm} : \textcolor{charliteral}{'%'};
+27     \textcolor{keywordflow}{if} (arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd})
+28         \textcolor{keywordflow}{while} (--arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd})
+29         \{
+30             *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = padd;
+31             \hyperlink{ft__printf_8h_a70ed59adcb4159ac551058053e649640}{SIZE} ^ (\hyperlink{ft__printf_8h_a2c1c653e45c4962f05cb6341f359707d}{BUFF\_MAX} - 1) ? 0 : \hyperlink{ft__printf__write__buff_8c_a4d23ff0763304b4e401aedde9172a78c}{ft\_printf\_write\_buff}(arg);
+32         \}
+33     \textcolor{keywordflow}{if} (!\hyperlink{ft__printf_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS})
+34         *arg->\hyperlink{structs__struct_a13dc65f84777d75bdc5cab593f16ba95}{p}++ = arg->\hyperlink{structs__struct_ae9c5f8011938c4b363b04995563a2fc6}{rdm} ? arg->\hyperlink{structs__struct_ae9c5f8011938c4b363b04995563a2fc6}{rdm} : \textcolor{charliteral}{'%'};
+35 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__modulo_8c_a3a40f962d4cf0ca365258e3cfc6c01f9_icgraph}
+\end{center}
+\end{figure}

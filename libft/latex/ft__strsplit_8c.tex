@@ -1,0 +1,67 @@
+\hypertarget{ft__strsplit_8c}{}\section{srcs/string/ft\+\_\+strsplit.c File Reference}
+\label{ft__strsplit_8c}\index{srcs/string/ft\+\_\+strsplit.\+c@{srcs/string/ft\+\_\+strsplit.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+strsplit.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__strsplit_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \hyperlink{ft__strsplit_8c_a8a3082db71e8c3f236041af6d5453f13}{ft\+\_\+strsplit} (char const $\ast$s, char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__strsplit_8c_a8a3082db71e8c3f236041af6d5453f13}\label{ft__strsplit_8c_a8a3082db71e8c3f236041af6d5453f13}} 
+\index{ft\+\_\+strsplit.\+c@{ft\+\_\+strsplit.\+c}!ft\+\_\+strsplit@{ft\+\_\+strsplit}}
+\index{ft\+\_\+strsplit@{ft\+\_\+strsplit}!ft\+\_\+strsplit.\+c@{ft\+\_\+strsplit.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+strsplit()}{ft\_strsplit()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ ft\+\_\+strsplit (\begin{DoxyParamCaption}\item[{char const $\ast$}]{s,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+strsplit.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char}    **array;
+18     \textcolor{keywordtype}{size\_t}  start;
+19     \textcolor{keywordtype}{size\_t}  end;
+20     \textcolor{keywordtype}{size\_t}  j;
+21     \textcolor{keywordtype}{size\_t}  i;
+22 
+23     array = NULL;
+24     j = 0;
+25     i = 0;
+26     \textcolor{keywordflow}{if} (!s || !(array = (\textcolor{keywordtype}{char} **)\hyperlink{ft__memalloc_8c_a5d526be072b01f6b566142e40540783f}{ft\_memalloc}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *) *
+27                     (\hyperlink{ft__count__word_8c_a8b1738c5f4f67d39430ed184f08f10f1}{ft\_count\_word}(s, c) + 1))))
+28         \textcolor{keywordflow}{return} (NULL);
+29     \textcolor{keywordflow}{while} (s[j] && i < \hyperlink{ft__count__word_8c_a8b1738c5f4f67d39430ed184f08f10f1}{ft\_count\_word}(s, c))
+30     \{
+31         end = 0;
+32         \textcolor{keywordflow}{while} (s[j] == c)
+33             j++;
+34         start = j;
+35         \textcolor{keywordflow}{while} (s[j++] != c)
+36             end++;
+37         \textcolor{keywordflow}{if} (!(array[i++] = \hyperlink{ft__strsub_8c_a87994ca583339cbfe4ec3ebde8396850}{ft\_strsub}(s, start, end)))
+38             \textcolor{keywordflow}{return} (NULL);
+39     \}
+40     array[\hyperlink{ft__count__word_8c_a8b1738c5f4f67d39430ed184f08f10f1}{ft\_count\_word}(s, c)] = 0;
+41     \textcolor{keywordflow}{return} (array);
+42 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__strsplit_8c_a8a3082db71e8c3f236041af6d5453f13_cgraph}
+\end{center}
+\end{figure}

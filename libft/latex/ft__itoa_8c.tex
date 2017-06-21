@@ -1,0 +1,133 @@
+\hypertarget{ft__itoa_8c}{}\section{srcs/string/ft\+\_\+itoa.c File Reference}
+\label{ft__itoa_8c}\index{srcs/string/ft\+\_\+itoa.\+c@{srcs/string/ft\+\_\+itoa.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+itoa.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__itoa_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{ft__itoa_8c_a1ab7b101cdf0262667890cdc38940dc1}{ft\+\_\+power} (int unit)
+\item 
+static int \hyperlink{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc}{ft\+\_\+unit} (long int buff)
+\item 
+char $\ast$ \hyperlink{ft__itoa_8c_ae5e08fbfd5d8129c2bf3a6c42fc7734c}{ft\+\_\+itoa} (int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__itoa_8c_ae5e08fbfd5d8129c2bf3a6c42fc7734c}\label{ft__itoa_8c_ae5e08fbfd5d8129c2bf3a6c42fc7734c}} 
+\index{ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}!ft\+\_\+itoa@{ft\+\_\+itoa}}
+\index{ft\+\_\+itoa@{ft\+\_\+itoa}!ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+itoa()}{ft\_itoa()}}
+{\footnotesize\ttfamily char$\ast$ ft\+\_\+itoa (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file ft\+\_\+itoa.\+c.
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}    buff;
+43     \textcolor{keywordtype}{char}        *str;
+44     \textcolor{keywordtype}{int}         i;
+45     \textcolor{keywordtype}{int}         power;
+46 
+47     buff = n;
+48     i = 0;
+49     \textcolor{keywordflow}{if} (!(str = \hyperlink{ft__strnew_8c_a75a803747e7ff7d15a9d1faefe45a92b}{ft\_strnew}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (\hyperlink{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc}{ft\_unit}(buff) + 1))))
+50         \textcolor{keywordflow}{return} (NULL);
+51     \textcolor{keywordflow}{if} (buff < 0)
+52     \{
+53         buff *= -1;
+54         str[i++] = \textcolor{charliteral}{'-'};
+55     \}
+56     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (buff == 0)
+57         str[i] = \textcolor{charliteral}{'0'};
+58     power = \hyperlink{ft__itoa_8c_a1ab7b101cdf0262667890cdc38940dc1}{ft\_power}(\hyperlink{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc}{ft\_unit}(buff));
+59     \textcolor{keywordflow}{while} (power)
+60     \{
+61         str[i++] = buff / power + \textcolor{charliteral}{'0'};
+62         buff %= power;
+63         power /= 10;
+64     \}
+65     \textcolor{keywordflow}{return} (str);
+66 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__itoa_8c_ae5e08fbfd5d8129c2bf3a6c42fc7734c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__itoa_8c_a1ab7b101cdf0262667890cdc38940dc1}\label{ft__itoa_8c_a1ab7b101cdf0262667890cdc38940dc1}} 
+\index{ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}!ft\+\_\+power@{ft\+\_\+power}}
+\index{ft\+\_\+power@{ft\+\_\+power}!ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+power()}{ft\_power()}}
+{\footnotesize\ttfamily static int ft\+\_\+power (\begin{DoxyParamCaption}\item[{int}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 15 of file ft\+\_\+itoa.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{int}         power;
+18 
+19     power = 1;
+20     \textcolor{keywordflow}{while} (unit-- > 1)
+21         power *= 10;
+22     \textcolor{keywordflow}{return} (power);
+23 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{ft__itoa_8c_a1ab7b101cdf0262667890cdc38940dc1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc}\label{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc}} 
+\index{ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}!ft\+\_\+unit@{ft\+\_\+unit}}
+\index{ft\+\_\+unit@{ft\+\_\+unit}!ft\+\_\+itoa.\+c@{ft\+\_\+itoa.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+unit()}{ft\_unit()}}
+{\footnotesize\ttfamily static int ft\+\_\+unit (\begin{DoxyParamCaption}\item[{long int}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file ft\+\_\+itoa.\+c.
+
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{keywordtype}{int}         count;
+28 
+29     count = 0;
+30     \textcolor{keywordflow}{if} (buff < 0)
+31         buff = -buff;
+32     \textcolor{keywordflow}{while} (buff > 0)
+33     \{
+34         count++;
+35         buff /= 10;
+36     \}
+37     \textcolor{keywordflow}{return} (count);
+38 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{ft__itoa_8c_a97086d7901cd6979f2e00895b94d8fcc_icgraph}
+\end{center}
+\end{figure}

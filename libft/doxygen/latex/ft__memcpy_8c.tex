@@ -1,0 +1,50 @@
+\hypertarget{ft__memcpy_8c}{}\section{srcs/memory/ft\+\_\+memcpy.c File Reference}
+\label{ft__memcpy_8c}\index{srcs/memory/ft\+\_\+memcpy.\+c@{srcs/memory/ft\+\_\+memcpy.\+c}}
+{\ttfamily \#include \char`\"{}libft.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+memcpy.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ft__memcpy_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce}{ft\+\_\+memcpy} (void $\ast$dst, const void $\ast$src, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce}\label{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce}} 
+\index{ft\+\_\+memcpy.\+c@{ft\+\_\+memcpy.\+c}!ft\+\_\+memcpy@{ft\+\_\+memcpy}}
+\index{ft\+\_\+memcpy@{ft\+\_\+memcpy}!ft\+\_\+memcpy.\+c@{ft\+\_\+memcpy.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+memcpy()}{ft\_memcpy()}}
+{\footnotesize\ttfamily void$\ast$ ft\+\_\+memcpy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file ft\+\_\+memcpy.\+c.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordtype}{char}    *d;
+18     \textcolor{keywordtype}{char}    *s;
+19 
+20     d = (\textcolor{keywordtype}{char} *)dst;
+21     s = (\textcolor{keywordtype}{char} *)src;
+22     \textcolor{keywordflow}{while} (n--)
+23         *d++ = *s++;
+24     \textcolor{keywordflow}{return} (dst);
+25 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__memcpy_8c_a28cfd23975baf37693e3ddc17815b9ce_icgraph}
+\end{center}
+\end{figure}

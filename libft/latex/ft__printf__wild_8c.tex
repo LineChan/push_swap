@@ -1,0 +1,63 @@
+\hypertarget{ft__printf__wild_8c}{}\section{srcs/printf/ft\+\_\+printf\+\_\+wild.c File Reference}
+\label{ft__printf__wild_8c}\index{srcs/printf/ft\+\_\+printf\+\_\+wild.\+c@{srcs/printf/ft\+\_\+printf\+\_\+wild.\+c}}
+{\ttfamily \#include \char`\"{}../includes/ft\+\_\+printf.\+h\char`\"{}}\newline
+Include dependency graph for ft\+\_\+printf\+\_\+wild.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{ft__printf__wild_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658}{ft\+\_\+printf\+\_\+wild} (\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658}\label{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658}} 
+\index{ft\+\_\+printf\+\_\+wild.\+c@{ft\+\_\+printf\+\_\+wild.\+c}!ft\+\_\+printf\+\_\+wild@{ft\+\_\+printf\+\_\+wild}}
+\index{ft\+\_\+printf\+\_\+wild@{ft\+\_\+printf\+\_\+wild}!ft\+\_\+printf\+\_\+wild.\+c@{ft\+\_\+printf\+\_\+wild.\+c}}
+\subsubsection{\texorpdfstring{ft\+\_\+printf\+\_\+wild()}{ft\_printf\_wild()}}
+{\footnotesize\ttfamily void ft\+\_\+printf\+\_\+wild (\begin{DoxyParamCaption}\item[{\hyperlink{ft__printf_8h_a79766236fad20faabc4a98324a764381}{t\+\_\+struct} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file ft\+\_\+printf\+\_\+wild.\+c.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordtype}{int}     wild;
+22 
+23     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ae4139daa03e89a213df324dc08a428f0}{WILD})
+24     \{
+25         wild = va\_arg(arg->\hyperlink{structs__struct_a921fac3a3ba8b5061b0b67186db0ffbe}{ap}, \textcolor{keywordtype}{int});
+26         arg->\hyperlink{structs__struct_a99c5b7755906c47bd6c46659fa55436a}{flag} |= wild < 0 ? \hyperlink{ft__printf_8h_a0ed6d8c5e23a50435d0b062421930628}{FLAG\_MINUS} : arg->\hyperlink{structs__struct_a99c5b7755906c47bd6c46659fa55436a}{flag};
+27         \textcolor{keywordflow}{if} (!arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd})
+28             arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd} = wild ? \hyperlink{libft_8h_a996f7be338ccb40d1a2a5abc1ad61759}{ABS}(wild) : arg->padd;
+29     \}
+30     \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ab852d1ecf376906ba14e067cfb436f32}{WILD\_D})
+31     \{
+32         \textcolor{keywordflow}{if} (\hyperlink{ft__printf_8h_ac328e551bde3d39b6d7b8cc9e048d941}{ZERO})
+33         \{
+34             arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} = arg->\hyperlink{structs__struct_aa1956d6e75a6d5a101336449b7ab3f73}{padd};
+35             wild = va\_arg(arg->\hyperlink{structs__struct_a921fac3a3ba8b5061b0b67186db0ffbe}{ap}, \textcolor{keywordtype}{int});
+36         \}
+37         \textcolor{keywordflow}{else}
+38             arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} = va\_arg(arg->\hyperlink{structs__struct_a921fac3a3ba8b5061b0b67186db0ffbe}{ap}, \textcolor{keywordtype}{int});
+39     \}
+40     \textcolor{keywordflow}{if} (arg->\hyperlink{structs__struct_a2da26f30dd3dd4c14ff9902f223df69f}{dot} < 0 && (arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'s'} || arg->\hyperlink{structs__struct_ab8c0632b6294515ba029b3cb3efa71da}{type} == \textcolor{charliteral}{'S'}))
+41         arg->\hyperlink{structs__struct_a99c5b7755906c47bd6c46659fa55436a}{flag} &= ~\hyperlink{ft__printf_8h_a60680315f3cc3f541a198e5b49ca8ca4}{FLAG\_DOT};
+42 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ft__printf__wild_8c_a27bd4e964841956e4d72f979c8c9b658_icgraph}
+\end{center}
+\end{figure}
