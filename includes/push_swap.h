@@ -100,6 +100,9 @@ t_head		*stack_b(void);
 ** Check protoypes
 */
 
+void	ft_check_instruct(void);
+int		ft_check_do_instruct(const char *line);
+
 
 /*
 ** Exec prototypes
@@ -124,6 +127,7 @@ void		ft_exec_rrr(void);
 void		ft_print(node head);
 void		ft_print_ab(char const *str);
 void		ft_print_result_ps(void);
+void		ft_print_result_list(node it);
 //
 
 
@@ -143,6 +147,8 @@ void		ft_ps_select_sort(void);
 void		ft_ps_quick_sort(void);
 void		ft_ps_quick_a(void);
 void		ft_ps_quick_b(void);
+void		ft_quick_select(int *push, int *pivot);
+void		ft_ps_clean_result(void);
 
 void		ft_ps_find_shortest_path(node head, int ref);
 void		ft_ps_find_where_to_push(node head, int ref);
@@ -153,18 +159,18 @@ int			ft_ps_head_is_reverse_sorted(node head);
 //
 
 
+/*
 void		ft_ps_reverse_sort(node head);
 void		ft_ps_merge_sort_tmp(node head);
 void		ft_ps_merge_sort(void);
-void		ft_quick_select(int *push, int *pivot);
-void		ft_ps_clean_result(void);
+*/
 
 
 
 
 
 
-int			ft_is_left(node *left, int *pitch, node *pivot);
+//int			ft_is_left(node *left, int *pitch, node *pivot);
 void		ft_ps_push_max(node head, int len); // quicksort
 
 
@@ -211,6 +217,7 @@ void					ft_curse_display(WINDOW *win, char const *message);
 t_curse_manager			*ft_curse_sig(void);
 t_curse_manager			*ft_score_sig(void);
 void					ft_del_sig(void);
-int						ft_curse_read_instruction(void);
+//int						ft_curse_read_instruction(void);
+void					ft_curse_instruct(void);
 
 #endif
