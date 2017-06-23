@@ -44,6 +44,7 @@
 
 # define TOP_A			(stack_a()->top)
 # define TOP_B			(stack_b()->top)
+# define TOP_CURSE		(push_swap()->top_curse)
 
 # define PRINT_A														\
 	do {																\
@@ -83,6 +84,7 @@ typedef struct		s_info
 {
 	int			nb_move;
 	int			nb_elem;
+	node		top_curse;
 	t_lst		lst_info;
 }					t_info;
 
@@ -180,11 +182,13 @@ void		ft_ps_push_max(node head, int len); // quicksort
 
 
 
+/*
 typedef struct			s_checker_exec
 {
 	char const			*input;
 	void				(*func)(void);
 }						t_checker_exec;
+*/
 
 /*
 **	ncurses
@@ -215,16 +219,18 @@ typedef struct			s_curse_manager
 		ft_lst_foreach(&HEAD_B, &ft_mvprint);		\
 	} while (0)										\
 
+t_curse_manager			*ft_curse_sig(void);
+t_curse_manager			*ft_score_sig(void);
+void					ft_del_sig(void);
+void					ft_curse_instruct(void);
+void					ft_curse_do_instruct(void);
+
+void					ft_curse_print_instruct(void);
+void					ft_curse_print_stack(void);
+void					ft_curse_draw_border(WINDOW *screen);
+//
 int						ft_exec_instruct(char const *line);
 void					ft_curse_init(void);
 void					ft_mvprint(node it);
 void					ft_curse_display(WINDOW *win, char const *message);
-t_curse_manager			*ft_curse_sig(void);
-t_curse_manager			*ft_score_sig(void);
-void					ft_del_sig(void);
-//int						ft_curse_read_instruction(void);
-void					ft_curse_instruct(void);
-void					ft_curse_do_instruct(void);
-void					ft_curse_draw_border(WINDOW *screen);
-
 #endif

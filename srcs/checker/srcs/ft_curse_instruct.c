@@ -15,34 +15,9 @@ static void		ft_curse_set_color(void)
 	init_pair(7, COLOR_MAGENTA, COLOR_BLACK);
 }
 
-/*
-void			ft_curse_get_input(void)
-{
-	char	input[5];
-	//int ch;
-
-	//ch = getch();
-	noecho();
-	ft_memset((void *)input, '\0', 5);
-	//while( getstr(input))
-	getstr(input);
-	while (*input)
-	{
-		mvwprintw(CURSE, 1, 1, "Reading input ... %s", input);
-		refresh();
-		wrefresh(CURSE);
-		sleep(1);
-		ft_memset((void *)input, '\0', 5);
-		getstr(input);
-		wclear(CURSE);
-		ft_curse_draw_border(CURSE);
-		ft_exec_add_move(input);
-	}
-}
-*/
-void			ft_curse_intro(int parent_y,
-								int parent_x,
-								int score_size)
+static void		ft_curse_intro(const int parent_y,
+								const int parent_x,
+								const int score_size)
 {
 	ft_curse_draw_border(CURSE);
 	ft_curse_draw_border(SCORE);
@@ -52,9 +27,6 @@ mvwprintw(CURSE, (parent_y - score_size) >> 1, (parent_x >> 1) - 14, "Press ente
 	refresh();
 	wrefresh(CURSE);
 	wrefresh(SCORE);
-	sleep(1);
-	return ;
-mvwprintw(CURSE, parent_y, (parent_x >> 1) - 11, "Press enter to start sorting");
 }
 
 void			ft_curse_instruct(void)
@@ -70,9 +42,7 @@ void			ft_curse_instruct(void)
 		EXIT_FAIL("File not open");
 
 	while (get_next_line(fd, &line) && ft_strcmp("", line))
-	{
 		ft_exec_add_move(line);
-	}
 	score_size = 10;
 	initscr();
 	cbreak();
@@ -89,8 +59,8 @@ void			ft_curse_instruct(void)
 	wrefresh(CURSE);
 	wrefresh(SCORE);
 	ft_curse_intro(parent_y, parent_x, score_size);
+	TOP_CURSE = &INFO;
 	ft_curse_do_instruct();
-	//ft_curse_get_input();
 	getch();
 	delwin(CURSE);
 	delwin(SCORE);
