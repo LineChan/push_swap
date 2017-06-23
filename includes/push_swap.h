@@ -18,6 +18,11 @@
 # include "../libft/includes/debug.h"
 
 /*
+** For open
+*/
+# include <fcntl.h>
+
+/*
 ** Define
 */
 # define C_STACK(it)	CONTAINEROF(it, t_stack, lst)
@@ -210,7 +215,7 @@ typedef struct			s_curse_manager
 		ft_lst_foreach(&HEAD_B, &ft_mvprint);		\
 	} while (0)										\
 
-int			ft_exec_instruct(char const *line);
+int						ft_exec_instruct(char const *line);
 void					ft_curse_init(void);
 void					ft_mvprint(node it);
 void					ft_curse_display(WINDOW *win, char const *message);
@@ -219,5 +224,7 @@ t_curse_manager			*ft_score_sig(void);
 void					ft_del_sig(void);
 //int						ft_curse_read_instruction(void);
 void					ft_curse_instruct(void);
+void					ft_curse_do_instruct(void);
+void					ft_curse_draw_border(WINDOW *screen);
 
 #endif

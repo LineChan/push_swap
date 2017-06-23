@@ -31,7 +31,6 @@ void			ft_print_ab(char const *str)
 	PRINT_A;PRINT_B;
 }
 
-#include <fcntl.h>
 void		ft_print_result_list(node it)
 {
 	ft_printf("%s\n", MOVE(it));
