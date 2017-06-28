@@ -34,6 +34,7 @@ PUSH SWAP
 -- BONUS -- 
 
 ---> -clean : remove all redondant moves (ex : pb then pa)
+---> -x : visual mode
 
 
 
