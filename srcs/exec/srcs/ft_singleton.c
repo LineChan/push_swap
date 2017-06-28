@@ -11,7 +11,7 @@ t_info			*push_swap(void)
 	{
 		INIT_LST_HEAD(ptr->lst_info);
 		ptr->nb_move = 0;
-		ptr->nb_elem = 0;
+		//ptr->nb_elem = 0;
 	}
 	return (ptr);
 }

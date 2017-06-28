@@ -17,10 +17,6 @@ void			ft_curse_print_stack(void)
 	wattron(CURSE, COLOR_PAIR(2));
 	wprintw(CURSE, "  ---> ");
 	wattroff(CURSE, COLOR_PAIR(2));
-	ft_exec_pb();
-	ft_exec_pb();
-	ft_exec_pb();
-	ft_exec_pb();
 	it = HEAD_A.next;
 	x = 17;
 	y = parent_y;
@@ -64,5 +60,5 @@ void			ft_curse_print_stack(void)
 	}
 	refresh();
 	wrefresh(CURSE);
-	sleep(2);
+	//sleep(2);
 }

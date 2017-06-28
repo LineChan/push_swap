@@ -83,7 +83,7 @@ typedef struct		s_head
 typedef struct		s_info
 {
 	int			nb_move;
-	int			nb_elem;
+	//int			nb_elem;
 	node		top_curse;
 	t_lst		lst_info;
 }					t_info;
@@ -109,6 +109,7 @@ t_head		*stack_b(void);
 
 void	ft_check_instruct(void);
 int		ft_check_do_instruct(const char *line);
+int		ft_check_undo_instruct(const char *line);
 
 
 /*

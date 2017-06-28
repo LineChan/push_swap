@@ -9,31 +9,38 @@ void			ft_curse_print_instruct(void)
 	int		y;
 	int		parent_x;
 	int		parent_y;
-	node	it;
 
-	it = &INFO;
 	x = 2;
 	y = 3;
 	getmaxyx(CURSE, parent_y, parent_x);
-	mvwprintw(SCORE, y, x, "Start");
+	//it = &INFO;
+	//it = it->next;
+	if ((TOP_CURSE->prev != &INFO) && (TOP_CURSE != &INFO))
+		mvwprintw(SCORE, y, 8, "%s  ", MOVE(TOP_CURSE->prev));
+	x += 10;
+	mvwprintw(SCORE, y, x, "<---- ");
+		x += 10;
 	if (TOP_CURSE == &INFO)
-	{
-		wattron(SCORE, COLOR_PAIR(2));
-		mvwprintw(SCORE, y + 1, x, "%c",'^');
-		wattroff(SCORE, COLOR_PAIR(2));
-	}
-	x = 9;
-	it = it->next;
+		mvwprintw(SCORE, y, x, "start");
+	else
+		mvwprintw(SCORE, y, x, "%s  ", MOVE(TOP_CURSE));
+	x += 10;
+	mvwprintw(SCORE, y, x, " ---->");
+	if (TOP_CURSE != INFO.prev)
+		wprintw(SCORE, "  %s", MOVE(TOP_CURSE->next));
+#if 0
 	while (it != &INFO)
 	{
-		mvwprintw(SCORE, y, x, "%s", MOVE(it));
-		if (TOP_CURSE == it)
-		{
-			wattron(SCORE, COLOR_PAIR(2));
-			mvwprintw(SCORE, y + 1, x, "%c",'^');
-			wattroff(SCORE, COLOR_PAIR(2));
-		}
-		wrefresh(SCORE);
+		/*
+		   mvwprintw(SCORE, y, x, "%s", MOVE(it));
+		   if (TOP_CURSE == it)
+		   {
+		   wattron(SCORE, COLOR_PAIR(2));
+		   mvwprintw(SCORE, y + 1, x, "%c",'^');
+		   wattroff(SCORE, COLOR_PAIR(2));
+		   }
+		   wrefresh(SCORE);
+		   */
 		it = it->next;
 		x += 4;
 		if (x > (parent_x - 4))
@@ -43,5 +50,6 @@ void			ft_curse_print_instruct(void)
 		}
 		//x += 2 + ft_strlen(MOVE(it));
 	}
+#endif
 	return ;
 }
