@@ -78,8 +78,8 @@ Top element on stack_a is read out and selected as a pivot. The pivot is tagged 
 Then we go through stack_a and compare the elements with the pivot. Lower elements are sent to stack_b. When the top of stack_a is on the pivot again, it is pushed to stack_b. This process goes on until stack_a is sorted or if there is a single value remaining.
 
 quick_b routine :
-
 	```C
+
 void	ft_ps_quick_b(void)
 {
 	int	pivot;
