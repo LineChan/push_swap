@@ -2,7 +2,7 @@ PUSH SWAP
 
 # -- Subject --
 
-Push_swap is a __sorting game__ thats requires __two programs__ :
+Push_swap is a *sorting game* thats requires *two programs* :
 - **push_swap** : You only have two stacks to sort the puzzle. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
 - **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
 
