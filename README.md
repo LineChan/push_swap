@@ -39,20 +39,39 @@ Different methods are used according to the number of elements to sort to reach 
 - sort_three sorts 3 element with less than 3 instructions
 - sort_seven sorts 7 elements with less than 12 instructions
 - insert_sort sorts short lists (with less than 20 elements)
-- quick_sort is used for every other lists. Sort 100 elements with less than 900 instructions, 
+- quick_sort is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. This is an average number, see below for further details.
 
--- sort 3 elem with less than 3 moves : sort_three
+Quicksort described step-by-step
+The algorithm is a while loop with 2 algorithms, one called quick_a and the other one quick_b. The loop stops when stack_a is sorted and stack_b is empty or reverse sorted. In the second case, all elements in stack_a are pushed to stack_a.
+quick_a routine :
+Top element on stack_a is read out and selected as a pivot. Then we go through stack_a and compare the elements with the pivot. Lower elements go to stack_b. When the top is on the pivot again, it is push to stack_b. This process goes on until stack_a is sorted or if there are only 2 elements remaining.
+	```C
+void		ft_ps_quick_a(void)
+{
+	int		pivot;
+	int		pushed;
+	node	left;
 
--- sort 7 elem with less than 12 moves : sort_seven (using sort_three)
-
--- sort 20 elem with less than x moves : insert_sort (using sort_three)
-
--- sort 100 elem with less than 900 moves : quick_sort
-
--- sort 500 elems with less than x moves : quick_sort 
-
-
-
+	pushed = 0;
+	while (NB_ELEM_A > 1)
+	{
+		pivot = DATA(HEAD_A.next);
+		SORTED(HEAD_A.next) = 1;
+		left = TOP_A;
+		if (ft_there_is_left_to_sort(&left, &pivot))
+		{
+			ft_push_lower(&left, &pushed, &pivot);
+			if (ft_exec_head_is_sorted(&HEAD_A))
+			{
+				ft_ps_find_shortest_path(&HEAD_A, DATA(HEAD_A.next));
+				break ;
+			}
+		}
+		else
+			ft_stack_a_routine(&pushed, &pivot);
+	}
+}
+```
 
 -- SPEC ---
 
