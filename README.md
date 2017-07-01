@@ -120,6 +120,11 @@ void	ft_quick_select(int *pushed, int *pivot)
 ```
 The process is repeated until a tagged element is met again or if Stack B is empty.
 
+Worse case performance
+This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
+
+I think you should use an
+`<addr>` element here instead.
 -- SPEC ---
 
 ---> example "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
