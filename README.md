@@ -4,8 +4,8 @@ PUSH SWAP
 ============
 
 Push_swap is a sorting game thats requires two programs :
-- push_swap : You only have two stacks to sort the puzzle. At first, a stack (called stack_a) contains a certain amount of unduplicated integers and a second one (stack_b) is empty. The goal is to have all the number sorted in increasing order in stack_a. The output of the program is a list of instructions.
-- checker : read the instructions and execute them. It checks if  stack_a is correctly sorted and stack_b empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
+- push_swap : You only have two stacks to sort the puzzle. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in stack_a. The output of the program is a list of instructions.
+- checker : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
 
 Instructions are pre-defined by the subject and will the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
@@ -30,7 +30,7 @@ Libraries :
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
 	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
 - Sorting methods
-	- [*3-stack based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
+	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 -- Method --
 ============
@@ -43,7 +43,7 @@ Different methods are used according to the number of elements to sort to reach 
 
 Quicksort described step-by-step
 
-The algorithm is a while loop with 2 algorithms, one called quick_a directly followed by another one called quick_b. The loop stops when stack_a is sorted and stack_b is either empty or reverse sorted. In the second case, all elements in stack_b are pushed to stack_a.
+The algorithm is a while loop with 2 algorithms, one called quick_a directly followed by another one called quick_b. The loop stops when Stack A is sorted and Stack B is either empty or reverse sorted. In the second case, all elements in stack_b are pushed back to stack_a.
 
 quick_a routine :
 ```C
@@ -70,12 +70,12 @@ void		ft_ps_quick_a(void)
 			}
 		}
 		else
-			ft_stack_a_routine(&pushed, &pivot);
+			ft_Stack A_routine(&pushed, &pivot);
 	}
 }
 ```
-Top element on stack_a is read out and selected as a pivot. The pivot is tagged as sorted to indicate that it will be pushed to its correct location in stack_b.
-Then we go through stack_a and compare the elements with the pivot. Lower elements are sent to stack_b. When the top of stack_a is on the pivot again, it is pushed to stack_b. This process goes on until stack_a is sorted or if there is a single value remaining.
+Top element on Stack A is read out and selected as a pivot. The pivot is tagged as sorted to indicate that it will be pushed to its correct location in Stack B.
+Then we go through Stack A and compare the elements with the pivot. Lower elements are sent to Stack B. When the top of stack_a is on the pivot again, it is pushed to stack_b. This process goes on until stack_a is sorted or if there is a single value remaining.
 
 quick_b routine :
 ```C
@@ -100,7 +100,7 @@ void	ft_ps_quick_b(void)
 			SORTED(TOP_B) = 1;
 			left = HEAD_B.prev;
 			if (ft_find_upper(&left, &pivot))
-				ft_stack_b_routine(&left, &size, &pivot);
+				ft_Stack B_routine(&left, &size, &pivot);
 			else
 			{
 				ft_exec_pa();
@@ -109,9 +109,9 @@ void	ft_ps_quick_b(void)
 	}
 }
 ```
-We apply the same process to stack_b. However, some things are now different :
-- stack_b now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of stack_b, it is poped to stack_a until there until an untagged element is at the top. This latter element is tagged and used as a pivot.
-- if the section has less than 30 elements (numbers of elements in stack_b between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
+We apply the same process to Stack B. However, some things are now different :
+- Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of stack_b, it is poped to Stack A until there until an untagged element is at the top. This latter element is tagged and used as a pivot.
+- if the section has less than 30 elements (numbers of elements in Stack B between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
 	```C
 void	ft_quick_select(int *pushed, int *pivot)
 {
@@ -127,7 +127,7 @@ void	ft_quick_select(int *pushed, int *pivot)
 		ft_exec_pb();
 }
 ```
-The process is repeated until a tagged element is met again or if stack_b is empty.
+The process is repeated until a tagged element is met again or if Stack B is empty.
 
 -- SPEC ---
 
