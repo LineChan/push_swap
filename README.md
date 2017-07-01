@@ -110,6 +110,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 ## Bonuses :star:
 
 - [x] help option
+- [x] call and caller graphs of the project
 - [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
 - [x] interactive display of both stacks at each step
