@@ -20,7 +20,7 @@ Allowed functions : write, malloc, free, exit
 
 Libraries :
 - libft : personnal library with functions from libc and printf from stdin
-- libst : personnal library with a set of tools to manipulate linux-like linked lists.
+- libst : personnal library with a set of tools to manipulate linux-like linked lists
 - ncurse : for bonuses only
 
 -- Sources --
@@ -50,8 +50,8 @@ quick_a routine :
 
 void		ft_ps_quick_a(void)
 {
-	int		pivot;
-	int		pushed;
+	int	pivot;
+	int	pushed;
 	node	left;
 
 	pushed = 0;
