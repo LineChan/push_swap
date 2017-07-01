@@ -98,13 +98,13 @@ void	ft_quick_select(int *pushed, int *pivot)
 			(ft_ps_head_is_reverse_sorted(&HEAD_B) || !NB_ELEM_B))
 		return ;
 	
-	/* Pushback everything to Stack B in the right order */
+	/* Pushback everything to Stack B */
 	while (DATA(TOP_A) < *pivot)
 		ft_exec_pb();
 }
 ```
 
-Worse case performance
+#### Worse case performance
 This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
 
 ## Specs
