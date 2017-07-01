@@ -114,8 +114,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 - [x] option to clear up all redondant moves (ex : pb then pa)
 - [x] interactive display of both stacks at each step
 - [x] display of the instrucstions
-- [x] write instructions in a .txt file and read from
----> -x : visual mode
+- [x] write instructions in a .txt file and read from it
 
 #  Sources :bookmark_tabs: 
 
