@@ -20,17 +20,8 @@ Allowed functions : write, malloc, free, exit
 
 Libraries :
 - libft : personnal library with functions from libc and printf from stdin
-- libst : personnal library with a set of tools to manipulate linux-like linked lists
+- libst : personnal library with a set of tools to manipulate Linux-like linked lists
 - ncurse : for bonuses only
-
--- Sources --
-=============
-
-- Linux-like linked list : 
-	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
-	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
-- Sorting methods
-	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 -- Method --
 ============
@@ -143,6 +134,15 @@ The process is repeated until a tagged element is met again or if Stack B is emp
 
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
+
+-- Sources --
+=============
+
+- Linux-like linked list : 
+	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
+	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
+- Sorting methods
+	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 
 
