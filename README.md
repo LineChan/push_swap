@@ -146,5 +146,5 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 
 
-#  :100: Result
+#  Result
 Peer evaluation not done yet.
