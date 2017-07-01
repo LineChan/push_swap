@@ -107,7 +107,7 @@ void	ft_quick_select(int *pushed, int *pivot)
 ### Worse case performance :boom:
 This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
 
-## Bonuses :star:
+## Bonuses :star2:
 
 - [x] help option
 - [x] call and caller graphs of the project
