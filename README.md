@@ -107,18 +107,9 @@ void	ft_quick_select(int *pushed, int *pivot)
 ### Worse case performance :boom:
 This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
 
-## Specs
-
----> example "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
-
----> Linux like linked list (src : //website )
-
-
-
-
-
 ## Bonuses :star:
 
+---> example "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
 
