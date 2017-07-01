@@ -24,5 +24,9 @@ void						ft_ps_sort_seven(void)
 	ft_ps_sort_three();
 	while (NB_ELEM_B)
 		ft_ps_find_where_to_push(&HEAD_A, DATA(TOP_B));
-	ft_exec_head_is_sorted(&HEAD_A);
+	if (TOP_A != HEAD_A.next)
+	{
+		while ((DATA(TOP_A) > DATA(TOP_A->prev)) && (TOP_A->prev != &HEAD_A))
+			ft_exec_rra();
+	}
 }

@@ -24,7 +24,7 @@ int					main(int ac, char **av)
 	{
 		--ac;
 		++av;
-		if (ac < 3)
+		if (ac < 2)
 			EXIT_FAIL("Error (no argument)");
 		else
 		++clean;

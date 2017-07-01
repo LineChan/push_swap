@@ -70,13 +70,10 @@ static void		ft_convert_arg(const char *s)
 
 void			ft_exec_parse(int ac, char **av)
 {
-	int		n;
-
-	n = 0;
-	while (n < ac)
+	while (ac)
 	{
 		ft_convert_arg(*av);
 		++av;
-		++n;
+		--ac;
 	}
 }
