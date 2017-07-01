@@ -44,6 +44,8 @@ void				ft_stack_b_routine(node *left, int *size, int *pivot)
 		ft_exec_pa();
 		ft_ps_find_shortest_path(&HEAD_A, DATA(HEAD_A.next));
 		ft_ps_find_shortest_path(&HEAD_B, DATA(HEAD_B.next));
+			if (DATA(TOP_A) > DATA(TOP_A->next))
+				ft_exec_sa();
 		ft_exec_pa();
 	}
 }
@@ -60,7 +62,9 @@ void				ft_ps_quick_b(void)
 			return ;
 		pivot = DATA(TOP_B);
 		if (SORTED(TOP_B))
+		{
 			ft_exec_pa();
+		}
 		else
 		{
 			SORTED(TOP_B) = 1;
@@ -68,7 +72,9 @@ void				ft_ps_quick_b(void)
 			if (ft_find_upper(&left, &pivot))
 				ft_stack_b_routine(&left, &size, &pivot);
 			else
+			{
 				ft_exec_pa();
+			}
 		}
 	}
 }

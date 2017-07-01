@@ -30,7 +30,7 @@ Libraries :
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
 	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
 - Sorting methods
-	- [*3-stack-based  algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
+	- [*3-stack based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 -- METHOD --
 

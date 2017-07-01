@@ -65,7 +65,10 @@ void			ft_ps_quick_a(void)
 		{
 			ft_push_lower(&left, &pushed, &pivot);
 			if (ft_exec_head_is_sorted(&HEAD_A))
+			{
+				ft_ps_find_shortest_path(&HEAD_A, DATA(HEAD_A.next));
 				break ;
+			}
 		}
 		else
 			ft_stack_a_routine(&pushed, &pivot);
