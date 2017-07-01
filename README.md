@@ -17,7 +17,7 @@ The instruction is ignored if the instruction cannot be executed (for instance i
 Allowed functions : write, read, malloc, free, exit
 
 ### Libraries :books:
-- **libft** : personnal library with functions from libc.h and printf from stdio.h
+- **libft** : personnal library with functions from libc.h (printf from stdio.h for instance)
 - **libst** : personnal library with a set of tools to manipulate Linux-like linked lists
 - **curse** : for bonuses only
 
