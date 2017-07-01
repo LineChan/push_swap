@@ -75,7 +75,58 @@ void		ft_ps_quick_a(void)
 }
 ```
 Top element on stack_a is read out and selected as a pivot. The pivot is tagged as sorted to indicate that it will be pushed at its correct location in stack_b.
-Then we go through stack_a and compare the elements with the pivot. Lower elements are sent to stack_b. When the top of stack_a is on the pivot again, it is push to stack_b. This process goes on until stack_a is sorted or if there is a single value remaining.
+Then we go through stack_a and compare the elements with the pivot. Lower elements are sent to stack_b. When the top of stack_a is on the pivot again, it is pushed to stack_b. This process goes on until stack_a is sorted or if there is a single value remaining.
+
+quick_b routine :
+	```C
+void	ft_ps_quick_b(void)
+{
+	int	pivot;
+	int	size;
+	node	left;
+
+	while (NB_ELEM_B)
+	{
+		if (ft_ps_head_is_reverse_sorted(&HEAD_B))
+			return ;
+		pivot = DATA(TOP_B);
+		if (SORTED(TOP_B))
+		{
+			ft_exec_pa();
+		}
+		else
+		{
+			SORTED(TOP_B) = 1;
+			left = HEAD_B.prev;
+			if (ft_find_upper(&left, &pivot))
+				ft_stack_b_routine(&left, &size, &pivot);
+			else
+			{
+				ft_exec_pa();
+			}
+		}
+	}
+}
+```
+We apply the same process to stack_b. However, some things are now different :
+- stack_b now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of stack_b, it is poped to stack_a until there until an untagged element is at the top. This latter element is tagged and used as a pivot.
+- if the section has less than 30 elements (numbers of elements in stack_b between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
+	```C
+void	ft_quick_select(int *pushed, int *pivot)
+{
+	while (*pushed)
+	{
+		ft_ps_push_max(&HEAD_B, *pushed);
+		--*pushed;
+	}
+	if (ft_exec_head_is_sorted(&HEAD_A) &&
+			(ft_ps_head_is_reverse_sorted(&HEAD_B) || !NB_ELEM_B))
+		return ;
+	while (DATA(TOP_A) ^ *pivot)
+		ft_exec_pb();
+}
+```
+The process is repeated until a tagged element is met again or if stack_b is empty.
 
 -- SPEC ---
 
