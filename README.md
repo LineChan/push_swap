@@ -79,7 +79,7 @@ This process goes on until Stack A is sorted or if there is a single value remai
 ### quick_b routine
 
 We apply the same process to Stack B. However, two things are now different :
-- Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is poped to Stack A until there until an untagged element is at the top. This latter element is tagged and used as a pivot.
+- Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is poped to Stack A until there until an untagged element is at the top. This latter element is tagged and used as a pivot. The process is repeated until a tagged element is met again or if Stack B is empty.
 - if the section has less than 30 elements (numbers of elements in Stack B between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
 ```C
 void	ft_quick_select(int *pushed, int *pivot)
@@ -101,7 +101,6 @@ void	ft_quick_select(int *pushed, int *pivot)
 		ft_exec_pb();
 }
 ```
-The process is repeated until a tagged element is met again or if Stack B is empty.
 
 Worse case performance
 This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
