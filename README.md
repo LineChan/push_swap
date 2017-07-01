@@ -1,6 +1,6 @@
 PUSH SWAP 
 
-# -- Subject --
+# -- Subject -- :pushpin:
 
 Push_swap is a sorting game thats requires *two programs* :
 - **push_swap** : You only have two stacks to sort the puzzle. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
@@ -17,7 +17,7 @@ The instruction is ignored if the instruction cannot be executed (for instance i
 
 Allowed functions : write, malloc, free, exit
 
-### Libraries :orange_book:
+### Libraries :books:
 - **libft** : personnal library with functions from libc and printf from stdin
 - **libst** : personnal library with a set of tools to manipulate Linux-like linked lists
 - **ncurse** : for bonuses only
@@ -136,7 +136,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
 
-# -- Sources --
+# -- Sources -- :bookmark_tabs:
 
 - Linux-like linked list : 
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
@@ -146,5 +146,5 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 
 
-# -- Final --
+# -- Result -- :100:
 Peer evaluation not done yet.
