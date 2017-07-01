@@ -46,7 +46,9 @@ void		ft_ps_quick_a(void)
 	pushed = 0;
 	while (NB_ELEM_A > 1)
 	{
+		/* Top element on Stack A is selected as pivot*/
 		pivot = DATA(HEAD_A.next);
+		/* It is also tagged as SORTED to indicate it will be pushed at its correct  location on Stack B*/
 		SORTED(HEAD_A.next) = 1;
 		left = TOP_A;
 		if (ft_there_is_left_to_sort(&left, &pivot))
@@ -63,7 +65,6 @@ void		ft_ps_quick_a(void)
 	}
 }
 ```
-Top element on Stack A is read out and selected as a pivot. The pivot is tagged as sorted to indicate that it will be pushed to its correct location in Stack B.
 Then we go through Stack A and compare the elements with the pivot. Lower elements are sent to Stack B. When the top of Stack A is on the pivot again, it is pushed to Stack B. This process goes on until Stack A is sorted or if there is a single value remaining.
 
 ### quick_b routine
