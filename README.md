@@ -2,7 +2,7 @@ PUSH SWAP
 
 # -- Subject --
 
-Push_swap is a sorting game thats requires two programs :
+Push_swap is a __sorting game__ thats requires __two programs__ :
 - **push_swap** : You only have two stacks to sort the puzzle. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
 - **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
 
@@ -18,17 +18,17 @@ The instruction is ignored if the instruction cannot be executed (for instance i
 Allowed functions : write, malloc, free, exit
 
 ## Libraries :
-- libft : personnal library with functions from libc and printf from stdin
-- libst : personnal library with a set of tools to manipulate Linux-like linked lists
-- ncurse : for bonuses only
+- **libft** : personnal library with functions from libc and printf from stdin
+- **libst** : personnal library with a set of tools to manipulate Linux-like linked lists
+- **ncurse** : for bonuses only
 
 # -- Method --
 
 Different methods are used according to the number of elements to sort to reach the objectives asked during the peer-correction.
-- sort_three sorts 3 element with less than 3 instructions
-- sort_seven sorts 7 elements with less than 12 instructions
-- insert_sort sorts short lists (with less than 20 elements)
-- quick_sort is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. This is an average number, see below for further details.
+- **sort_three** sorts 3 element with less than 3 instructions
+- **sort_seven** sorts 7 elements with less than 12 instructions
+- **insert_sort** sorts short lists (with less than 20 elements)
+- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. This is an average number, see below for further details.
 
 ## Quicksort described step-by-step
 
