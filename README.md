@@ -36,10 +36,11 @@ Libraries :
 ============
 
 Different methods are used according to the number of elements to sort to reach the objectives asked during the peer-correction.
-	- sort_three sorts 3 element with less than 3 instructions
-	- sort_seven sorts 7 elements with less than 12 instructions
-	- insert_sort sorts short lists (with less than 20 elements)
-	- quick_sort is used for every other lists. Sort 100 elements with less than 900 instructions, 
+- sort_three sorts 3 element with less than 3 instructions
+- sort_seven sorts 7 elements with less than 12 instructions
+- insert_sort sorts short lists (with less than 20 elements)
+- quick_sort is used for every other lists. Sort 100 elements with less than 900 instructions, 
+
 -- sort 3 elem with less than 3 moves : sort_three
 
 -- sort 7 elem with less than 12 moves : sort_seven (using sort_three)
