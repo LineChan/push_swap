@@ -24,7 +24,7 @@ Allowed functions : write, malloc, free, exit
 
 #  Method 
 
-Different methods are used according to the number of elements to sort to reach the objectives asked during the peer-correction.
+Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
 - **sort_three** sorts 3 element with less than 3 instructions
 - **sort_seven** sorts 7 elements with less than 12 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
