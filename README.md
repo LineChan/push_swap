@@ -45,7 +45,8 @@ Quicksort described step-by-step
 The algorithm is a while loop with 2 algorithms, one called quick_a and the other one quick_b. The loop stops when stack_a is sorted and stack_b is empty or reverse sorted. In the second case, all elements in stack_a are pushed to stack_a.
 quick_a routine :
 Top element on stack_a is read out and selected as a pivot. Then we go through stack_a and compare the elements with the pivot. Lower elements go to stack_b. When the top is on the pivot again, it is push to stack_b. This process goes on until stack_a is sorted or if there are only 2 elements remaining.
-	```C
+```C
+
 void		ft_ps_quick_a(void)
 {
 	int		pivot;
