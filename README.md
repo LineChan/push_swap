@@ -46,11 +46,13 @@ void		ft_ps_quick_a(void)
 	pushed = 0;
 	while (NB_ELEM_A > 1)
 	{
-		// Top element on Stack A is selected as pivot
+		/* Top element on Stack A is selected as pivot */
 		pivot = DATA(HEAD_A.next);
+	
 		/* It is also tagged as SORTED to indicate it will be pushed
 		 at its correct  location on Stack B */
 		SORTED(HEAD_A.next) = 1;
+
 		left = TOP_A;
 		if (ft_there_is_left_to_sort(&left, &pivot))
 		{
