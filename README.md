@@ -17,7 +17,7 @@ The instruction is ignored if the instruction cannot be executed (for instance i
 
 Allowed functions : write, malloc, free, exit
 
-### Libraries
+### Libraries :orange_book:
 - **libft** : personnal library with functions from libc and printf from stdin
 - **libst** : personnal library with a set of tools to manipulate Linux-like linked lists
 - **ncurse** : for bonuses only
