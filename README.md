@@ -131,7 +131,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 
 
-## :sparkles: Bonuses 
+## Bonuses :sparkles: 
 
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
