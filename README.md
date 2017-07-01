@@ -1,6 +1,6 @@
 PUSH SWAP 
 
-#  Subject  :pushpin:
+#  :pushpin: Subject  
 
 Push_swap is a sorting game thats requires *two programs* :
 - **push_swap** : You only have two stacks to sort the puzzle. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
@@ -131,12 +131,12 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 
 
-## Bonuses :sparkles:
+## :sparkles: Bonuses 
 
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
 
-# Sources :bookmark_tabs:
+#  :bookmark_tabs: Sources
 
 - Linux-like linked list : 
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
