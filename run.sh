@@ -22,6 +22,6 @@ if [ ! -f "push_swap" ] || [ ! -f "checker" ]; then
 fi
 
 ARG="$(ruby -e "puts ($MIN..$MAX).to_a.shuffle.join(' ')")";
-time ./push_swap "-clean" $ARG | ./checker $ARG
+time ./push_swap "--clean" $ARG | ./checker $ARG
 echo "With list:";
 echo "$ARG";

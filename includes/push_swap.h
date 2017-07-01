@@ -40,7 +40,6 @@
 # define HEAD_A			(stack_a()->lst_head)
 # define HEAD_B			(stack_b()->lst_head)
 # define INFO			(push_swap()->lst_info)
-# define INFO_SAVE		(push_swap_save()->lst_info)
 
 # define TOP_A			(stack_a()->top)
 # define TOP_B			(stack_b()->top)
@@ -67,7 +66,6 @@ typedef struct		s_head
 typedef struct		s_info
 {
 	int			nb_move;
-	//int			nb_elem;
 	node		top_curse;
 	t_lst		lst_info;
 }					t_info;
@@ -99,6 +97,7 @@ int		ft_check_undo_instruct(const char *line);
 void		ft_exec_parse(int ac, char **av);
 void		ft_exec_push(int nb);
 void		ft_exec_add_move(char const *move);
+void		ft_exec_help(void);
 int			ft_exec_head_is_sorted(node head);
 
 void		ft_exec_ra(void);
@@ -118,15 +117,6 @@ void		ft_print(node head);
 void		ft_print_ab(char const *str);
 void		ft_print_result_ps(void);
 void		ft_print_result_list(node it);
-//
-
-
-/*
-void		ft_exec_setup(int **array);
-void		ft_exec_init(void);
-*/
-
-
 
 /*
 ** Push Swap prototypes
@@ -143,81 +133,27 @@ void		ft_ps_clean_result(void);
 
 void		ft_ps_find_shortest_path(node head, int ref);
 void		ft_ps_find_where_to_push(node head, int ref);
+void		ft_ps_push_max(node head, int len);
 int			ft_ps_count_step(node head, int ref);
 int			ft_ps_head_is_reverse_sorted(node head);
 
-
-//
-
-
-# define PRINT_A                                                                                                                \
-	do {                                                                                                                                \
-		ft_printf("Stack A  \t{GREEN:-------->}    ");        \
-		ft_lst_foreach(&HEAD_A, &ft_print);                                                         \
-		ft_printf("\n");                                                                         \
-	} while (0)
-
-# define PRINT_B                                                                                                                \
-	do {                                                                                                                                \
-		ft_printf("Stack B  \t{GREEN:-------->}    ");        \
-		ft_lst_foreach(&HEAD_B, &ft_print);                                                         \
-		ft_printf("\n");                                                                        \
-	} while (0)
 /*
-void		ft_ps_reverse_sort(node head);
-void		ft_ps_merge_sort_tmp(node head);
-void		ft_ps_merge_sort(void);
+** Curses
 */
-
-
-
-
-
-
-//int			ft_is_left(node *left, int *pitch, node *pivot);
-void		ft_ps_push_max(node head, int len); // quicksort
-
-
-
-/*
-typedef struct			s_checker_exec
-{
-	char const			*input;
-	void				(*func)(void);
-}						t_checker_exec;
-*/
-
-/*
-**	ncurses
-*/
-
 # include "curses.h"
-# include "ncurses.h"
+# define CURSE_MODE		ft_curse_sig()->ncurse_mode
+# define CURSE			ft_curse_sig()->win
+# define SCORE			ft_score_sig()->win
+
 typedef struct			s_curse_manager
 {
 	int 				ncurse_mode;
 	WINDOW				*win;
 }						t_curse_manager;
 
-#define CURSE_MODE		ft_curse_sig()->ncurse_mode
-#define CURSE			ft_curse_sig()->win
-//#define CURSE(member)	ft_curse_sig()->member
-#define SCORE			ft_score_sig()->win
-//#define SCORE(member)	ft_score_sig()->member
-# define PRINTW_A						\
-	do {											\
-		ft_curse_display(CURSE, "Stack A\t");		\
-		ft_lst_foreach(&HEAD_A, &ft_mvprint);		\
-	} while (0)										\
-
-# define PRINTW_B								\
-	do {											\
-		ft_curse_display(CURSE, "Stack B\t");		\
-		ft_lst_foreach(&HEAD_B, &ft_mvprint);		\
-	} while (0)										\
-
 t_curse_manager			*ft_curse_sig(void);
 t_curse_manager			*ft_score_sig(void);
+
 void					ft_curse_del(void);
 void					ft_curse_instruct(void);
 void					ft_curse_do_instruct(void);
@@ -225,9 +161,4 @@ void					ft_curse_do_instruct(void);
 void					ft_curse_print_instruct(void);
 void					ft_curse_print_stack(void);
 void					ft_curse_draw_border(WINDOW *screen);
-//
-int						ft_exec_instruct(char const *line);
-void					ft_curse_init(void);
-void					ft_mvprint(node it);
-void					ft_curse_display(WINDOW *win, char const *message);
 #endif

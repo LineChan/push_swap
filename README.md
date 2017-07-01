@@ -15,12 +15,12 @@ There are 4 types of instructions :
 
 The instruction is ignored if the instruction cannot be executed (for instance if the stack is empty).
 
-Allowed functions : write, malloc, free, exit
+Allowed functions : write, read, malloc, free, exit
 
 ### Libraries :books:
 - **libft** : personnal library with functions from libc and printf from stdin
 - **libst** : personnal library with a set of tools to manipulate Linux-like linked lists
-- **ncurse** : for bonuses only
+- **curse** : for bonuses only
 
 #  Method 
 
@@ -109,14 +109,14 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 ## Bonuses :star2:
 
-- [x] help option
+- [x] help page : use ./push_swap --help
 - [x] call and caller graphs of the project
 - [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
 - [x] interactive display of both stacks at each step
 - [x] instructions display
 - [x] write instructions in a .txt file and read from it
-- [x] short script to execute quickly push_swap then checker with random numbers
+- [x] short script to execute quickly push_swap then checker with random numbers and shows some info (OK / KO, time, initial list)
 
 #  Sources :bookmark_tabs: 
 

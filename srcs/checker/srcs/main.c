@@ -9,6 +9,11 @@ int				main(int ac, char **av)
 		return (0);
 	++av;
 	--ac;
+	if (!ft_strcmp("--help", *av))
+	{
+		ft_exec_help();
+		return (0);
+	}
 	if (!ft_strcmp("-x", *av))
 	{
 		CURSE_MODE =1;

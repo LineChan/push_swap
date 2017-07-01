@@ -15,6 +15,20 @@ int					main(int ac, char **av)
 	--ac;
 	clean = 0;
 	x = 0;
+	if (!ft_strcmp("--help", *av))
+	{
+		ft_exec_help();
+		return (0);
+	}
+	if (!ft_strcmp("--clean", *av))
+	{
+		--ac;
+		++av;
+		if (!ac)
+			EXIT_FAIL("Error (no argument)");
+		else
+		++clean;
+	}
 	if (!ft_strcmp("-x", *av))
 	{
 		--ac;
@@ -23,15 +37,6 @@ int					main(int ac, char **av)
 			EXIT_FAIL("Error (no argument)");
 		else
 			x = 1;
-	}
-	if (!ft_strcmp("-clean", *av))
-	{
-		--ac;
-		++av;
-		if (!ac)
-			EXIT_FAIL("Error (no argument)");
-		else
-		++clean;
 	}
 	ft_exec_parse(ac, av);
 	ft_ps_sort();
