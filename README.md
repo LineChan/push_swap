@@ -109,9 +109,9 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 ## Bonuses :star:
 
-[x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
-[x] option to clear up all redondant moves (ex : pb then pa)
-[x] 
+- [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
+- [x] option to clear up all redondant moves (ex : pb then pa)
+- [x] display of both stacks at each step
 ---> -x : visual mode
 
 #  Sources :bookmark_tabs: 
