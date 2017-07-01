@@ -61,7 +61,7 @@ void		ft_ps_quick_a(void)
 			}
 		}
 		else
-			ft_Stack A_routine(&pushed, &pivot);
+			ft_stack_a_routine(&pushed, &pivot);
 	}
 }
 ```
@@ -91,7 +91,7 @@ void	ft_ps_quick_b(void)
 			SORTED(TOP_B) = 1;
 			left = HEAD_B.prev;
 			if (ft_find_upper(&left, &pivot))
-				ft_Stack B_routine(&left, &size, &pivot);
+				ft_stack_b_routine(&left, &size, &pivot);
 			else
 			{
 				ft_exec_pa();
