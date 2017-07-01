@@ -121,9 +121,7 @@ The process is repeated until a tagged element is met again or if Stack B is emp
 Worse case performance
 This quicksort-like algorithm seems to share the advantages and disavantages than Hoare’s Quicksort. Best cases occurs when the first pivot breaks Stack A in halves (or close to) and worse performances occur when elements are almost in order or reverse order.
 
-I think you should use an
-`<addr>` element here instead.
--- SPEC ---
+## Specs
 
 ---> example "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 
@@ -133,13 +131,12 @@ I think you should use an
 
 
 
--- BONUS -- 
+## Bonuses
 
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
 
--- Sources --
-=============
+# -- Sources --
 
 - Linux-like linked list : 
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
@@ -149,6 +146,5 @@ I think you should use an
 
 
 
--- RESULTS - FINAL GRADE ? --
-=============================
+# -- Final --
 Peer evaluation not done yet.
