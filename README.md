@@ -1,6 +1,10 @@
 PUSH SWAP 
 
 -- SUBJECT --
+============
+
+Push_swap is a sorting game thats requires two programs :
+- push_swap : You only have two stacks to sort the puzzle. At first, a stack (called stack_a) contains a certain amount of unduplicated integers and a second one (stack_b) is empty.
 
 
 
