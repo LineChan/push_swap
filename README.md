@@ -1,6 +1,6 @@
 PUSH SWAP 
 
--- SUBJECT --
+-- Subject --
 ============
 
 Push_swap is a sorting game thats requires two programs :
@@ -14,7 +14,7 @@ There are 4 types of instructions :
 - rotate (ra, rb, rr) : first element comes last
 - reverse rotate (rra, rrb, rrr) : last element comes first
 
-If the instruction cannot be executed (for instance if the stack is empty) it is ignored.
+The instruction is ignored if the instruction cannot be executed (for instance if the stack is empty).
 
 Allowed functions : write, malloc, free, exit
 
@@ -23,6 +23,12 @@ Libraries :
 - libst : personnal library with a set of tools to manipulate linux-like linked lists.
 - ncurse : for bonuses only
 
+-- Sources --
+=============
+
+- Linux-like linked list : 
+		- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
+		- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
 
 -- METHOD --
 
