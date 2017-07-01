@@ -1,4 +1,3 @@
-PUSH SWAP 
 
 #   Subject   :pushpin:
 
@@ -26,7 +25,6 @@ Allowed functions : write, read, malloc, free, exit
 
 Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
 - **sort_three** sorts 3 element with less than 3 instructions
-- **sort_seven** sorts 7 elements with less than 12 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
 - **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
 
