@@ -28,7 +28,7 @@ Different methods are used according to the number of elements to sort to reach 
 - **sort_three** sorts 3 element with less than 3 instructions
 - **sort_seven** sorts 7 elements with less than 12 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
-- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. This is an average number, see below for further details.
+- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. This is an average number, see :arrow_down: for further details.
 
 ## Quicksort described step-by-step
 
@@ -109,8 +109,9 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 
 ## Bonuses :star:
 
----> example "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
----> -clean : remove all redondant moves (ex : pb then pa)
+[x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
+[x] option to clear up all redondant moves (ex : pb then pa)
+[x] 
 ---> -x : visual mode
 
 #  Sources :bookmark_tabs: 
