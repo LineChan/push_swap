@@ -113,8 +113,9 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 - [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
 - [x] interactive display of both stacks at each step
-- [x] display of the instrucstions
+- [x] instructions display
 - [x] write instructions in a .txt file and read from it
+- [x] short script to execute quickly push_swap then checker with random numbers
 
 #  Sources :bookmark_tabs: 
 
