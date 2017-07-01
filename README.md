@@ -67,7 +67,7 @@ void		ft_ps_quick_a(void)
 		}
 		else
 		{
-			/* When to top of Stack A is on the pivot again,*/
+			/* When top of Stack A is on the pivot again,*/
 			/* it is pushed to Stack B */
 			ft_stack_a_routine(&pushed, &pivot);
 		}
@@ -77,37 +77,7 @@ void		ft_ps_quick_a(void)
 This process goes on until Stack A is sorted or if there is a single value remaining.
 
 ### quick_b routine
-```C
 
-void	ft_ps_quick_b(void)
-{
-	int	pivot;
-	int	size;
-	node	left;
-
-	while (NB_ELEM_B)
-	{
-		if (ft_ps_head_is_reverse_sorted(&HEAD_B))
-			return ;
-		pivot = DATA(TOP_B);
-		if (SORTED(TOP_B))
-		{
-			ft_exec_pa();
-		}
-		else
-		{
-			SORTED(TOP_B) = 1;
-			left = HEAD_B.prev;
-			if (ft_find_upper(&left, &pivot))
-				ft_stack_b_routine(&left, &size, &pivot);
-			else
-			{
-				ft_exec_pa();
-			}
-		}
-	}
-}
-```
 We apply the same process to Stack B. However, two things are now different :
 - Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is poped to Stack A until there until an untagged element is at the top. This latter element is tagged and used as a pivot.
 - if the section has less than 30 elements (numbers of elements in Stack B between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
