@@ -25,11 +25,13 @@ void			ft_print(node it)
 		ft_printf("%d  ", DATA(it));
 }
 
+/*
 void			ft_print_ab(char const *str)
 {
 	ft_printf("{RED:%s}\n", str);
 	PRINT_A;PRINT_B;
 }
+*/
 
 void		ft_print_result_list(node it)
 {

@@ -22,7 +22,7 @@ int				main(int ac, char **av)
 		ft_check_instruct();
 	else
 		ft_curse_instruct();
-	//ft_printf("{RED:SEGFAULT main}\n");
+	ft_lst_moveto_prev(&HEAD_A, TOP_A);
 	if (ft_exec_head_is_sorted(&HEAD_A) && !NB_ELEM_B)
 		ft_printf("{GREEN:OK}\n");
 	else

@@ -1,7 +1,9 @@
 #include "push_swap.h"
 
+/*
 # define NEXT(it, move1, move2) (!ft_strcmp(MOVE(it), move1) && \
 		(!ft_strcmp(MOVE(it->next), move2)))
+*/
 
 /*
  ** Clean results and remove redondant patterns

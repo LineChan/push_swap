@@ -30,18 +30,10 @@ t_curse_manager	*ft_score_sig(void)
 	return (p);
 }
 
-void			ft_del_sig(void)
+void			ft_curse_del(void)
 {
 	t_curse_manager	*p;
 
 	p = ft_curse_sig();
-	nocbreak();
-	echo();
-	keypad(stdscr, false);
-  	nodelay(stdscr, false);
-  	nocbreak();
-  	echo();
-  	endwin();
-	delwin(p->win);
 	ft_memdel((void **)&p);
 }

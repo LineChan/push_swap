@@ -15,6 +15,7 @@ void			ft_curse_draw_border(WINDOW *screen)
 	mvwprintw(screen, 0, 0, "+");
 	mvwprintw(screen, y - 1, 0, "+");
 	mvwprintw(screen, 0, x - 1, "+");
+	mvwprintw(screen, y - 1, x - 1, "+");
 	i = 1;
 	while (i < (y - 1))
 	{

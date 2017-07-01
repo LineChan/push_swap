@@ -37,7 +37,7 @@ void			ft_curse_print_stack(void)
 	}
 	x = 2;
 	y = parent_y;
-	mvwprintw(CURSE, (y >> 1) + 1, x, "Stack B");
+	mvwprintw(CURSE, (y >> 1) + 2, x, "Stack B");
 	wattron(CURSE, COLOR_PAIR(2));
 	wprintw(CURSE, "  ---> ");
 	wattroff(CURSE, COLOR_PAIR(2));
@@ -46,7 +46,7 @@ void			ft_curse_print_stack(void)
 	while (it != &HEAD_B)
 	{
 		(TOP_B == it) ? wattron(CURSE, COLOR_PAIR(5)) : 0;
-		mvwprintw(CURSE, (y >> 1) + 1, x, "%d", MOVE(it));
+		mvwprintw(CURSE, (y >> 1) + 2, x, "%d", MOVE(it));
 		(TOP_B == it) ? wattroff(CURSE, COLOR_PAIR(5)) : 0;
 		refresh();
 		wrefresh(CURSE);

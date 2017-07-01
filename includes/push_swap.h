@@ -31,9 +31,9 @@
 
 # define C_PS(it)		CONTAINEROF(it, t_result, lst)
 # define MOVE(it)		(C_PS(it)->move)
+# define NEXT(i, a, b)	(!ft_strcmp(MOVE(i), a) && !ft_strcmp(MOVE(i->next), b))
 
 # define NB_MOVE		(push_swap()->nb_move)
-//# define NB_ELEM		(push_swap()->nb_elem)
 # define NB_ELEM_A		(stack_a()->nb_elem)
 # define NB_ELEM_B		(stack_b()->nb_elem)
 
@@ -45,22 +45,6 @@
 # define TOP_A			(stack_a()->top)
 # define TOP_B			(stack_b()->top)
 # define TOP_CURSE		(push_swap()->top_curse)
-
-# define PRINT_A														\
-	do {																\
-		ft_printf("Stack A  \t{GREEN:-------->}    ");	\
-		ft_lst_foreach(&HEAD_A, &ft_print); 							\
-		ft_printf("\n"); 									\
-	} while (0)
-
-# define PRINT_B														\
-	do {																\
-		ft_printf("Stack B  \t{GREEN:-------->}    ");	\
-		ft_lst_foreach(&HEAD_B, &ft_print); 							\
-		ft_printf("\n");									\
-	} while (0)
-
-# define PRINT_AB(x)	ft_print_ab(x)
 
 /*
 ** Structure
@@ -93,12 +77,10 @@ typedef struct		s_result
 	char		*move;
 	t_lst		lst;
 }					t_result;
+
 /*
 ** Singletons
 */
-//int			*nb_elem(void);
-
-//int			*clean(void);
 t_info		*push_swap(void);
 t_head		*stack_a(void);
 t_head		*stack_b(void);
@@ -106,7 +88,6 @@ t_head		*stack_b(void);
 /*
 ** Check protoypes
 */
-
 void	ft_check_instruct(void);
 int		ft_check_do_instruct(const char *line);
 int		ft_check_undo_instruct(const char *line);
@@ -117,6 +98,7 @@ int		ft_check_undo_instruct(const char *line);
 */
 void		ft_exec_parse(int ac, char **av);
 void		ft_exec_push(int nb);
+void		ft_exec_add_move(char const *move);
 int			ft_exec_head_is_sorted(node head);
 
 void		ft_exec_ra(void);
@@ -139,9 +121,10 @@ void		ft_print_result_list(node it);
 //
 
 
+/*
 void		ft_exec_setup(int **array);
-void		ft_exec_add_move(char const *move);
 void		ft_exec_init(void);
+*/
 
 
 
@@ -167,6 +150,19 @@ int			ft_ps_head_is_reverse_sorted(node head);
 //
 
 
+# define PRINT_A                                                                                                                \
+	do {                                                                                                                                \
+		ft_printf("Stack A  \t{GREEN:-------->}    ");        \
+		ft_lst_foreach(&HEAD_A, &ft_print);                                                         \
+		ft_printf("\n");                                                                         \
+	} while (0)
+
+# define PRINT_B                                                                                                                \
+	do {                                                                                                                                \
+		ft_printf("Stack B  \t{GREEN:-------->}    ");        \
+		ft_lst_foreach(&HEAD_B, &ft_print);                                                         \
+		ft_printf("\n");                                                                        \
+	} while (0)
 /*
 void		ft_ps_reverse_sort(node head);
 void		ft_ps_merge_sort_tmp(node head);
@@ -222,7 +218,7 @@ typedef struct			s_curse_manager
 
 t_curse_manager			*ft_curse_sig(void);
 t_curse_manager			*ft_score_sig(void);
-void					ft_del_sig(void);
+void					ft_curse_del(void);
 void					ft_curse_instruct(void);
 void					ft_curse_do_instruct(void);
 

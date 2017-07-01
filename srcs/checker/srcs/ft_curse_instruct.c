@@ -22,8 +22,9 @@ static void		ft_curse_intro(const int parent_y,
 	ft_curse_draw_border(CURSE);
 	ft_curse_draw_border(SCORE);
 	refresh();
+	mvwprintw(CURSE, ((parent_y - score_size) >> 1) >> 1, ((parent_x  - 40) >> 1), "Use left or right arrow to do/undo moves");
 mvwprintw(CURSE, (parent_y - score_size) >> 1, (parent_x >> 1) - 14, "Press enter to start sorting");
-	mvwprintw(SCORE, 1, 2, "Number of moves : 0 / %d\n", NB_MOVE);
+	mvwprintw(SCORE, parent_y, 2, "Number of moves : 0 / %d\n", NB_MOVE);
 	refresh();
 	wrefresh(CURSE);
 	wrefresh(SCORE);
@@ -61,7 +62,6 @@ void			ft_curse_instruct(void)
 	ft_curse_intro(parent_y, parent_x, score_size);
 	TOP_CURSE = &INFO;
 	ft_curse_do_instruct();
-	getch();
 	delwin(CURSE);
 	delwin(SCORE);
 	endwin();
