@@ -136,7 +136,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages tha
 ---> -clean : remove all redondant moves (ex : pb then pa)
 ---> -x : visual mode
 
-#  :bookmark_tabs: Sources
+#  Sources :bookmark_tabs: 
 
 - Linux-like linked list : 
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
