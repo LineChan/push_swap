@@ -54,6 +54,8 @@ void		ft_ps_quick_a(void)
 		SORTED(HEAD_A.next) = 1;
 
 		left = TOP_A;
+		/* We go through Stack A and compare elements with the pivot */
+		/* Lower elements are sent to Stack B */
 		if (ft_there_is_left_to_sort(&left, &pivot))
 		{
 			ft_push_lower(&left, &pushed, &pivot);
@@ -64,11 +66,15 @@ void		ft_ps_quick_a(void)
 			}
 		}
 		else
+		{
+			/* When to top of Stack A is on the pivot again,*/
+			/* it is pushed to Stack B */
 			ft_stack_a_routine(&pushed, &pivot);
+		}
 	}
 }
 ```
-Then we go through Stack A and compare the elements with the pivot. Lower elements are sent to Stack B. When the top of Stack A is on the pivot again, it is pushed to Stack B. This process goes on until Stack A is sorted or if there is a single value remaining.
+This process goes on until Stack A is sorted or if there is a single value remaining.
 
 ### quick_b routine
 ```C
