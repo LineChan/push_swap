@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
+
 /*
 ** Execute a move
 **
 ** 1st parameter : move to be executed
 */
-int			ft_check_do_instruct(char const *line)
+int			ft_check_do_instruct(const char *line)
 {
-	//ft_printf("{RED: SEGFAULT DO}\n");
 	if (!ft_strcmp("pa", line))
 		ft_exec_pa();
 	else if (!ft_strcmp("pb", line))

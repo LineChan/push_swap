@@ -13,9 +13,9 @@
 #include "push_swap.h"
 
 /*
-** Execute			push_a (move the 1st node of Stack B to Stack A)
-** 					push_b (move the 1st node of Stack A to Stack B)
-** and add the move to the result linked list
+** Executes			push_a (pop the top of Stack B to Stack A)
+** 					push_b (pop the top of Stack A to Stack B)
+** and adds the move to the instruction list
 */
 void				ft_exec_pa(void)
 {
@@ -26,8 +26,8 @@ void				ft_exec_pa(void)
 		(TOP_B == &HEAD_B) ? (TOP_B = TOP_B->next) : 0;
 		--NB_ELEM_B;
 		++NB_ELEM_A;
-		ft_exec_add_move("pa");
 		TOP_A = TOP_A->prev;
+		ft_exec_add_move("pa");
 	}
 }
 

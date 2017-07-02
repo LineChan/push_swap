@@ -45,7 +45,7 @@ void			ft_ps_select_sort(void)
 	while (len > 3)
 	{
 		ft_push_min();
-		if (ft_exec_head_is_sorted(&HEAD_A))
+		if (ft_exec_head_is_sorted())
 			break ;
 		--len;
 	}

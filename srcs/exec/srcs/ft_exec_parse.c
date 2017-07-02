@@ -68,12 +68,12 @@ static void		ft_convert_arg(const char *s)
 	}
 }
 
-void			ft_exec_parse(int ac, char **av)
+void			ft_exec_parse(int *ac, char **av)
 {
-	while (ac)
+	while (*ac)
 	{
 		ft_convert_arg(*av);
 		++av;
-		--ac;
+		--*ac;
 	}
 }

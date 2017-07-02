@@ -57,6 +57,5 @@ psfclean :
 tests : $(NAME)
 	make -C tests
 
-psre : psfclean ps
 re : fclean all
 .SILENT:

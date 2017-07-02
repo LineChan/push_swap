@@ -20,7 +20,7 @@ int				main(int ac, char **av)
 		++av;
 		--ac;
 	}
-	ft_exec_parse(ac, av);
+	ft_exec_parse(&ac, av);
 	TOP_A = HEAD_A.next;
 	TOP_B = &HEAD_B;
 	if (!CURSE_MODE)
@@ -28,7 +28,7 @@ int				main(int ac, char **av)
 	else
 		ft_curse_instruct();
 	ft_lst_moveto_prev(&HEAD_A, TOP_A);
-	if (ft_exec_head_is_sorted(&HEAD_A) && !NB_ELEM_B)
+	if (ft_exec_head_is_sorted() && !NB_ELEM_B)
 		ft_printf("{GREEN:OK}\n");
 	else
 		ft_printf("{RED:KO}\n");

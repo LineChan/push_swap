@@ -38,6 +38,7 @@
 */
 # include <limits.h>
 
+# define PRINTF(...) (ft_printf(__VA_ARGS__))
 /*
 ** Buffer size - min : 55 (ULL in base 2)
 */

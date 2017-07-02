@@ -1,9 +1,11 @@
 #include "push_swap.h"
 
 /*
+** Adds a move to the instruction list
 **
+** 1st parameter : instructionn to be added
 */
-void			ft_exec_add_move(char const *exec)
+void			ft_exec_add_move(const char *exec)
 {
 	t_result		*new;
 

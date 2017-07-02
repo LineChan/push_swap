@@ -2,8 +2,10 @@
 
 /*
 ** Allocate a new node and add it to the end of Stack A
+**
+** 1st parameter : integer to sort
 */
-void			ft_exec_push(int nb)
+void			ft_exec_push(const int nb)
 {
 	t_stack		*new;
 

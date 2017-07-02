@@ -38,7 +38,7 @@ int					main(int ac, char **av)
 		else
 			x = 1;
 	}
-	ft_exec_parse(ac, av);
+	ft_exec_parse(&ac, av);
 	ft_ps_sort();
 	if (clean)
 		ft_ps_clean_result();

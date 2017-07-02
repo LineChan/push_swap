@@ -45,6 +45,13 @@
 # define TOP_B			(stack_b()->top)
 # define TOP_CURSE		(push_swap()->top_curse)
 
+# define CASE_A (IS_NEG((DATA(TOP_A->next) - DATA(TOP_A))))
+# define CASE_B (IS_NEG((DATA(TOP_A->next->next) - DATA(TOP_A->next))))
+# define CASE_C (IS_NEG((DATA(TOP_A) - DATA(TOP_A->next->next))))
+# define CASE_1 (CASE_A && !CASE_B)
+# define CASE_2 (CASE_C && CASE_B)
+# define CASE_3 (!CASE_A && !CASE_C)
+
 /*
 ** Structure
 */
@@ -90,15 +97,14 @@ void	ft_check_instruct(void);
 int		ft_check_do_instruct(const char *line);
 int		ft_check_undo_instruct(const char *line);
 
-
 /*
 ** Exec prototypes
 */
-void		ft_exec_parse(int ac, char **av);
-void		ft_exec_push(int nb);
-void		ft_exec_add_move(char const *move);
+void		ft_exec_parse(int *ac, char **av);
+void		ft_exec_push(const int nb);
+void		ft_exec_add_move(const char *move);
 void		ft_exec_help(void);
-int			ft_exec_head_is_sorted(node head);
+int			ft_exec_head_is_sorted(void);
 
 void		ft_exec_ra(void);
 void		ft_exec_rb(void);
@@ -112,9 +118,6 @@ void		ft_exec_rra(void);
 void		ft_exec_rrb(void);
 void		ft_exec_rrr(void);
 
-
-void		ft_print(node head);
-void		ft_print_ab(char const *str);
 void		ft_print_result_ps(void);
 void		ft_print_result_list(node it);
 
@@ -123,6 +126,7 @@ void		ft_print_result_list(node it);
 */
 void		ft_ps_sort(void);
 void		ft_ps_sort_three(void);
+
 void		ft_ps_sort_seven(void);
 void		ft_ps_select_sort(void);
 void		ft_ps_quick_sort(void);
@@ -141,9 +145,9 @@ int			ft_ps_head_is_reverse_sorted(node head);
 ** Curses
 */
 # include "curses.h"
-# define CURSE_MODE		ft_curse_sig()->ncurse_mode
-# define CURSE			ft_curse_sig()->win
-# define SCORE			ft_score_sig()->win
+# define CURSE_MODE		(ft_curse_sig()->ncurse_mode)
+# define CURSE			(ft_curse_sig()->win)
+# define SCORE			(ft_score_sig()->win)
 
 typedef struct			s_curse_manager
 {

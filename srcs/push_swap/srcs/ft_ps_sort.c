@@ -6,7 +6,7 @@
 
 void			ft_ps_sort(void)
 {
-	if (ft_exec_head_is_sorted(&HEAD_A) || (NB_ELEM_A == 1))
+	if (ft_exec_head_is_sorted() || (NB_ELEM_A == 1))
 		return ;
 	TOP_A = HEAD_A.next;
 	TOP_B = &HEAD_B;

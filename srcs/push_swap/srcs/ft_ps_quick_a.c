@@ -42,7 +42,7 @@ static void		ft_push_lower(node *left, int *pushed, int *pivot)
 static void		ft_stack_a_routine(int *pushed, int *pivot)
 {
 	ft_ps_find_shortest_path(&HEAD_A, *pivot);
-	if (!(ft_exec_head_is_sorted(&HEAD_A)
+	if (!(ft_exec_head_is_sorted()
 			&& (ft_ps_head_is_reverse_sorted(&HEAD_B) || !NB_ELEM_B)))
 		pushed = 0;
 	if (NB_ELEM_A > 2)
@@ -64,7 +64,7 @@ void			ft_ps_quick_a(void)
 		if (ft_there_is_left_to_sort(&left, &pivot))
 		{
 			ft_push_lower(&left, &pushed, &pivot);
-			if (ft_exec_head_is_sorted(&HEAD_A))
+			if (ft_exec_head_is_sorted())
 			{
 				ft_ps_find_shortest_path(&HEAD_A, DATA(HEAD_A.next));
 				break ;
