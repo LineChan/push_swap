@@ -3,7 +3,7 @@
 /*
 ** Checks if Stack B is reverse sorted
 */
-int				ft_ps_head_is_reverse_sorted(node head)
+int				ft_ps_head_is_reverse_sorted(const node head)
 {
 	node	it;
 

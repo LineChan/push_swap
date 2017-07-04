@@ -15,7 +15,7 @@
 /*
 ** Print functions
 */
-void		ft_print_result_list(node it)
+void		ft_print_result_list(const node it)
 {
 	PRINTF("%s\n", MOVE(it));
 }

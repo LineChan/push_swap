@@ -18,7 +18,7 @@
 ** 1st parameter : list to be pushed
 ** 2nd paremeter : lenght of destination sublist
 */
-void				ft_ps_push_max(node head, int len)
+void				ft_ps_push_max(const node head, const int len)
 {
 	int			ref;
 	int			offset;

@@ -17,7 +17,7 @@
 ** 1st parameter : head of the destination list
 ** 2st parameter : int value of the node to be pushed
 */
-void			ft_ps_find_where_to_push(node head, int ref)
+void			ft_ps_find_where_to_push(const node head, const int ref)
 {
 	int			next;
 	node		it;

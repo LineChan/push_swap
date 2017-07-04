@@ -9,7 +9,6 @@
 /*   Updated: 2017/05/15 13:00:36 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
 /*
@@ -18,16 +17,13 @@
 ** 1st parameter : head of the list to go through
 ** 2nd parameter : integer to find in the list
 */
-
-
-void					ft_ps_find_shortest_path(node head, int ref)
+void					ft_ps_find_shortest_path(const node head, const int ref)
 {
 	int			step;
 
 	step = ft_ps_count_step(head, ref);
 	if (head == &HEAD_B)
 	{
-		//if (step < (NB_ELEM_B - step))
 		if (step < (NB_ELEM_B >> 1))
 			while (DATA(TOP_B) != ref)
 				ft_exec_rb();
@@ -37,7 +33,6 @@ void					ft_ps_find_shortest_path(node head, int ref)
 	}
 	else
 	{
-		//if (step < (NB_ELEM_A - step))
 		if (step < (NB_ELEM_A >> 1))
 			while (DATA(TOP_A) != ref)
 				ft_exec_ra();

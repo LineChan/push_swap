@@ -119,14 +119,13 @@ void		ft_exec_rrb(void);
 void		ft_exec_rrr(void);
 
 void		ft_print_result_ps(void);
-void		ft_print_result_list(node it);
+void		ft_print_result_list(const node it);
 
 /*
 ** Push Swap prototypes
 */
 void		ft_ps_sort(void);
 void		ft_ps_sort_three(void);
-
 void		ft_ps_sort_seven(void);
 void		ft_ps_select_sort(void);
 void		ft_ps_quick_sort(void);
@@ -135,11 +134,11 @@ void		ft_ps_quick_b(void);
 void		ft_quick_select(int *push, int *pivot);
 void		ft_ps_clean_result(void);
 
-void		ft_ps_find_shortest_path(node head, int ref);
-void		ft_ps_find_where_to_push(node head, int ref);
-void		ft_ps_push_max(node head, int len);
-int			ft_ps_count_step(node head, int ref);
-int			ft_ps_head_is_reverse_sorted(node head);
+void		ft_ps_find_shortest_path(const node head, const int ref);
+void		ft_ps_find_where_to_push(const node head, const int ref);
+void		ft_ps_push_max(const node head, const int len);
+int			ft_ps_count_step(const node head, int ref);
+int			ft_ps_head_is_reverse_sorted(const node head);
 
 /*
 ** Curses

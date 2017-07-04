@@ -18,10 +18,10 @@
 ** 1st parameter : head of the list the reference is
 ** 2nd parameter : reference to find
 */
-int					ft_ps_count_step(node head, int ref)
+int					ft_ps_count_step(const node head, const int ref)
 {
-	int                step;
-	node        it;
+	int			step;;
+	node		it;;
 
 	step = 0;
 	if (head == &HEAD_B)
