@@ -93,9 +93,9 @@ t_head		*stack_b(void);
 /*
 ** Check protoypes
 */
-void	ft_check_instruct(void);
-int		ft_check_do_instruct(const char *line);
-int		ft_check_undo_instruct(const char *line);
+void		ft_check_instruct(void);
+int			ft_check_do_instruct(const char *line);
+int			ft_check_undo_instruct(const char *line);
 
 /*
 ** Exec prototypes
@@ -133,7 +133,6 @@ void		ft_ps_quick_a(void);
 void		ft_ps_quick_b(void);
 void		ft_quick_select(int *push, int *pivot);
 void		ft_ps_clean_result(void);
-
 void		ft_ps_find_shortest_path(const node head, const int ref);
 void		ft_ps_find_where_to_push(const node head, const int ref);
 void		ft_ps_push_max(const node head, const int len);
@@ -147,6 +146,7 @@ int			ft_ps_head_is_reverse_sorted(const node head);
 # define CURSE_MODE		(ft_curse_sig()->ncurse_mode)
 # define CURSE			(ft_curse_sig()->win)
 # define SCORE			(ft_score_sig()->win)
+# define SCORE_SIZE		10
 
 typedef struct			s_curse_manager
 {
@@ -160,7 +160,6 @@ t_curse_manager			*ft_score_sig(void);
 void					ft_curse_del(void);
 void					ft_curse_instruct(void);
 void					ft_curse_do_instruct(void);
-
 void					ft_curse_print_instruct(void);
 void					ft_curse_print_stack(void);
 void					ft_curse_draw_border(WINDOW *screen);

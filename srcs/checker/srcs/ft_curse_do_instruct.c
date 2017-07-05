@@ -13,6 +13,7 @@ void			ft_curse_do_instruct(void)
 	int		parent_y;
 
 	i = 0;
+	TOP_CURSE = &INFO;
 	noecho();
 	starting_nb_move = NB_MOVE;
 	keypad(stdscr, TRUE);
