@@ -1,3 +1,0 @@
-norm -> replace multi line define
-prototype -> change to const char, const int etc.
-define -> rename some of them
