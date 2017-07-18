@@ -35,4 +35,5 @@ void		ft_print_result_ps(void)
 		write(fd, "\n", 1);
 		it = it->next;
 	}
+	close(fd);
 }

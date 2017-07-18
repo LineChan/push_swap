@@ -159,8 +159,11 @@ t_curse_manager			*ft_score_sig(void);
 
 void					ft_curse_del(void);
 void					ft_curse_instruct(void);
+void					ft_curse_wait_instruct(void);
 void					ft_curse_do_instruct(void);
 void					ft_curse_print_instruct(void);
 void					ft_curse_print_stack(void);
 void					ft_curse_draw_border(WINDOW *screen);
+
+int						ft_curse_select_instruct(int *ch, const int nb_move);
 #endif

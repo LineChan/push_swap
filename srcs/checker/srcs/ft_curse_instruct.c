@@ -43,7 +43,12 @@ static void			ft_curse_display(void)
 	wrefresh(CURSE);
 	wrefresh(SCORE);
 	ft_curse_intro();
-	ft_curse_do_instruct();
+	noecho();
+	keypad(stdscr, TRUE);
+	TOP_CURSE = &INFO;
+	while (getch() != 10);
+	wclear(CURSE);
+	ft_curse_wait_instruct();
 }
 
 void				ft_curse_instruct(void)
@@ -70,5 +75,5 @@ void				ft_curse_instruct(void)
 	delwin(CURSE);
 	delwin(SCORE);
 	endwin();
-	//close ?
+	close(fd);
 }
