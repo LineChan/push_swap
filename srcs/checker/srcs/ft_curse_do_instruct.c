@@ -25,14 +25,13 @@ void			ft_curse_do_instruct(void)
 	ft_curse_print_stack();
 	wrefresh(CURSE);
 	wrefresh(SCORE);
-	while (TOP_CURSE->next != &INFO)
+	//while (TOP_CURSE->next != &INFO)
+	while (ch != KEY_F(1))
 	{
 		ch = getch();
 		while ((ch != KEY_LEFT) && (ch !=  KEY_RIGHT)
 					&& (ch != KEY_F(1)))
 			ch = getch();
-		if (ch == KEY_F(1))
-			return ;
 		if (ch == KEY_RIGHT)
 		{
 			if (i < starting_nb_move)
@@ -42,7 +41,7 @@ void			ft_curse_do_instruct(void)
 				ft_check_do_instruct(MOVE(TOP_CURSE));
 			}
 		}
-		else
+		else if (i >= 0)
 		{
 			--i;
 			ft_check_undo_instruct(MOVE(TOP_CURSE));

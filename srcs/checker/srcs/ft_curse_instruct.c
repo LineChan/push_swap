@@ -3,7 +3,7 @@
 /*
 ** Checker with visualization
 */
-static void		ft_curse_set_color(void)
+static void			ft_curse_set_color(void)
 {
 	start_color();
 	init_pair(1, COLOR_RED, COLOR_BLACK);
@@ -15,7 +15,7 @@ static void		ft_curse_set_color(void)
 	init_pair(7, COLOR_MAGENTA, COLOR_BLACK);
 }
 
-static void		ft_curse_intro(void)
+static void			ft_curse_intro(void)
 {
 	int		parent_y;
 	int		parent_x;
@@ -34,7 +34,7 @@ mvwprintw(CURSE, (parent_y - SCORE_SIZE) >> 1, (parent_x >> 1) - 14,
 	wrefresh(SCORE);
 }
 
-void			ft_curse_display(void)
+static void			ft_curse_display(void)
 {
 	ft_curse_set_color();
 	ft_curse_draw_border(CURSE);
@@ -46,7 +46,7 @@ void			ft_curse_display(void)
 	ft_curse_do_instruct();
 }
 
-void			ft_curse_instruct(void)
+void				ft_curse_instruct(void)
 {
 	int			parent_x;
 	int			parent_y;
