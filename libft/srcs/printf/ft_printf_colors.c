@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/30 10:58:16 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/02 09:16:15 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/07/29 15:30:53 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ static char const		*g_colors_lst[] =
 	"{GREEN:", "\033[32;1m",
 	"{YELLOW:", "\033[33;1m",
 	"{BLUE:", "\033[34;1m",
-	"{CYAN:", "\033[36;1m",
 	"{red:", "\033[31m",
 	"{green:", "\033[32m",
 	"{yellow:", "\033[33m",
 	"{blue:", "\033[34m",
-	"{cyan:", "\033[36m",
 };
 
 void					ft_printf_colors(char **s, t_struct *arg)

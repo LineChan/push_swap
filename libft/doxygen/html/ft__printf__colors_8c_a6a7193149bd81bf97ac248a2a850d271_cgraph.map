@@ -1,9 +1,0 @@
-<map id="ft_printf_colors" name="ft_printf_colors">
-<area shape="rect" id="node2" href="$ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title="ft_strlen" alt="" coords="350,5,419,31"/>
-<area shape="rect" id="node3" href="$ft__strncmp_8c.html#a9d2fe792187aa4ed08e5864fb2c4d6dc" title="ft_strncmp" alt="" coords="186,36,269,61"/>
-<area shape="rect" id="node4" href="$ft__printf__write__buff_8c.html#a4d23ff0763304b4e401aedde9172a78c" title="ft_printf_write_buff" alt="" coords="162,187,293,212"/>
-<area shape="rect" id="node5" href="$ft__printf__singleton_8c.html#a52cc68b9f9d5b854d0fdb68153580ead" title="ret" alt="" coords="365,148,404,173"/>
-<area shape="rect" id="node7" href="$ft__stpcpy_8c.html#a5327a1207883acf873f3d8ca5fda1d78" title="ft_stpcpy" alt="" coords="190,85,265,111"/>
-<area shape="rect" id="node6" href="$ft__memset_8c.html#ac340ddbfddbbf2c8de3c36f0f28c336d" title="ft_memset" alt="" coords="342,197,426,223"/>
-<area shape="rect" id="node8" href="$ft__memcpy_8c.html#a28cfd23975baf37693e3ddc17815b9ce" title="ft_memcpy" alt="" coords="341,75,427,100"/>
-</map>

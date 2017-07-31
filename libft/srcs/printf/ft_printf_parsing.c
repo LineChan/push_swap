@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:48:33 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/13 10:08:22 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/07/29 15:37:07 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ static void		ft_printf_find_options(char **s, t_struct *arg)
 
 void			ft_printf_parsing(char *s, t_struct *arg)
 {
-	NB_COLOR ^= NB_COLOR;
 	while (*s)
 	{
 		if (*s == '%')

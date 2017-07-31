@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 20:35:16 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/22 14:27:49 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/07/31 12:07:27 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "../liblst/includes/liblst.h"
 # include "../libft/includes/libft.h"
-# include "../libft/includes/debug.h"
 
 /*
 ** For open

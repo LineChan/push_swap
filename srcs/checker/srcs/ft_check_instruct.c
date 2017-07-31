@@ -8,7 +8,7 @@ void			ft_check_instruct(void)
 {
 	char	*line;
 
-	while (get_next_line(0, &line) && ft_strcmp("", line))
+	while ((line = ft_gnt(0, '\n')) && ft_strcmp("", line))
 	{
 		if (!ft_check_do_instruct(line))
 			EXIT_FAIL("Wrong instruction");

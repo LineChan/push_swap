@@ -1,7 +1,0 @@
-<map id="ft_uintlen" name="ft_uintlen">
-<area shape="rect" id="node2" href="$ft__printf_8h.html#a068a28f0d9ce9fc31c0e2075a7185231" title="ft_printf_binary" alt="" coords="138,5,247,31"/>
-<area shape="rect" id="node3" href="$ft__printf_8h.html#ad5ecbd0312bed1ad5521a4c6b5534cd7" title="ft_printf_hexa" alt="" coords="304,107,406,132"/>
-<area shape="rect" id="node4" href="$ft__printf_8h.html#af96a7005b3f51194bb7a8b914e377c35" title="ft_printf_octal" alt="" coords="142,107,243,132"/>
-<area shape="rect" id="node5" href="$ft__printf_8h.html#add6f92f4f074a1014281a1623e27751b" title="ft_printf_pointer" alt="" coords="135,156,249,181"/>
-<area shape="rect" id="node6" href="$ft__printf_8h.html#ab70d9e0319d64c3f6a7e7c66b6dd0822" title="ft_printf_unsigned" alt="" coords="129,205,256,231"/>
-</map>
