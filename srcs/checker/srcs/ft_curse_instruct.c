@@ -57,8 +57,14 @@ void				ft_curse_instruct(void)
 	int			parent_y;
 	char		*line;
 
+<<<<<<< HEAD
 	while ((line = ft_fgnt("result.txt", '\n'))
 				&& ft_strcmp("", line))
+=======
+	//while (get_next_line(fd, &line) && ft_strcmp("", line))
+	while ((line = ft_fgnt("result.txt", '\n'))
+			&& ft_strcmp("", line))
+>>>>>>> dc63d21fa8b1fdeb377dd67bf2050b5508a3eddb
 		ft_exec_add_move(line);
 	initscr();
 	cbreak();
