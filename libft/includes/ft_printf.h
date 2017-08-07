@@ -111,7 +111,6 @@ typedef struct			s_struct
 	int					padd;
 	int					dot;
 	int					neg;
-	int 				fd;
 	int					color_ptr;
 	unsigned long		flag;
 	va_list				ap;
@@ -123,18 +122,10 @@ typedef struct			s_printf
 	void				(*func)(t_struct *);
 }						t_printf;
 
-typedef enum			e_printf_redir
-{
-	ft_stdin = 0,
-	ft_stdout = 1,
-	ft_stderr = 2,
-}						e_printf_redit;
-
 /*
 ** Prototypes
 */
 int						ft_printf(const char *format, ...);
-int						ft_fprintf(int const fd, const char *s, ...);
 int						*ret(void);
 void					ft_printf_write_buff(t_struct *arg);
 int						ft_printf_unicode_string(t_struct *arg, wchar_t wc);

@@ -6,7 +6,7 @@
 #*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/04/17 15:25:36 by mvillemi          #+#    #+#             *#
-#*   Updated: 2017/04/20 10:29:46 by mvillemi         ###   ########.fr       *#
+#*   Updated: 2017/07/31 13:02:19 by mvillemi         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -28,7 +28,7 @@ INCS_FILES			:= $(shell find $(INCS) -type f)
 
 # Compiler and shell
 CC					:= gcc
-CFLAGS				:= -Werror -Wall -Wextra
+CFLAGS				:= -Werror -Wall -Wextra -g
 RM					:= rm -rf
 SIZE				:= $(shell echo "$(shell tput cols) - 16" | bc)
 INCLUDES			:= -I$(INCS)
@@ -58,6 +58,7 @@ $(NAME) : $(OBJS_FILES)
 	ar rc $@ $^
 	printf $(CLEAR)
 	$(PRINT_OK) $(NAME)
+	#mv $(NAME) ../
 
 $(OBJS)/%.o : %.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@ && $(PRINT_KO) $< || exit

@@ -24,22 +24,6 @@ int				ft_printf(const char *s, ...)
 	va_start(arg.ap, s);
 	*ret() = 0;
 	ft_memset((void *)arg.buff, '\0', BUFF_MAX + 1);
-	arg.fd = 1;
-	arg.p = arg.buff;
-	ft_printf_parsing((char *)s, &arg);
-	va_end(ap);
-	return (*ret());
-}
-
-int				ft_fprintf(int const fd, const char *s, ...)
-{
-	va_list		ap;
-	t_struct	arg;
-
-	va_start(arg.ap, s);
-	*ret() = 0;
-	ft_memset((void *)arg.buff, '\0', BUFF_MAX + 1);
-	arg.fd = fd;
 	arg.p = arg.buff;
 	ft_printf_parsing((char *)s, &arg);
 	va_end(ap);

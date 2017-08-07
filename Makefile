@@ -42,7 +42,8 @@ fclean :
 	make -C srcs/exec fclean
 	make -C srcs/checker fclean
 	make -C srcs/push_swap fclean
-	#make -C tests fclean
+	rm -rf checker.dSYM
+	rm -rf push_swap.dSYM
 
 ps :
 	make -C srcs/exec

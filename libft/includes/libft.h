@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:40:53 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/18 09:27:58 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/07/27 18:33:15 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@
 # include <limits.h>
 
 /*
+** For Open and Close
+*/ 
+# include <fcntl.h>
+
+/*
 ** For sizeof and malloc
 */
 # include <stdlib.h>
@@ -34,19 +39,9 @@
 # include "ft_printf.h"
 
 /*
-** get_next_line
-*/
-# include "get_next_line.h"
-
-/*
 ** error
 */
 #include "error.h"
-
-/*
-** assert define
-*/
-#define ASSERT(x)	ft_assert(#x, __FUNCTION__, x);
 
 /*
 ** Number of bits and mask sign
@@ -107,7 +102,6 @@ void			ft_strdel(char **as);
 void			ft_striter(char *s, void (*f)(char*));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			ft_swap(int *a, int *b);
-void			ft_assert(char const *cond_str, char const *from, int cond);
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_atoi(const char *str);
@@ -166,5 +160,14 @@ char			**ft_strsplit(char const *s, char c);
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcat(char *dst, const char *src, size_t n);
 size_t			ft_count_word(const char *str, char c);
+
+/*
+** Variations of get_next_line
+*/
+
+# define GNT_SIZE (1 << 7)
+
+char			*ft_gnt(const int fd, const char token);
+char			*ft_fgnt(const char *line, const char token);
 
 #endif

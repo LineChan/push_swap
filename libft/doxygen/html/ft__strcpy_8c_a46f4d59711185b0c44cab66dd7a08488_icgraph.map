@@ -1,7 +1,0 @@
-<map id="ft_strcpy" name="ft_strcpy">
-<area shape="rect" id="node2" href="$libft_8h.html#aada5f5ba69c0c2c97a1322b4e2554709" title="ft_strdup" alt="" coords="125,56,198,81"/>
-<area shape="rect" id="node5" href="$libft_8h.html#a5c1c26f8be9bc527cfe69a3555124795" title="ft_strjoin" alt="" coords="126,105,198,131"/>
-<area shape="rect" id="node3" href="$get__next__line_8c.html#a2a0cce441220d416c1a7a7c26d87fee2" title="give_line" alt="" coords="246,5,320,31"/>
-<area shape="rect" id="node4" href="$libft_8h.html#ab20831df58070fa98472f95285c72311" title="get_next_line" alt="" coords="368,56,469,81"/>
-<area shape="rect" id="node6" href="$get__next__line_8c.html#a06f312f16c45c42009336d033d5dd6f9" title="read_fd" alt="" coords="250,107,317,132"/>
-</map>

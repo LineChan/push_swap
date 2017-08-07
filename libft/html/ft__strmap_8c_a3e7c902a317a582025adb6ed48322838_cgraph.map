@@ -1,8 +1,0 @@
-<map id="ft_strmap" name="ft_strmap">
-<area shape="rect" id="node2" href="$ft__strnew_8c.html#a75a803747e7ff7d15a9d1faefe45a92b" title="ft_strnew" alt="" coords="130,53,206,79"/>
-<area shape="rect" id="node7" href="$ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title="ft_strlen" alt="" coords="134,103,202,128"/>
-<area shape="rect" id="node3" href="$ft__printf__singleton_8c.html#a52cc68b9f9d5b854d0fdb68153580ead" title="ret" alt="" coords="281,29,320,55"/>
-<area shape="rect" id="node4" href="$ft__memalloc_8c.html#a5d526be072b01f6b566142e40540783f" title="ft_memalloc" alt="" coords="254,79,347,104"/>
-<area shape="rect" id="node5" href="$ft__bzero_8c.html#a5937ab0d08e31d0e3e4a16ec71e293a1" title="ft_bzero" alt="" coords="395,79,464,104"/>
-<area shape="rect" id="node6" href="$ft__memset_8c.html#ac340ddbfddbbf2c8de3c36f0f28c336d" title="ft_memset" alt="" coords="512,79,596,104"/>
-</map>

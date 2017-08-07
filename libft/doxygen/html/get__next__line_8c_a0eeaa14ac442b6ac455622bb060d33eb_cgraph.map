@@ -1,6 +1,0 @@
-<map id="add_new" name="add_new">
-<area shape="rect" id="node2" href="$get__next__line_8c.html#a9886a4182046c3ea93648d4591058a55" title="list_init" alt="" coords="129,5,191,31"/>
-<area shape="rect" id="node3" href="$ft__memalloc_8c.html#a5d526be072b01f6b566142e40540783f" title="ft_memalloc" alt="" coords="239,5,332,31"/>
-<area shape="rect" id="node4" href="$ft__bzero_8c.html#a5937ab0d08e31d0e3e4a16ec71e293a1" title="ft_bzero" alt="" coords="380,5,450,31"/>
-<area shape="rect" id="node5" href="$ft__memset_8c.html#ac340ddbfddbbf2c8de3c36f0f28c336d" title="ft_memset" alt="" coords="498,5,581,31"/>
-</map>

@@ -1,10 +1,10 @@
 #include "push_swap.h"
 
 /*
- ** Draw borders (box) 
- **
- ** 1st parameter : screen where borders are going to be drawn
- */
+** Draw borders of the screen
+**
+** 1st parameter : screen where borders are going to be drawn
+*/
 void			ft_curse_draw_border(WINDOW *screen)
 {
 	int			x;

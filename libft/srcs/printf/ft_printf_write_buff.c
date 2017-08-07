@@ -19,7 +19,7 @@
 
 void			ft_printf_write_buff(t_struct *arg)
 {
-	*ret() += write(arg->fd, arg->buff, SIZE);
+	*ret() += write(1, arg->buff, SIZE);
 	ft_memset((void *)arg->buff, '\0', SIZE);
 	arg->p = arg->buff;
 }

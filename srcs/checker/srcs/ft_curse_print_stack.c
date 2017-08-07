@@ -1,7 +1,7 @@
 #include "push_swap.h"
 
 /*
-**
+** Prints stacks with ncurse
 */
 void			ft_curse_print_stack(void)
 {
@@ -60,5 +60,4 @@ void			ft_curse_print_stack(void)
 	}
 	refresh();
 	wrefresh(CURSE);
-	//sleep(2);
 }

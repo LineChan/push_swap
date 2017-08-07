@@ -6,11 +6,14 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 18:58:14 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/10 11:39:33 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/07 11:26:12 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+/*
+** Singletons
+*/
 
 t_curse_manager	*ft_curse_sig(void)
 {

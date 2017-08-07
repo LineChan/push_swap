@@ -55,13 +55,10 @@ void				ft_curse_instruct(void)
 {
 	int			parent_x;
 	int			parent_y;
-	int			fd;
 	char		*line;
 
-	fd = open("result.txt", O_RDONLY);
-	if (IS_NEG(fd))
-		EXIT_FAIL("File not open");
-	while (get_next_line(fd, &line) && ft_strcmp("", line))
+	while ((line = ft_fgnt("result.txt", '\n'))
+				&& ft_strcmp("", line))
 		ft_exec_add_move(line);
 	initscr();
 	cbreak();
@@ -75,5 +72,4 @@ void				ft_curse_instruct(void)
 	delwin(CURSE);
 	delwin(SCORE);
 	endwin();
-	close(fd);
 }

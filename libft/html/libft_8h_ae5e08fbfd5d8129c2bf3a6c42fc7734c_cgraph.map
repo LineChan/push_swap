@@ -1,9 +1,0 @@
-<map id="ft_itoa" name="ft_itoa">
-<area shape="rect" id="node2" href="$ft__strnew_8c.html#a75a803747e7ff7d15a9d1faefe45a92b" title="ft_strnew" alt="" coords="111,53,186,79"/>
-<area shape="rect" id="node7" href="$ft__itoa_8c.html#a97086d7901cd6979f2e00895b94d8fcc" title="ft_unit" alt="" coords="120,103,178,128"/>
-<area shape="rect" id="node8" href="$ft__itoa_8c.html#a1ab7b101cdf0262667890cdc38940dc1" title="ft_power" alt="" coords="112,152,185,177"/>
-<area shape="rect" id="node3" href="$ft__printf__singleton_8c.html#a52cc68b9f9d5b854d0fdb68153580ead" title="ret" alt="" coords="262,29,300,55"/>
-<area shape="rect" id="node4" href="$ft__memalloc_8c.html#a5d526be072b01f6b566142e40540783f" title="ft_memalloc" alt="" coords="234,79,328,104"/>
-<area shape="rect" id="node5" href="$ft__bzero_8c.html#a5937ab0d08e31d0e3e4a16ec71e293a1" title="ft_bzero" alt="" coords="376,79,445,104"/>
-<area shape="rect" id="node6" href="$ft__memset_8c.html#ac340ddbfddbbf2c8de3c36f0f28c336d" title="ft_memset" alt="" coords="493,79,577,104"/>
-</map>
