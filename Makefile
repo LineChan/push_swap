@@ -9,15 +9,6 @@
 # **************************************************************************** #
 
 NAME			:= push_swap_proj
-PS				:= push_swap
-CK				:= checker
-TEST			:= tests
-
-#Directories
-#Compiler and shell
-CC				:= gcc
-CFLAG			:= -Werror -Wall -Wextra
-RM				:= rm -rf
 
 all: $(NAME)
 
@@ -27,7 +18,6 @@ $(NAME) :
 	make -C srcs/exec
 	make -C srcs/checker 
 	make -C srcs/push_swap
-
 
 clean :
 	make -C libft clean
@@ -55,8 +45,6 @@ psfclean :
 	make -C srcs/checker fclean
 	make -C srcs/push_swap fclean
 
-tests : $(NAME)
-	make -C tests
-
 re : fclean all
+
 .SILENT:
