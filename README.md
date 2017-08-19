@@ -13,7 +13,7 @@ Push_swap is a sorting game that requires *two programs* :
 Instructions are pre-defined by the subject and are the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
 - **push** (pa, pb) : moves the first element of a stack to the beginning of the other one
-  - **swap** (sa, sb, ss) : swap the two first elements of a stack
+ - **swap** (sa, sb, ss) : swap the two first elements of a stack
 - **rotate** (ra, rb, rr) : first element comes last
 - **reverse rotate** (rra, rrb, rrr) : last element comes first
 
