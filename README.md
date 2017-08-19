@@ -112,22 +112,21 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 ## Bonuses :star2:
 
-- [x] help page : use ./push_swap --help
 - [x] call and caller graphs of the project
-	- [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
+- [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
-	- [x] interactive display of both stacks at each step
-	- [x] instructions display
-	- [x] write instructions in a .txt file and read from it
+- [x] interactive display of both stacks at each step
+- [x] instructions display
+- [x] save instructions in a file
 - [x] short script to execute quickly push_swap then checker with random numbers and shows some info (OK / KO, time, initial list)
 
 #  Sources :bookmark_tabs: 
 
-	- Linux-like linked list : 
-	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
-	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
-	- Sorting methods
-	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
+- Linux-like linked list : 
+- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
+- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
+- Sorting methods
+- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 
 # Help
