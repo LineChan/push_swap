@@ -31,11 +31,11 @@ Allowed functions : write, read, malloc, free, exit
 Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
 - **sort_three** sorts 3 element with less than 3 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
-	- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
+- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
 
 ## Quicksort described step-by-step
 
-	The algorithm is a while loop with 2 algorithms, the 1st is called quick_a  and is directly followed by the 2nd one called quick_b. The loop stops when Stack A is sorted and Stack B is either empty or reverse sorted. In the second case, all elements in Stack B are pushed back to Stack A.
+The algorithm is a while loop with 2 algorithms, the 1st is called quick_a  and is directly followed by the 2nd one called quick_b. The loop stops when Stack A is sorted and Stack B is either empty or reverse sorted. In the second case, all elements in Stack B are pushed back to Stack A.
 
 ### quick_a routine
 	```C
