@@ -90,7 +90,6 @@ int			ft_check_undo_instruct(const char *line);
 void		ft_exec_parse(int *ac, char **av);
 void		ft_exec_push(const int nb);
 void		ft_exec_add_move(const char *move);
-void		ft_exec_help(void);
 int			ft_exec_head_is_sorted(void);
 
 void		ft_exec_ra(void);

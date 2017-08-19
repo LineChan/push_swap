@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_initialize_params.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/02/15 01:38:56 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/07/29 15:22:34 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/ft_printf.h"
 
 /*
@@ -6,11 +18,10 @@
 
 void		ft_printf_init_struct(t_struct *arg)
 {
-	arg->type = 0;
-	arg->rdm = 0;
-	arg->padd = 0;
-	arg->dot = 0;
-	arg->neg = 0;
-	arg->flag = 0;
-	NB_COLOR = 0;
+	arg->type ^= arg->type;
+	arg->rdm ^= arg->rdm;
+	arg->padd ^= arg->padd;
+	arg->dot ^= arg->dot;
+	arg->neg ^= arg->neg;
+	arg->flag ^= arg->flag;
 }

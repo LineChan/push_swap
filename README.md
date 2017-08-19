@@ -1,4 +1,9 @@
 
+#   Summary
+* [Subject](#subject)
+* [Method](#method)
+* [Help](#help)
+
 #   Subject   :pushpin:
 
 Push_swap is a sorting game that requires *two programs* :
@@ -8,32 +13,32 @@ Push_swap is a sorting game that requires *two programs* :
 Instructions are pre-defined by the subject and are the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
 - **push** (pa, pb) : moves the first element of a stack to the beginning of the other one
-- **swap** (sa, sb, ss) : swap the two first elements of a stack
-- **rotate** (ra, rb, rr) : first element comes last
-- **reverse rotate** (rra, rrb, rrr) : last element comes first
+					  - **swap** (sa, sb, ss) : swap the two first elements of a stack
+												- **rotate** (ra, rb, rr) : first element comes last
+																			- **reverse rotate** (rra, rrb, rrr) : last element comes first
 
-The instruction is ignored if the instruction cannot be executed (for instance if the stack is empty).
+																												   The instruction is ignored if the instruction cannot be executed (for instance if the stack is empty).
 
-Allowed functions : write, read, malloc, free, exit
+																												   Allowed functions : write, read, malloc, free, exit
 
 ### Libraries :books:
 - **libft** : personnal library with functions from libc.h (printf from stdio.h for instance)
-- **liblst** : personnal library with a set of tools to manipulate Linux-like linked lists
-- **curse** : for bonuses only
+	- **liblst** : personnal library with a set of tools to manipulate Linux-like linked lists
+	- **curse** : for bonuses only
 
 #  Method 
 
-Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
-- **sort_three** sorts 3 element with less than 3 instructions
+	Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
+	- **sort_three** sorts 3 element with less than 3 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
-- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
+	- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
 
 ## Quicksort described step-by-step
 
-The algorithm is a while loop with 2 algorithms, the 1st is called quick_a  and is directly followed by the 2nd one called quick_b. The loop stops when Stack A is sorted and Stack B is either empty or reverse sorted. In the second case, all elements in Stack B are pushed back to Stack A.
+	The algorithm is a while loop with 2 algorithms, the 1st is called quick_a  and is directly followed by the 2nd one called quick_b. The loop stops when Stack A is sorted and Stack B is either empty or reverse sorted. In the second case, all elements in Stack B are pushed back to Stack A.
 
 ### quick_a routine
-```C
+	```C
 
 void		ft_ps_quick_a(void)
 {
@@ -46,9 +51,9 @@ void		ft_ps_quick_a(void)
 	{
 		/* Top element on Stack A is selected as pivot */
 		pivot = DATA(HEAD_A.next);
-	
+
 		/* It is also tagged as SORTED to indicate it will be pushed
-		 at its correct  location on Stack B */
+		   at its correct  location on Stack B */
 		SORTED(HEAD_A.next) = 1;
 
 		left = TOP_A;
@@ -77,25 +82,25 @@ This process goes on until Stack A is sorted or if there is a single value remai
 ### quick_b routine
 
 We apply the same process to Stack B. However, two things are now different :
-	
+
 1. Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is popped to Stack A until an untagged element is at the top. This latter element is tagged and used as a pivot. The process is repeated until a tagged element is met again or if Stack B is empty.
-	
+
 2. If the section has less than 30 elements (numbers of elements in Stack B between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
-```C
+	```C
 void	ft_quick_select(int *pushed, int *pivot)
 {
 	/* Push all the values between two pivots
-	and selects the greastest value each time */
+	   and selects the greastest value each time */
 	while (*pushed)
 	{
 		ft_ps_push_max(&HEAD_B, *pushed);
 		--*pushed;
 	}
-	
+
 	if (ft_exec_head_is_sorted(&HEAD_A) &&
 			(ft_ps_head_is_reverse_sorted(&HEAD_B) || !NB_ELEM_B))
 		return ;
-	
+
 	/* Pushback everything to Stack B */
 	while (DATA(TOP_A) < *pivot)
 		ft_exec_pb();
@@ -109,22 +114,42 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 - [x] help page : use ./push_swap --help
 - [x] call and caller graphs of the project
-- [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
+	- [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
-- [x] interactive display of both stacks at each step
-- [x] instructions display
-- [x] write instructions in a .txt file and read from it
+	- [x] interactive display of both stacks at each step
+	- [x] instructions display
+	- [x] write instructions in a .txt file and read from it
 - [x] short script to execute quickly push_swap then checker with random numbers and shows some info (OK / KO, time, initial list)
 
 #  Sources :bookmark_tabs: 
 
-- Linux-like linked list : 
+	- Linux-like linked list : 
 	- [*Data structure in Linux Kernel*](https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html)
 	- [*Torvalds github*](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
-- Sorting methods
+	- Sorting methods
 	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 
+# Help
+	> ./push_swap [--clean] [-x] [args ...]
+
+**clean** : check for known instruction patterns and delete them
+**x** : write instructions results.txt
+**args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
+
+	> ./checker [-x] [args ...]
+
+**x** : read instructions from a results.txt
+**args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
+	HOW TO USE push_swap with checker
+
+	> ARG="4 67 3 87 23";./push_swap $ARG | ./checker $ARG
+	> ./push_swap --clean 2 6 3 5 7 1 4 | ./checker 2 6 3 5 7 1 4
+
+	> ./push_swap -x 2 6 3 5 && ./checker -x  2 6 3 5
+
+	> ./push_swap --clean -x 2 6 3 5 && ./checker -x  2 6 3 5
 
 #  Result
-Peer evaluation not done yet.
+	Peer evaluation not done yet.
+
