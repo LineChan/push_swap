@@ -23,13 +23,13 @@ Allowed functions : write, read, malloc, free, exit
 
 ### Libraries :books:
 - **libft** : personnal library with functions from libc.h (printf from stdio.h for instance)
-	- **liblst** : personnal library with a set of tools to manipulate Linux-like linked lists
-	- **curse** : for bonuses only
+- **liblst** : personnal library with a set of tools to manipulate Linux-like linked lists
+- **curse** : for bonuses only
 
 #  Method 
 
-	Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
-	- **sort_three** sorts 3 element with less than 3 instructions
+Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
+- **sort_three** sorts 3 element with less than 3 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
 	- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
 
