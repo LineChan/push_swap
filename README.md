@@ -133,13 +133,17 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 	> ./push_swap [--clean] [-x] [args ...]
 
 **clean** : check for known instruction patterns and delete them
+
 **x** : write instructions results.txt
+
 **args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
 
 	> ./checker [-x] [args ...]
 
 **x** : read instructions from a results.txt
+
 **args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
+
 	HOW TO USE push_swap with checker
 
 	> ARG="4 67 3 87 23";./push_swap $ARG | ./checker $ARG
