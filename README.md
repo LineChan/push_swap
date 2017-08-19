@@ -129,7 +129,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 	- [*stack-based algorithms*](http://liacs.leidenuniv.nl/~rijnjnvan/ds2013/assets/opdrachten/opdracht1-stacksorting.pdf)
 
 
-# Help
+# Help :heavy_exclamation_mark:
 	> ./push_swap [--clean] [-x] [args ...]
 	> ./checker [-x] [args ...]
 
