@@ -131,6 +131,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 # Help
 	> ./push_swap [--clean] [-x] [args ...]
+	> ./checker [-x] [args ...]
 
 **clean** : check for known instruction patterns and delete them
 
@@ -138,20 +139,14 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 **args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
 
-	> ./checker [-x] [args ...]
 
-**x** : read instructions from a results.txt
 
-**args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
+> ARG="4 67 3 87 23";./push_swap $ARG | ./checker $ARG
+> ./push_swap --clean 2 6 3 5 7 1 4 | ./checker 2 6 3 5 7 1 4
 
-	HOW TO USE push_swap with checker
+> ./push_swap -x 2 6 3 5 && ./checker -x  2 6 3 5
 
-	> ARG="4 67 3 87 23";./push_swap $ARG | ./checker $ARG
-	> ./push_swap --clean 2 6 3 5 7 1 4 | ./checker 2 6 3 5 7 1 4
-
-	> ./push_swap -x 2 6 3 5 && ./checker -x  2 6 3 5
-
-	> ./push_swap --clean -x 2 6 3 5 && ./checker -x  2 6 3 5
+> ./push_swap --clean -x 2 6 3 5 && ./checker -x  2 6 3 5
 
 #  Result
 Peer evaluation not done yet.
