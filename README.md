@@ -142,6 +142,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 
 > ARG="4 67 3 87 23";./push_swap $ARG | ./checker $ARG
+
 > ./push_swap --clean 2 6 3 5 7 1 4 | ./checker 2 6 3 5 7 1 4
 
 > ./push_swap -x 2 6 3 5 && ./checker -x  2 6 3 5
