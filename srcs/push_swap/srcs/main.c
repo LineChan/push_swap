@@ -15,11 +15,6 @@ int					main(int ac, char **av)
 	--ac;
 	clean = 0;
 	x = 0;
-	if (!ft_strcmp("--help", *av))
-	{
-		ft_exec_help();
-		return (0);
-	}
 	if (!ft_strcmp("--clean", *av))
 	{
 		--ac;
