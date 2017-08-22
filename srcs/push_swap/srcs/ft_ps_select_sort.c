@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 11:58:28 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/10 13:30:36 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:25:10 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void		ft_push_min(void)
 {
 	int		ref;
 	int		offset;
-	node	it;
+	t_lst	*it;
 
 	offset = 0;
 	it = HEAD_A.next;

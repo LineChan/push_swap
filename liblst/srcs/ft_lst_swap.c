@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/17 16:01:05 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/03/25 21:49:14 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:15:23 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@
 ** 2nd parameter : 2nd node
 */
 
-static int			nodes_are_next(node a, node b)
+static int			nodes_are_next(t_lst *a, t_lst *b)
 {
 	return ((a->next == b && b->prev == a) || (a->prev == b && b->next == a));
 }
 
-void				ft_lst_swap(node a, node b)
+void				ft_lst_swap(t_lst *a, t_lst *b)
 {
-	node tmp[4];
+	t_lst	*tmp[4];
 
 	tmp[0] = a->prev;
 	tmp[1] = b->prev;
@@ -54,7 +54,7 @@ void				ft_lst_swap(node a, node b)
 
 	if (nodes_are_next(a, b))
 	{
-		a->prev =  tmp[2];
+		a->prev = tmp[2];
 		b->prev = tmp[0];
 		a->next = tmp[3];
 		b->next = tmp[1];

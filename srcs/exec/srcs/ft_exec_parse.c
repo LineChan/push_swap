@@ -36,7 +36,7 @@ static int		ft_push_swap_atoi(const char **s)
 static int		ft_valid_number(const char **s)
 {
 	int			nb;
-	node		it;
+	t_lst		*it;
 
 	nb = ft_push_swap_atoi(s);
 	if (NB_ELEM_A)

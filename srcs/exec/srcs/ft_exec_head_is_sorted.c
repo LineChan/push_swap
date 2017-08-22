@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 19:01:44 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/10 09:54:34 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:21:55 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 int				ft_exec_head_is_sorted(void)
 {
-	node	it;
+	t_lst	*it;
 
 	it = HEAD_A.next;
 	while (it->next != &HEAD_A)

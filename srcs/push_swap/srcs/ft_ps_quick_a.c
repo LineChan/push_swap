@@ -3,7 +3,7 @@
 /*
 ** 1st part of quicksort routine
 */
-static int		ft_there_is_left_to_sort(node *left, int *pivot)
+static int		ft_there_is_left_to_sort(t_lst **left, int *pivot)
 {
 	while (DATA((*left)->next) ^ *pivot)
 	{
@@ -14,7 +14,7 @@ static int		ft_there_is_left_to_sort(node *left, int *pivot)
 	return (0);
 }
 
-static void		ft_push_lower(node *left, int *pushed, int *pivot)
+static void		ft_push_lower(t_lst **left, int *pushed, int *pivot)
 {
 	int		step;
 
@@ -53,7 +53,7 @@ void			ft_ps_quick_a(void)
 {
 	int		pivot;
 	int		pushed;
-	node	left;
+	t_lst	*left;
 
 	pushed = 0;
 	while (NB_ELEM_A > 1)

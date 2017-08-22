@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 16:32:08 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/19 09:58:34 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:42:39 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 /*
  **
  */
-static void		ft_partition(node src,
-							node *front,
-							node *back,
-							int (*f)(node, node))
+static void		ft_partition(t_lst *src,
+							t_lst **front,
+							t_lst **back,
+							int (*f)(t_lst *, t_lst *))
 {
-	node                it;
+	t_lst		*it;
 
 	it = (src)->next;
 	while (it->next != src)
@@ -32,11 +32,11 @@ static void		ft_partition(node src,
 	ft_lst_moveto_prev((src)->next, *front);
 }
 
-void			ft_lst_quicksort(node lst, int (*f)(node, node))
+void			ft_lst_quicksort(t_lst *lst, int (*f)(t_lst *, t_lst *))
 {
-	node		src;
-	node		a;
-	node		b;
+	t_lst		*src;
+	t_lst		*a;
+	t_lst		*b;
 
 	if (ft_lst_is_head(lst) || ft_lst_is_single(lst))
 		return ;

@@ -53,14 +53,14 @@ typedef struct		s_head
 {
 	int			nb_elem;
 	int			nb_move;
-	node		top;
+	t_lst		*top;
 	t_lst		lst_head;
 }					t_head;
 
 typedef struct		s_info
 {
 	int			nb_move;
-	node		top_curse;
+	t_lst		*top_curse;
 	t_lst		lst_info;
 }					t_info;
 
@@ -105,7 +105,7 @@ void		ft_exec_rrb(void);
 void		ft_exec_rrr(void);
 
 void		ft_print_result_ps(void);
-void		ft_print_result_list(const node it);
+void		ft_print_result_list(t_lst *it);
 
 /*
 ** Push Swap prototypes
@@ -119,11 +119,11 @@ void		ft_ps_quick_a(void);
 void		ft_ps_quick_b(void);
 void		ft_quick_select(int *push, int *pivot);
 void		ft_ps_clean_result(void);
-void		ft_ps_find_shortest_path(const node head, const int ref);
-void		ft_ps_find_where_to_push(const node head, const int ref);
-void		ft_ps_push_max(const node head, const int len);
-int			ft_ps_count_step(const node head, int ref);
-int			ft_ps_head_is_reverse_sorted(const node head);
+void		ft_ps_find_shortest_path(const t_lst *head, const int ref);
+void		ft_ps_find_where_to_push(const t_lst *head, const int ref);
+void		ft_ps_push_max(const t_lst *head, const int len);
+int			ft_ps_count_step(const t_lst *head, int ref);
+int			ft_ps_head_is_reverse_sorted(const t_lst *head);
 
 /*
 ** Curses

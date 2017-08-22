@@ -3,9 +3,9 @@
 /*
 ** Checks if Stack B is reverse sorted
 */
-int				ft_ps_head_is_reverse_sorted(const node head)
+int				ft_ps_head_is_reverse_sorted(const t_lst *head)
 {
-	node	it;
+	t_lst		*it;
 
 	if (head == &HEAD_B)
 		it = HEAD_B.next;

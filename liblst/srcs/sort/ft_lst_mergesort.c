@@ -6,11 +6,11 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 14:54:45 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/11 16:39:59 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:03:01 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/liblst.h"
+#include "liblst.h"
 
 /*
 ** Recursively sort a list using mergesort (top-down implementation)
@@ -18,11 +18,11 @@
 ** 1st parameter : list to be sorted
 ** 2nd parameter : function to compare nodes
 */
-void				ft_lst_mergesort(node lst, int (*f)(node, node))
+void				ft_lst_mergesort(t_lst *lst, int (*f)(t_lst *, t_lst *))
 {
-	node	src;
-	node	a;
-	node	b;
+	t_lst	*src;
+	t_lst	*a;
+	t_lst	*b;
 
 	if (ft_lst_is_single(lst) || ft_lst_is_head(lst))
 		return ;

@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/22 14:29:43 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/22 14:31:04 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:23:48 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -17,10 +17,10 @@
 ** 1st parameter : head of the destination list
 ** 2st parameter : int value of the node to be pushed
 */
-void			ft_ps_find_where_to_push(const node head, const int ref)
+void			ft_ps_find_where_to_push(const t_lst *head, const int ref)
 {
 	int			next;
-	node		it;
+	t_lst		*it;
 
 	it = head->next;
 	next = DATA(it);

@@ -4,11 +4,6 @@
 # $> sh run.sh 10		-> 0..10
 # $> sh run.sh -4 32	-> -4..32
 
-if [ $# -gt 0 ] && [ "$1" == "re" ]; then
-	make psre;
-	shift;
-fi
-
 MIN="1";
 MAX="100";
 case $# in 	# $# -> argc

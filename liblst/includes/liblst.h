@@ -35,7 +35,6 @@ typedef struct				s_lst
 	t_lst		*next;
 }							t_lst;
 
-typedef t_lst* node;
 /*
 ** Sets a pointer on 0, so we can get rid of the offset of the given field
 ** and use its "absolute" address with OFFSETOF
@@ -62,43 +61,43 @@ typedef t_lst* node;
 **
 ** 1st parameter : node to be init
 */
-# define INIT_LST_HEAD(node)		(node).next = (node).prev = &(node)
-# define INIT_LST_HEAD_P(node)		(node)->next = (node)->prev = node;
+# define INIT_LST_HEAD(it)			(it).next = (it).prev = &(it)
+# define INIT_LST_HEAD_P(it)		(it)->next = (it)->prev = it;
 
 /*
 ** Prototypes
 */
-void			ft_lst_add_next(node new, node dst);
-void			ft_lst_add_prev(node new, node dst);
-void			ft_lst_del(node ref);
-void			ft_lst_disconnect(node src);
-void			ft_lst_foreach(node lst, void (*f)(node));
-void			ft_lst_moveto_next(node src, node dst);
-void			ft_lst_moveto_prev(node src, node dst);
-void			ft_lst_swap(node a, node b);
-void			ft_lst_split(node src, node front, node back);
-void			ft_lst_sorted_merge(node src,
-									node a,
-									node b,
-									int (*f)(node, node));
-void			ft_lst_merge(node src, node dst);
+void			ft_lst_add_next(t_lst *new, t_lst *dst);
+void			ft_lst_add_prev(t_lst *new, t_lst *dst);
+void			ft_lst_del(t_lst *ref);
+void			ft_lst_disconnect(t_lst *src);
+void			ft_lst_foreach(t_lst *lst, void (*f)(t_lst *));
+void			ft_lst_moveto_next(t_lst *src, t_lst *dst);
+void			ft_lst_moveto_prev(t_lst *src, t_lst *dst);
+void			ft_lst_swap(t_lst *a, t_lst *b);
+void			ft_lst_split(t_lst *src, t_lst *front, t_lst *back);
+void			ft_lst_sorted_merge(t_lst *src,
+									t_lst *a,
+									t_lst *b,
+									int (*f)(t_lst *, t_lst *));
+void			ft_lst_merge(t_lst *src, t_lst *dst);
 void			ft_lst_sorted_merge_array(int array[],
 											int start, 
 											int split,
 											int stop);
 
-int				ft_lst_is_head(node lst);
-int				ft_lst_is_single(node lst);
+int				ft_lst_is_head(t_lst *lst);
+int				ft_lst_is_single(t_lst *lst);
 
-node			ft_lst_new_node(void);
+t_lst			*ft_lst_new_node(void);
 
 /*
 ** Sorting algorithm
 */
-void			ft_lst_mergesort(node lst, int (*f)(node, node));
-void			ft_lst_bubblesort(node lst, int (*f)(node, node));
-void			ft_lst_insertsort(node lst, int (*f)(node, node));
-void			ft_lst_selectsort(node lst, int (*f)(node, node));
-void			ft_lst_quicksort(node lst, int (*f)(node, node));
+void			ft_lst_mergesort(t_lst *lst, int (*f)(t_lst *, t_lst *));
+void			ft_lst_bubblesort(t_lst *lst, int (*f)(t_lst *, t_lst *));
+void			ft_lst_insertsort(t_lst *lst, int (*f)(t_lst *, t_lst *));
+void			ft_lst_selectsort(t_lst *lst, int (*f)(t_lst *, t_lst *));
+void			ft_lst_quicksort(t_lst *lst, int (*f)(t_lst *, t_lst *));
 
 #endif

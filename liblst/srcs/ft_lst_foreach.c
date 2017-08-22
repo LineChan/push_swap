@@ -6,15 +6,15 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 14:34:20 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/11 16:29:44 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:10:07 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "liblst.h"
 
-void			ft_lst_foreach(node lst, void (*f)(t_lst *))
+void			ft_lst_foreach(t_lst *lst, void (*f)(t_lst *))
 {
-	node	it;
+	t_lst	*it;
 
 	if (ft_lst_is_head(lst))
 		return ;

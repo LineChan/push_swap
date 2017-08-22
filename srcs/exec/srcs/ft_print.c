@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 18:53:12 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/09 11:24:58 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:30:52 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** Print functions
 */
-void		ft_print_result_list(const node it)
+void		ft_print_result_list(t_lst *it)
 {
 	PRINTF("%s\n", MOVE(it));
 }
@@ -23,7 +23,7 @@ void		ft_print_result_list(const node it)
 void		ft_print_result_ps(void)
 {
 	int		fd;
-	node	it;
+	t_lst	*it;
 
 	it = INFO.next;
 	fd = open("result.txt", O_TRUNC | O_RDWR);

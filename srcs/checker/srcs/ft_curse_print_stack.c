@@ -7,7 +7,7 @@ static void			ft_curse_stack_a(int parent_y, int parent_x)
 {
 	int		x;
 	int		y;
-	node	it;
+	t_lst	*it;
 
 	it = HEAD_A.next;
 	x = 17;
@@ -31,7 +31,7 @@ static void			ft_curse_stack_a(int parent_y, int parent_x)
 
 static void			ft_curse_stack_b(int parent_y, int parent_x)
 {
-	node	it;
+	t_lst	*it;
 	int		y;
 	int		x;
 
@@ -59,7 +59,7 @@ void			ft_curse_print_stack(void)
 {
 	int		parent_x;
 	int		parent_y;
-	node	it;
+	t_lst	*it;
 
 	getmaxyx(CURSE, parent_y, parent_x);
 	mvwprintw(CURSE, (parent_y >> 1) - 3, 2, "Stack A");

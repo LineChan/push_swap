@@ -6,11 +6,11 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 20:41:32 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/11 16:12:02 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:08:12 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/liblst.h"
+#include "liblst.h"
 
 /*
 ** Sort a list using selectsort
@@ -18,11 +18,11 @@
 ** 1st parameter : list to be sorted
 ** 2nd parameter : function to compare nodes
 */
-static void					ft_selectsort_routine(node *lst,
-													node *src,
-													node *it,
-													node *min,
-													int (*f)(node, node))
+static void					ft_selectsort_routine(t_lst **lst,
+													t_lst **src,
+													t_lst **it,
+													t_lst **min,
+													int (*f)(t_lst *, t_lst *))
 {
 	while ((f(*min, *it) <= 0) && ((*it)->next != *lst))
 		*it = (*it)->next;
@@ -39,11 +39,11 @@ static void					ft_selectsort_routine(node *lst,
 		*src = *lst;
 	}
 }
-void			ft_lst_selectsort(node lst, int (*f)(node, node))
+void			ft_lst_selectsort(t_lst *lst, int (*f)(t_lst *, t_lst *))
 {
-	node		src;
-	node		it;
-	node		min;
+	t_lst	*src;
+	t_lst	*it;
+	t_lst	*min;
 
 	if (ft_lst_is_head(lst) || ft_lst_is_single(lst))
 		return ;

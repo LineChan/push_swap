@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 10:01:43 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/10 10:04:24 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:09:06 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** 1st parameter : node to disconnect
 */
-void				ft_lst_disconnect(node src)
+void				ft_lst_disconnect(t_lst *src)
 {
 	src->prev->next = src->next;
 	src->next->prev = src->prev;

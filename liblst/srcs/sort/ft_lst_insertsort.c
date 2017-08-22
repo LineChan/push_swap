@@ -6,11 +6,11 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 20:13:13 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/11 16:27:17 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:02:10 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/liblst.h"
+#include "liblst.h"
 
 /*
 ** Sort a list using insertsort
@@ -18,11 +18,10 @@
 ** 1st parameter : list to be sorted
 ** 2nd parameter : function to compare elements
 */
-
-void				ft_lst_insertsort(node lst, int (*f)(node, node))
+void				ft_lst_insertsort(t_lst *lst, int (*f)(t_lst *, t_lst *))
 {
-	node	src;
-	node	it;
+	t_lst	*src;
+	t_lst	*it;
 
 	if (ft_lst_is_head(lst) || ft_lst_is_single(lst))
 		return ;

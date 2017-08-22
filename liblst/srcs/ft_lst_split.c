@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 15:48:57 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/10 12:19:08 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:14:39 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@
  ** 2nd parameter : front half
  ** 3rd parameter : back half
  */
-void			ft_lst_split(node src, node front, node back)
+void			ft_lst_split(t_lst *src, t_lst *front, t_lst *back)
 {
-	node	slow;
-	node	fast;
+	t_lst	*slow;
+	t_lst	*fast;
 
 	if (ft_lst_is_head(src) || ft_lst_is_single(src))
 		return ;

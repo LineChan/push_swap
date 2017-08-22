@@ -3,7 +3,7 @@
 /*
 ** 2nd part of the quicksort routine
 */
-static int			ft_find_upper(node *left, int *pivot)
+static int			ft_find_upper(t_lst **left, int *pivot)
 {
 	while (DATA(*left) ^ *pivot)
 	{
@@ -17,7 +17,7 @@ static int			ft_find_upper(node *left, int *pivot)
 static int			ft_elem_between_pivot(void)
 {
 	int		count;
-	node	it;
+	t_lst	*it;
 
 	count = 0;
 	it = TOP_B->next;
@@ -31,7 +31,7 @@ static int			ft_elem_between_pivot(void)
 	return (count);
 }
 
-void				ft_stack_b_routine(node *left, int *size, int *pivot)
+void				ft_stack_b_routine(t_lst **left, int *size, int *pivot)
 {
 	*size = ft_elem_between_pivot() + 1;
 	if (*size < 30)
@@ -54,7 +54,7 @@ void				ft_ps_quick_b(void)
 {
 	int		pivot;
 	int		size;
-	node	left;
+	t_lst	*left;
 
 	while (NB_ELEM_B)
 	{

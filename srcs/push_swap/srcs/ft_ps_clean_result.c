@@ -8,7 +8,7 @@
 /*
  ** Clean results and remove redondant patterns
  */
-void		ft_ps_clean_push(node it)
+void		ft_ps_clean_push(t_lst *it)
 {
 	if ((it == &INFO) || (it->next == &INFO))
 		return ;
@@ -20,7 +20,7 @@ void		ft_ps_clean_push(node it)
 	}
 }
 
-void		ft_ps_clean_rotate(node it)
+void		ft_ps_clean_rotate(t_lst *it)
 {
 	if ((it == &INFO) || (it->next == &INFO))
 		return ;
@@ -33,7 +33,7 @@ void		ft_ps_clean_rotate(node it)
 	}
 }
 
-void		ft_ps_clean_double(node it)
+void		ft_ps_clean_double(t_lst *it)
 {
 	if ((			it == &INFO) || (it->next == &INFO))
 		return ;
@@ -65,7 +65,7 @@ void		ft_ps_clean_double(node it)
 
 void		ft_ps_clean_result(void)
 {
-	node	it;
+	t_lst	*it;
 
 	it = INFO.next;
 	ft_lst_foreach(it, &ft_ps_clean_push);

@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 12:35:17 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/10 12:49:51 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/22 13:12:22 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** 1st parameter : list to be merged
 ** 2nd parameter : destination list
 */
-void                        ft_lst_merge(node src, node dst)
+void                        ft_lst_merge(t_lst *src, t_lst *dst)
 {
 	dst->prev->next = src->next;
 	src->next->prev = dst->prev;
