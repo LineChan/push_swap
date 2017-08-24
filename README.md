@@ -137,7 +137,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 **x** : write instructions results.txt
 
-**args** : intergers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
+**args** : integers to be sorted. Send ERROR if the parameter is not an integer or a duplicated element
 
 
 
