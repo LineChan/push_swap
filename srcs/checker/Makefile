@@ -6,7 +6,7 @@
 #*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/04/17 15:25:36 by mvillemi          #+#    #+#             *#
-#*   Updated: 2017/04/21 09:34:45 by mvillemi         ###   ########.fr       *#
+#*   Updated: 2017/08/22 13:44:33 by mvillemi         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -68,7 +68,7 @@ all :
 
 $(NAME) : $(OBJS_FILES) 
 	$(CC) $(CFLAGS) -o $@ $(INCLUDES) $(OBJS_FILES) $(LIBRARIES)
-	mv $(NAME) ../../
+	cp $(NAME) ../../
 	printf "\033[K"
 	$(PRINT_OK) $(NAME)
 
@@ -77,6 +77,7 @@ $(OBJS)/%.o : %.c
 
 clean :
 	$(RM) $(OBJS)
+	rm $(NAME)
 
 fclean : clean
 	$(RM) ../../$(NAME)

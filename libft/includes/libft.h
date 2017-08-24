@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:40:53 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/07/27 18:33:15 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/08/24 17:11:48 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,6 @@
 # include "ft_printf.h"
 
 /*
-** error
-*/
-#include "error.h"
-
-/*
 ** Number of bits and mask sign
 */
 # define NB_BIT 8
@@ -55,6 +50,7 @@
 # define SWAP(x,y) (x ^= y ^= x ^= y)
 # define ABS(x) ((x + (x >> MASK_SIGN)) ^ (x >> MASK_SIGN))
 # define SIZEOF(x) (sizeof(x)/sizeof(x[0]))
+# define EXIT_FAIL(x) (ft_printf("{RED:%s}\n",x), exit(EXIT_FAILURE))
 
 /*
 ** Returns 1 if a and b have opposite signs
