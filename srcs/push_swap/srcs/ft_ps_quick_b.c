@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ps_quick_b.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 16:08:42 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 17:41:02 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
 ** 2nd part of the quicksort routine
 */
+
 static int			ft_find_upper(t_lst **left, int *pivot)
 {
 	while (DATA(*left) ^ *pivot)
@@ -44,8 +57,8 @@ void				ft_stack_b_routine(t_lst **left, int *size, int *pivot)
 		ft_exec_pa();
 		ft_ps_find_shortest_path(&HEAD_A, DATA(HEAD_A.next));
 		ft_ps_find_shortest_path(&HEAD_B, DATA(HEAD_B.next));
-			if (DATA(TOP_A) > DATA(TOP_A->next))
-				ft_exec_sa();
+		if (DATA(TOP_A) > DATA(TOP_A->next))
+			ft_exec_sa();
 		ft_exec_pa();
 	}
 }

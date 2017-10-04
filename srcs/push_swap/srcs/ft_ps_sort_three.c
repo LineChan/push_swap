@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 18:58:14 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/10 11:39:33 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:09:19 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 ** Sort a list with 3 elemets
 **
 */
+
 void			ft_ps_sort_three(void)
 {
 	if (CASE_1)

@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ps_quick_a.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 16:08:37 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 17:40:26 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
 ** 1st part of quicksort routine
 */
+
 static int		ft_there_is_left_to_sort(t_lst **left, int *pivot)
 {
 	while (DATA((*left)->next) ^ *pivot)
@@ -19,22 +32,22 @@ static void		ft_push_lower(t_lst **left, int *pushed, int *pivot)
 	int		step;
 
 	step = ft_ps_count_step(&HEAD_A, DATA(*left));
-		if (step < (NB_ELEM_A >> 1))
-			while (TOP_A != *left)
-				ft_exec_ra();
-		else
+	if (step < (NB_ELEM_A >> 1))
+		while (TOP_A != *left)
+			ft_exec_ra();
+	else
+	{
+		ft_exec_rra();
+		while (TOP_A != *left)
 		{
-			ft_exec_rra();
-			while (TOP_A != *left)
+			if (DATA(TOP_A) < *pivot)
 			{
-				if (DATA(TOP_A) < *pivot)
-				{
-					ft_exec_pb();
-					++*pushed;
-				}
-				ft_exec_rra();
+				ft_exec_pb();
+				++*pushed;
 			}
+			ft_exec_rra();
 		}
+	}
 	ft_exec_pb();
 	++*pushed;
 }

@@ -1,14 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ps_clean_result.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 16:07:48 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 17:40:45 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
-# define NEXT(it, move1, move2) (!ft_strcmp(MOVE(it), move1) && \
-		(!ft_strcmp(MOVE(it->next), move2)))
+** Clean results and remove redondant patterns
 */
 
-/*
- ** Clean results and remove redondant patterns
- */
-void		ft_ps_clean_push(t_lst *it)
+static void		ft_ps_clean_push(t_lst *it)
 {
 	if ((it == &INFO) || (it->next == &INFO))
 		return ;
@@ -20,7 +28,7 @@ void		ft_ps_clean_push(t_lst *it)
 	}
 }
 
-void		ft_ps_clean_rotate(t_lst *it)
+static void		ft_ps_clean_rotate(t_lst *it)
 {
 	if ((it == &INFO) || (it->next == &INFO))
 		return ;
@@ -33,28 +41,23 @@ void		ft_ps_clean_rotate(t_lst *it)
 	}
 }
 
-void		ft_ps_clean_double(t_lst *it)
+static void		ft_ps_del_node(t_lst *it, char *move)
 {
-	if ((			it == &INFO) || (it->next == &INFO))
+	MOVE(it) = move;
+	ft_lst_del(it);
+	--NB_MOVE;
+}
+
+static void		ft_ps_clean_double(t_lst *it)
+{
+	if ((it == &INFO) || (it->next == &INFO))
 		return ;
 	if (NEXT(it, "ra", "rb") || NEXT(it, "rb", "ra"))
-	{
-		MOVE(it) = "rr";
-		ft_lst_del(it->next);
-		--NB_MOVE;
-	}
+		ft_ps_del_node(it->next, "rr");
 	if (NEXT(it, "rra", "rrb") || NEXT(it, "rrb", "rra"))
-	{
-		MOVE(it) = "rrr";
-		ft_lst_del(it->next);
-		--NB_MOVE;
-	}
+		ft_ps_del_node(it->next, "rrr");
 	if (NEXT(it, "sa", "sb") || NEXT(it, "sb", "sa"))
-	{
-		MOVE(it) = "ss";
-		ft_lst_del(it->next);
-		--NB_MOVE;
-	}
+		ft_ps_del_node(it->next, "ss");
 	if (NEXT(it, "rr", "rrr") || NEXT(it, "rrr", "rr"))
 	{
 		ft_lst_del(it);
@@ -63,7 +66,7 @@ void		ft_ps_clean_double(t_lst *it)
 	}
 }
 
-void		ft_ps_clean_result(void)
+void			ft_ps_clean_result(void)
 {
 	t_lst	*it;
 

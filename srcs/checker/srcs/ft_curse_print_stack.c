@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_curse_print_stack.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 15:48:42 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 15:48:47 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
 ** Prints stacks with ncurse
 */
+
 static void			ft_curse_stack_a(int parent_y, int parent_x)
 {
 	int		x;
@@ -55,7 +68,7 @@ static void			ft_curse_stack_b(int parent_y, int parent_x)
 	}
 }
 
-void			ft_curse_print_stack(void)
+void				ft_curse_print_stack(void)
 {
 	int		parent_x;
 	int		parent_y;

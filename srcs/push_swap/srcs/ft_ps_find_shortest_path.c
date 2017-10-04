@@ -6,9 +6,10 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 12:03:09 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:23:36 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:08:09 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -17,6 +18,7 @@
 ** 1st parameter : head of the list to go through
 ** 2nd parameter : integer to find in the list
 */
+
 void					ft_ps_find_shortest_path(const t_lst *head,
 													const int ref)
 {

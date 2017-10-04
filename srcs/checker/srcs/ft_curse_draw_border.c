@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_curse_draw_border.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 15:51:47 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 15:51:56 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -5,6 +17,7 @@
 **
 ** 1st parameter : screen where borders are going to be drawn
 */
+
 void			ft_curse_draw_border(WINDOW *screen)
 {
 	int			x;

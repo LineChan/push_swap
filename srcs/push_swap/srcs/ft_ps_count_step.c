@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/22 14:26:15 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:23:23 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:10:43 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 ** 1st parameter : head of the list the reference is
 ** 2nd parameter : reference to find
 */
+
 int					ft_ps_count_step(const t_lst *head, const int ref)
 {
-	int			step;;
-	t_lst		*it;;
+	int			step;
+	t_lst		*it;
 
 	step = 0;
 	if (head == &HEAD_B)

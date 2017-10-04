@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_quick_select.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 16:09:22 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 16:09:26 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -6,6 +18,7 @@
 ** 1st parameter : number of elements between two pivots
 ** 2nd parameter : pivot value
 */
+
 void			ft_quick_select(int *pushed, int *pivot)
 {
 	while (*pushed)

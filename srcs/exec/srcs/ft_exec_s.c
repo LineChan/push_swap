@@ -6,9 +6,10 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 12:23:11 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/09 12:36:15 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:03:06 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -17,6 +18,7 @@
 ** 					swap_s (swap_a & swap_b at the same time)
 ** and add the move to the instruction list
 */
+
 void			ft_exec_sa(void)
 {
 	if (NB_ELEM_A > 1)

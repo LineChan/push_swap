@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_check_do_instruct.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/05 12:15:19 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/05 12:15:29 by mvillemi         ###   ########.fr       */
+/*   Created: 2017/10/04 15:51:22 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 15:51:26 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -16,6 +17,7 @@
 **
 ** 1st parameter : move to be executed
 */
+
 int			ft_check_do_instruct(const char *line)
 {
 	if (!ft_strcmp("pa", line))

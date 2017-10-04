@@ -6,9 +6,10 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 12:37:27 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/09 12:43:20 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:06:12 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -17,6 +18,7 @@
 **				reverse_rotate_r (reverse rotate Stack A and Stack B)
 ** and adda the move to the instruction list
 */
+
 void			ft_exec_rra(void)
 {
 	if (NB_ELEM_A > 1)

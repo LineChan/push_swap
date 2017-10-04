@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_exec_parse.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 16:01:02 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 16:06:37 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -7,6 +19,7 @@
 ** 1st parameter : number of arguments
 ** 2nd parameter : arguments container
 */
+
 static int		ft_push_swap_atoi(const char **s)
 {
 	int		sign;
@@ -45,7 +58,7 @@ static int		ft_valid_number(const char **s)
 		while (it != &HEAD_A)
 		{
 			if (nb == DATA(it))
-					EXIT_FAIL("Error (duplicated elements)");
+				EXIT_FAIL("Error (duplicated elements)");
 			it = it->next;
 		}
 	}

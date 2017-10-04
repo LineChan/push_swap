@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_handle_option.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/04 15:49:01 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/04 15:52:44 by mvillemi         ###   ########.fr       */
+/*   Created: 2017/10/04 17:42:53 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 18:01:08 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
-** Check the result given by push_swap
+** Handle options
+**
+** 1st parameter : number of arguments
+** 2nd parameter : list of arguments
+** 3rd parameter : option
 */
 
-int				main(int ac, char **av)
+void		ft_handle_option(int *ac, char **av, int option[])
 {
-	if (ac == 1)
-		return (0);
-	++av;
-	--ac;
+	if (!ft_strcmp("--clean", *av))
+	{
+		--*ac;
+		++av;
+		ft_printf("option av : %s\n", *av);
+		if (*ac < 2)
+			EXIT_FAIL("ERROR : no argument");
+		else
+			++option[0];
+	}
 	if (!ft_strcmp("-x", *av))
 	{
-		CURSE_MODE = 1;
+		--*ac;
 		++av;
-		--ac;
+		if (!*ac)
+			EXIT_FAIL("ERROR : no arugment");
+		else
+			++option[1];
 	}
-	ft_exec_parse(&ac, av);
-	TOP_A = HEAD_A.next;
-	TOP_B = &HEAD_B;
-	if (!CURSE_MODE)
-		ft_check_instruct();
-	else
-		ft_curse_instruct();
-	ft_lst_moveto_prev(&HEAD_A, TOP_A);
-	if (ft_exec_head_is_sorted() && !NB_ELEM_B)
-		ft_printf("{GREEN:OK}\n");
-	else
-		ft_printf("{RED:KO}\n");
-	return (0);
 }

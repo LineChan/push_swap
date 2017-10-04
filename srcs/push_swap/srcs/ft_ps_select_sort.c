@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 11:58:28 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:25:10 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 17:42:07 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 ** Select sort a list
 ** Push MIN to Stack B until there are only 3 elems left. Use
 ** three_sort, then push everything back to Stack A
-**
 */
+
 static void		ft_push_min(void)
 {
 	int		ref;

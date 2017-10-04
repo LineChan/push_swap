@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 20:10:41 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/09 12:37:10 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:03:31 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 ** 				rotate_r (rotates Stack A and Stack B)
 ** and adds the move to the instruction list
 */
+
 void			ft_exec_ra(void)
 {
 	if (NB_ELEM_A > 1)

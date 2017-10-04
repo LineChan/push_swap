@@ -77,6 +77,8 @@ t_info		*push_swap(void);
 t_head		*stack_a(void);
 t_head		*stack_b(void);
 
+void		ft_handle_option(int *ac, char **av, int option[]);
+
 /*
 ** Check protoypes
 */

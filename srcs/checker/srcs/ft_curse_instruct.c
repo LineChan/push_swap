@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_curse_instruct.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 15:52:01 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 15:56:00 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
 ** Checker with visualization
 */
+
 static void			ft_curse_set_color(void)
 {
 	start_color();
@@ -25,8 +38,8 @@ static void			ft_curse_intro(void)
 	ft_curse_draw_border(SCORE);
 	refresh();
 	mvwprintw(CURSE, ((parent_y - SCORE_SIZE) >> 1) >> 1,
-		((parent_x  - 40) >> 1), "Use left or right arrow to do/undo moves");
-mvwprintw(CURSE, (parent_y - SCORE_SIZE) >> 1, (parent_x >> 1) - 14,
+		((parent_x - 40) >> 1), "Use left or right arrow to do/undo moves");
+	mvwprintw(CURSE, (parent_y - SCORE_SIZE) >> 1, (parent_x >> 1) - 14,
 		"Press enter to start sorting");
 	mvwprintw(SCORE, parent_y, 2, "Number of moves : 0 / %d\n", NB_MOVE);
 	refresh();
@@ -46,7 +59,8 @@ static void			ft_curse_display(void)
 	noecho();
 	keypad(stdscr, TRUE);
 	TOP_CURSE = &INFO;
-	while (getch() != 10);
+	while (getch() != 10)
+		;
 	wclear(CURSE);
 	ft_curse_wait_instruct();
 }

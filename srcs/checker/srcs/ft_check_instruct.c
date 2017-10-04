@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_instruct.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 15:51:28 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 15:53:36 by mvillemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
-** Check the instruction given by the push_swap program 
+** Check the instruction given by the push_swap program
 ** and execute them
 */
+
 void			ft_check_instruct(void)
 {
 	char	*line;

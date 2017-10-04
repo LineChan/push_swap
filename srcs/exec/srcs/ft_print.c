@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 18:53:12 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:30:52 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:06:29 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
 ** Print functions
 */
+
 void		ft_print_result_list(t_lst *it)
 {
 	PRINTF("%s\n", MOVE(it));

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ps_head_is_sorted.c                             :+:      :+:    :+:   */
+/*   ft_exec_head_is_sorted.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/05 19:01:44 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:21:55 by mvillemi         ###   ########.fr       */
+/*   Created: 2017/10/04 16:00:36 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/04 16:00:38 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
 ** Check if Stack A is sorted
 */
+
 int				ft_exec_head_is_sorted(void)
 {
 	t_lst	*it;

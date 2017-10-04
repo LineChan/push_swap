@@ -6,18 +6,18 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 19:49:20 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/05/22 14:26:02 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/04 16:09:14 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
- ** Sort lists with 4 - 7 elements
- **
- */
+** Sort lists with 4 - 7 elements
+**
+*/
 
-void						ft_ps_sort_seven(void)
+void				ft_ps_sort_seven(void)
 {
 	while (NB_ELEM_A > 3)
 		ft_exec_pb();
