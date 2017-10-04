@@ -10,7 +10,6 @@ int					main(int ac, char **av)
 
 	if (ac == 1)
 		EXIT_FAIL("");
-	// clean
 	++av;
 	--ac;
 	clean = 0;
