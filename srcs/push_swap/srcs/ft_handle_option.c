@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 17:42:53 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/04 18:01:08 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 14:44:32 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,23 @@
 ** 3rd parameter : option
 */
 
-void		ft_handle_option(int *ac, char **av, int option[])
+void		ft_handle_option(int *ac, char ***av, int option[])
 {
-	if (!ft_strcmp("--clean", *av))
+	--*ac;
+	++*av;
+	if (!ft_strcmp("--clean", **av))
 	{
 		--*ac;
-		++av;
-		ft_printf("option av : %s\n", *av);
+		++*av;
 		if (*ac < 2)
 			EXIT_FAIL("ERROR : no argument");
 		else
 			++option[0];
 	}
-	if (!ft_strcmp("-x", *av))
+	if (!ft_strcmp("-x", **av))
 	{
 		--*ac;
-		++av;
+		++*av;
 		if (!*ac)
 			EXIT_FAIL("ERROR : no arugment");
 		else

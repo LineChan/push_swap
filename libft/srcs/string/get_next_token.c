@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/24 11:11:33 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/07/27 18:33:03 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 14:56:45 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 /*
 ** Splits a text according to a token and sends a line
-** 
-** ft_gnl : 
-** 1st parameter : 
-**
 */
 
 int				ft_gnt_precheck(char *buff,
@@ -126,13 +122,12 @@ char			*ft_gnt(const int fd, const char token)
 char			*ft_fgnt(const char *file, const char token)
 {
 	static char		*line;
-	static int				fd;
+	static int		fd;
 	int				ret;
 
 	if (!line)
 	{
-		fd = open(file, O_RDONLY);
-		if (IS_NEG(fd))
+		if (IS_NEG((fd = open(file, O_RDONLY))))
 			EXIT_FAIL("FT_GNT : wrong file descriptor");
 	}
 	else
@@ -141,11 +136,8 @@ char			*ft_fgnt(const char *file, const char token)
 		line = 0;
 	}
 	ret = get_next_token(fd, token, &line);
-	if (IS_NEG(ret))
-	{
-		close(fd);
+	if (IS_NEG(ret) && close(fd))
 		return (0);
-	}
 	if (!ret && line && !*line)
 	{
 		free(line);

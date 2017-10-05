@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 18:53:12 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/04 16:06:29 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:47:04 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void		ft_print_result_list(t_lst *it)
 {
-	PRINTF("%s\n", MOVE(it));
+	ft_printf("%s\n", MOVE(it));
 }
 
 void		ft_print_result_ps(void)
@@ -27,7 +27,7 @@ void		ft_print_result_ps(void)
 	t_lst	*it;
 
 	it = INFO.next;
-	fd = open("result.txt", O_TRUNC | O_RDWR);
+	fd = open("result.txt", O_CREAT | O_TRUNC | O_RDWR, 0666);
 	if (IS_NEG(fd))
 		EXIT_FAIL("File descriptor not open");
 	while (it != &INFO)

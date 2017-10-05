@@ -1,11 +1,12 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib_tlst.h                                         :+:      :+:    :+:   */
+/*   liblst.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/05 10:12:59 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/06 14:35:10 by mvillemi         ###   ########.fr       */
+/*   Created: 2017/10/05 15:21:38 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/05 15:22:13 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +76,6 @@ void			ft_lst_foreach(t_lst *lst, void (*f)(t_lst *));
 void			ft_lst_moveto_next(t_lst *src, t_lst *dst);
 void			ft_lst_moveto_prev(t_lst *src, t_lst *dst);
 void			ft_lst_swap(t_lst *a, t_lst *b);
-void			ft_lst_split(t_lst *src, t_lst *front, t_lst *back);
-void			ft_lst_sorted_merge(t_lst *src,
-									t_lst *a,
-									t_lst *b,
-									int (*f)(t_lst *, t_lst *));
-void			ft_lst_merge(t_lst *src, t_lst *dst);
 void			ft_lst_sorted_merge_array(int array[],
 											int start, 
 											int split,
@@ -90,14 +85,5 @@ int				ft_lst_is_head(t_lst *lst);
 int				ft_lst_is_single(t_lst *lst);
 
 t_lst			*ft_lst_new_node(void);
-
-/*
-** Sorting algorithm
-*/
-void			ft_lst_mergesort(t_lst *lst, int (*f)(t_lst *, t_lst *));
-void			ft_lst_bubblesort(t_lst *lst, int (*f)(t_lst *, t_lst *));
-void			ft_lst_insertsort(t_lst *lst, int (*f)(t_lst *, t_lst *));
-void			ft_lst_selectsort(t_lst *lst, int (*f)(t_lst *, t_lst *));
-void			ft_lst_quicksort(t_lst *lst, int (*f)(t_lst *, t_lst *));
 
 #endif

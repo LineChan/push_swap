@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 19:49:20 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/04 16:09:14 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 13:30:24 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 /*
 ** Sort lists with 4 - 7 elements
-**
 */
 
 void				ft_ps_sort_seven(void)

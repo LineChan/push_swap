@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 23:06:30 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/06 09:20:23 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:24:40 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@
 */
 # include <limits.h>
 
-# define PRINTF(...) (ft_printf(__VA_ARGS__))
 /*
 ** Buffer size - min : 55 (ULL in base 2)
 */

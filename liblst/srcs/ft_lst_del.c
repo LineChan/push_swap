@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/20 10:46:03 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:08:55 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:06:47 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 **
 ** 1st parameter : node to be removed
 */
+
 void		ft_lst_del(t_lst *ref)
 {
 	ref->next->prev = ref->prev;
