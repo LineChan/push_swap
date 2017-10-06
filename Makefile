@@ -8,42 +8,45 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:= push_swap_proj
+# Define racine path if it does not exit.
+ifndef CUR_PROJECT_PWD
+	export CUR_PROJECT_PWD := $(shell /bin/pwd)
+endif
+
+NAME			:= push_swap
 
 all: $(NAME)
 
 $(NAME) : 
-	make -C libft
-	make -C liblst
-	make -C srcs/exec
-	make -C srcs/checker 
-	make -C srcs/push_swap
+	make -C libs/libft
+	make -C libs/liblst
+	make -C sources/exec
+	#make -C sources/checker 
+	#make -C sources/push_swap
 
 clean :
-	make -C libft clean
-	make -C liblst clean
-	make -C srcs/exec clean
-	make -C srcs/checker clean
-	make -C srcs/push_swap clean
+	make -C libs/libft clean
+	make -C libs/liblst clean
+	#make -C sources/exec clean
+	#make -C sources/checker clean
+	#make -C sources/push_swap clean
 
 fclean : 
-	make -C libft fclean
-	make -C liblst fclean
-	make -C srcs/exec fclean
-	make -C srcs/checker fclean
-	make -C srcs/push_swap fclean
-	rm -rf checker.dSYM
-	rm -rf push_swap.dSYM
+	make -C libs/libft fclean
+	make -C libs/liblst fclean
+	#make -C sources/exec fclean
+	#make -C sources/checker fclean
+	#make -C sources/push_swap fclean
 
 ps :
-	make -C srcs/exec
-	make -C srcs/checker
-	make -C srcs/push_swap
+	make -C sources/exec
+	make -C sources/checker
+	make -C sources/push_swap
 
 psfclean :
-	make -C srcs/exec fclean
-	make -C srcs/checker fclean
-	make -C srcs/push_swap fclean
+	make -C sources/exec fclean
+	make -C sources/checker fclean
+	make -C sources/push_swap fclean
 
 re : fclean all
 

@@ -6,15 +6,15 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:46:23 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/05 15:46:25 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/06 16:48:45 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../liblst/includes/liblst.h"
-# include "../libft/includes/libft.h"
+# include "libft.h"
+# include "libst.h"
 
 /*
 ** For open
