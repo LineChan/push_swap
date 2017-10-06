@@ -5,18 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/10/06 14:10:37 by mvillemi          #+#    #+#              #
-#    Updated: 2017/10/07 00:17:32 by mvillemi         ###   ########.fr        #
+#    Created: 2017/10/06 15:55:28 by mvillemi          #+#    #+#              #
+#    Updated: 2017/10/07 00:14:36 by mvillemi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Define racine path if not exist.
+# Define racine path if it does not exist.
 ifndef CUR_PROJECT_PWD
  export CUR_PROJECT_PWD := $(shell /bin/pwd)
 endif
 
-NAME			:= liblst.a
-NAME_CLEAR		:= liblst
+NAME			:= push_swap
 
 # Directories
 INCS			:= includes
@@ -25,7 +24,7 @@ LIBS			:= $(CUR_PROJECT_PWD)/libs
 OBJS			:= objs
 
 # Libaries
-LIB 			:= ""
+LIB 			:= "libft liblst libexec"
 
 # Subdirectories
 SRCS_DIR		:= $(shell find $(SRCS) -type d)
@@ -79,7 +78,8 @@ all :
 
 $(NAME) : $(OBJS_FILES)
 	$(foreach i,$(shell echo "$(LIB)"),make -C "$(LIBS)/$(i)";)
-	ar rc $@ $^ && printf $(CLEAR) && $(PRINT_OK) "$(NAME_CLEAR)"
+	$(CC) $(C_FLAGS) -o $@ $(INCS_FILES) $(OBJS_FILES) $(LIBS_FILES)
+	printf $(CLEAR) && $(PRINT_OK) $(NAME)
 
 $(OBJS)/%.o: %.c
 	$(CC) $(C_FLAGS) $(INCS_FILES) -c $< -o $@ && $(PRINT_KO) $< || exit

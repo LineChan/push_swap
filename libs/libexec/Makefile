@@ -6,7 +6,7 @@
 #    By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/06 14:10:37 by mvillemi          #+#    #+#              #
-#    Updated: 2017/10/07 00:17:32 by mvillemi         ###   ########.fr        #
+#    Updated: 2017/10/07 00:16:58 by mvillemi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ ifndef CUR_PROJECT_PWD
  export CUR_PROJECT_PWD := $(shell /bin/pwd)
 endif
 
-NAME			:= liblst.a
-NAME_CLEAR		:= liblst
+NAME			:= libexec.a
+NAME_CLEAR		:= libexec
 
 # Directories
 INCS			:= includes
@@ -25,7 +25,7 @@ LIBS			:= $(CUR_PROJECT_PWD)/libs
 OBJS			:= objs
 
 # Libaries
-LIB 			:= ""
+LIB 			:= "libft liblst"
 
 # Subdirectories
 SRCS_DIR		:= $(shell find $(SRCS) -type d)

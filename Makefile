@@ -1,46 +1,52 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2015/09/30 20:03:48 by igomez            #+#    #+#              #
+#    Updated: 2017/10/07 01:20:14 by mvillemi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# Define racine path if it does not exit.
 ifndef CUR_PROJECT_PWD
-	export CUR_PROJECT_PWD := $(shell /bin/pwd)
+ export CUR_PROJECT_PWD := $(shell /bin/pwd)
 endif
 
-NAME			:= push_swap
+CHECKER  := "checker_files"
+PUSH_SWAP := "push_swap_files"
 
-all: $(NAME)
+all:
+	@make -C $(PUSH_SWAP) && cp $(PUSH_SWAP)/push_swap $(CUR_PROJECT_PWD)/.;
+	@make -C $(CHECKER) && cp $(CHECKER)/checker $(CUR_PROJECT_PWD)/.;
 
-$(NAME) : 
-	make -C libs/libft
-	make -C libs/liblst
-	make -C sources/exec
-	#make -C sources/checker 
-	#make -C sources/push_swap
 
-clean :
-	make -C libs/libft clean
-	make -C libs/liblst clean
-	make -C sources/exec clean
-	#make -C sources/checker clean
-	#make -C sources/push_swap clean
+clean:
+	@make -C $(CHECKER) clean;
+	@make -C $(PUSH_SWAP) clean;
 
-fclean : 
-	make -C libs/libft fclean
-	make -C libs/liblst fclean
-	make -C sources/exec fclean
-	rm push_swap
-	rm checker
-	#make -C sources/checker fclean
-	#make -C sources/push_swap fclean
+fclean:
+	@rm -f "checker";
+	@rm -f "push_swap";
+	@make -C $(CHECKER) fclean;
+	@make -C $(PUSH_SWAP) fclean;
 
-ps :
-	make -C sources/exec
-	make -C sources/checker
-	make -C sources/push_swap
+push_swap:
+	@make -C $(PUSH_SWAP);
 
-psfclean :
-	make -C sources/exec fclean
-	make -C sources/checker fclean
-	make -C sources/push_swap fclean
+checker:
+	@make -C $(CHECKER);
 
-re : fclean all
+re: fclean all
 
+test: all
+	@perl ops.pl
+	./run.sh
+
+debug: clean
+	@make DEBUG=1 -C $(PUSH_SWAP) && cp $(PUSH_SWAP)/push_swap $(CUR_PROJECT_PWD)/.;
+	@make DEBUG=1 -C $(CHECKER) && cp $(CHECKER)/checker $(CUR_PROJECT_PWD)/.;
+
+.PHONY: all clean fclean re push_swap checker debug
 .SILENT:
