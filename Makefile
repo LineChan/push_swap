@@ -1,12 +1,3 @@
-#                                                         :::      ::::::::    #
-#    make                                               :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/01/21 04:14:19 by mvillemi          #+#    #+#              #
-#*   Updated: 2017/04/18 17:58:25 by mvillemi         ###   ########.fr       *#
-#                                                                              #
-# **************************************************************************** #
 
 # Define racine path if it does not exit.
 ifndef CUR_PROJECT_PWD
@@ -27,14 +18,16 @@ $(NAME) :
 clean :
 	make -C libs/libft clean
 	make -C libs/liblst clean
-	#make -C sources/exec clean
+	make -C sources/exec clean
 	#make -C sources/checker clean
 	#make -C sources/push_swap clean
 
 fclean : 
 	make -C libs/libft fclean
 	make -C libs/liblst fclean
-	#make -C sources/exec fclean
+	make -C sources/exec fclean
+	rm push_swap
+	rm checker
 	#make -C sources/checker fclean
 	#make -C sources/push_swap fclean
 
