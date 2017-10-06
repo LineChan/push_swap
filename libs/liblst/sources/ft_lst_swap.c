@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/17 16:01:05 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:15:23 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:17:03 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 /*
 ** Swap two nodes in a circular doubly linked list.
-** 
+**
 ** The idea is to use a matrix to describe states before and after the swap :
 ** (explanation based on non circular lists for clarity)
 ** For adjacent nodes : [X] - [A] - [B] - [Y]
-**      A B               A B 
+**      A B               A B
 ** prev X A    =>    prev B X
 ** next B Y          next Y A
 **
@@ -26,7 +26,7 @@
 **      2 3    --/        3 1
 **
 ** For non adjacent nodes : [W] - [A] - [X] - ... - [Y] - [B] - [Z]
-**      A B               A B 
+**      A B               A B
 ** prev W Y    =>    prev Y W
 ** next X Z          next Z X
 **
@@ -51,7 +51,6 @@ void				ft_lst_swap(t_lst *a, t_lst *b)
 	tmp[1] = b->prev;
 	tmp[2] = a->next;
 	tmp[3] = b->next;
-
 	if (nodes_are_next(a, b))
 	{
 		a->prev = tmp[2];

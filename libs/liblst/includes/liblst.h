@@ -1,11 +1,12 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib_tlst.h                                         :+:      :+:    :+:   */
+/*   liblst.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/05 10:12:59 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/04/06 14:35:10 by mvillemi         ###   ########.fr       */
+/*   Created: 2017/10/06 17:07:46 by mvillemi          #+#    #+#             */
+/*   Updated: 2017/10/06 17:09:14 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -13,27 +14,11 @@
 # define LIBLST_H
 # include <stdint.h>
 
-/*
-** Libft
-*/
-#include "../../libft/includes/libft.h"
-
-/*
-** Linux like circular doubly linked list
-**
-** Explanations found here : 
-**		https://0xax.gitbooks.io/linux-insides/content/DataStructures/dlist.html
-** Source : 
-**		https://github.com/torvalds/linux/blob/master/include/linux/list.h
-*/
-
-typedef struct s_lst t_lst;
-
-typedef struct				s_lst
+typedef struct	s_lst
 {
-	t_lst		*prev;
-	t_lst		*next;
-}							t_lst;
+	struct s_lst	*prev;
+	struct s_lst	*next;
+}				t_lst;
 
 /*
 ** Sets a pointer on 0, so we can get rid of the offset of the given field
@@ -42,7 +27,7 @@ typedef struct				s_lst
 ** 1st parameter : structure type
 ** 2nd parameter : name of the list within the structure
 */
-# define OFFSETOF(st, lst)				((char *)(&(((st *)0)->lst)))
+# define OFFSETOF(st, lst)			((char *)(&(((st *)0)->lst)))
 
 /*
 ** Calculates the address of the structure thanks to the given address of
@@ -82,9 +67,9 @@ void			ft_lst_sorted_merge(t_lst *src,
 									int (*f)(t_lst *, t_lst *));
 void			ft_lst_merge(t_lst *src, t_lst *dst);
 void			ft_lst_sorted_merge_array(int array[],
-											int start, 
-											int split,
-											int stop);
+									int start,
+									int split,
+									int stop);
 
 int				ft_lst_is_head(t_lst *lst);
 int				ft_lst_is_single(t_lst *lst);

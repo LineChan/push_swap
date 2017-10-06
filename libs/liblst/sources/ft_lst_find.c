@@ -6,7 +6,7 @@
 /*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 10:27:33 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/08/22 13:09:36 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:16:19 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 ** 1st parameter : head node
 ** 2nd parameter : function pointer for comparison
 */
+
 t_lst			*ft_lst_find(t_lst *head, int (*f)(t_lst *))
 {
 	t_lst	*it;
