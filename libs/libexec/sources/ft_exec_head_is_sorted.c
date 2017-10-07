@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exec_head_is_sorted.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+        */
+/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 16:00:36 by mvillemi          #+#    #+#             */
 /*   Updated: 2017/10/06 23:38:34 by mvillemi         ###   ########.fr       */

@@ -1,3 +1,21 @@
+     100 files     152 text files.
+classified 152 filesDuplicate file check 152 files (137 known unique)Unique:      100 files                                               152 unique files.                              
+Counting:  100       3 files ignored.
+
+github.com/AlDanial/cloc v 1.72  T=0.70 s (215.8 files/s, 9966.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                              136            517           1809           3051
+C/C++ Header                     6             77            197            348
+make                             6            127            126            325
+Perl                             1             26             11            176
+Markdown                         1             40              0            114
+Bourne Shell                     1              5              4             21
+-------------------------------------------------------------------------------
+SUM:                           151            792           2147           4035
+-------------------------------------------------------------------------------
+
 .
 ├── Makefile
 ├── README.md

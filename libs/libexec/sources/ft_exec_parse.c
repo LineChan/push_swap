@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exec_parse.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+        */
+/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 16:01:02 by mvillemi          #+#    #+#             */
 /*   Updated: 2017/10/06 23:17:16 by mvillemi         ###   ########.fr       */

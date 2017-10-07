@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+        */
+/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:46:23 by mvillemi          #+#    #+#             */
 /*   Updated: 2017/10/06 23:49:01 by mvillemi         ###   ########.fr       */

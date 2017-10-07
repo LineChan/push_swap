@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+         #
+#    By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/06 15:55:28 by mvillemi          #+#    #+#              #
 #    Updated: 2017/10/07 00:16:02 by mvillemi         ###   ########.fr        #

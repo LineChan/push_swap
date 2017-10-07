@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   liblst.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr           +#+  +:+       +#+        */
+/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 17:07:46 by mvillemi          #+#    #+#             */
 /*   Updated: 2017/10/06 23:00:34 by mvillemi         ###   ########.fr       */
