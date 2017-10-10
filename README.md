@@ -149,6 +149,10 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 > ./push_swap --clean -x 2 6 3 5 && ./checker -x  2 6 3 5
 
+	> doxygen Doxyfile
+
+Doxygen has to be installed : > brew install doxygen
+
 #  Result
 Peer evaluation not done yet.
 
