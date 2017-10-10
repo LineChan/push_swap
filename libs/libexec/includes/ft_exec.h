@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exec.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvillemi <mvillemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Zoellingam <illan91@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:46:23 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/06 23:24:55 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/10 18:06:09 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ typedef struct			s_info
 
 typedef struct			s_result
 {
-	char		*move;
+	char		move[4];
 	t_lst		lst;
 }						t_result;
 
@@ -90,6 +90,7 @@ t_head					*stack_a(void);
 t_head					*stack_b(void);
 
 void					ft_handle_option(int *ac, char ***av, int option[]);
+void					ft_del_singl(void);
 
 /*
 ** Exec prototypes

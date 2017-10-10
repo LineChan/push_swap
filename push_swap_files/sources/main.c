@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 16:09:28 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/05 14:39:26 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/10 20:36:09 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int					main(int ac, char **av)
 		ft_print_result_ps();
 	else
 		ft_lst_foreach(&INFO, &ft_print_result_list);
+	ft_del_singl();
 	return (0);
 }

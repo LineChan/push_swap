@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 15:49:01 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/04 15:52:44 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/10 20:26:02 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int				main(int ac, char **av)
 		ft_printf("{GREEN:OK}\n");
 	else
 		ft_printf("{RED:KO}\n");
+	ft_del_singl();
 	return (0);
 }

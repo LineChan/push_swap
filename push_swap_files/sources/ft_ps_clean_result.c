@@ -6,7 +6,7 @@
 /*   By: mvillemi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 16:07:48 by mvillemi          #+#    #+#             */
-/*   Updated: 2017/10/10 17:02:15 by mvillemi         ###   ########.fr       */
+/*   Updated: 2017/10/10 20:30:48 by mvillemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,25 @@
 ** Clean results and remove redondant patterns
 */
 
+static void		ft_ps_del_node(t_lst *it)
+{
+	t_result	*ptr;
+
+	ptr = C_PS(it);
+	ft_lst_del(it);
+	ft_memdel((void **)&ptr);
+	--NB_MOVE;
+}
+
 static void		ft_ps_clean_push(t_lst *it)
 {
 	if ((it == &INFO) || (it->next == &INFO))
 		return ;
 	if (NEXT(it, "pa", "pb") || NEXT(it, "pb", "pa"))
 	{
-		ft_lst_del(it->next);
-		ft_lst_del(it);
+		it = it->prev;
+		ft_ps_del_node(it->next);
+		ft_ps_del_node(it->next);
 	}
 }
 
@@ -34,19 +45,10 @@ static void		ft_ps_clean_rotate(t_lst *it)
 	if (NEXT(it, "ra", "rra") || NEXT(it, "rra", "ra") ||
 			NEXT(it, "rb", "rrb") || NEXT(it, "rrb", "rb"))
 	{
-		ft_lst_del(it->next);
-		ft_lst_del(it);
+		it = it->prev;
+		ft_ps_del_node(it->next);
+		ft_ps_del_node(it->next);
 	}
-}
-
-static void		ft_ps_del_node(t_lst *it)
-{
-	t_lst	*ptr;
-
-	ptr = it;
-	ft_lst_del(it);
-	ft_memdel((void **)&ptr);
-	--NB_MOVE;
 }
 
 static void		ft_ps_clean_double(t_lst *it)
@@ -70,8 +72,8 @@ static void		ft_ps_clean_double(t_lst *it)
 	}
 	if (NEXT(it, "rr", "rrr") || NEXT(it, "rrr", "rr"))
 	{
-		ft_lst_del(it->next);
-		ft_lst_del(it);
+		ft_ps_del_node(it->next);
+		ft_ps_del_node(it);
 	}
 }
 
