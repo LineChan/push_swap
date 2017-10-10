@@ -8,7 +8,7 @@
 
 Push_swap is a sorting game that requires *two programs* :
 - **push_swap** : You only have two stacks to sort. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
-- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
+- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empty. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
 
 Instructions are pre-defined by the subject and are the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
@@ -148,6 +148,10 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 > ./push_swap -x 2 6 3 5 && ./checker -x  2 6 3 5
 
 > ./push_swap --clean -x 2 6 3 5 && ./checker -x  2 6 3 5
+
+	> doxygen Doxyfile
+
+Doxygen has to be installed : > brew install doxygen
 
 #  Result
 Peer evaluation not done yet.
