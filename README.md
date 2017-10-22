@@ -116,7 +116,8 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 - [x] option to clear up all redondant moves (ex : pb then pa)
 - [x] save instructions in a file
 - [x] short script to execute quickly push_swap then checker with random numbers and shows some info (OK / KO, time, initial list)
-- [x] interactive display
+- [x] interactive display made with ncurse
+
 ![visual](/img/visual.png)
 
 #  Sources :bookmark_tabs: 
