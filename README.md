@@ -120,7 +120,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 ![](/img/.png)
 <p align="center"><br>
-<img src="https://github.com/LineChan/push_swap/tree/master/img/visual.png"><br>
+<img src="https://github.com/LineChan/push_swap/blob/master/img/visual.png"><br>
 </p>
 
 
