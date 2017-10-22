@@ -8,7 +8,7 @@
 
 Push_swap is a sorting game that requires *two programs* :
 - **push_swap** : You only have two stacks to sort. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
-- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empty. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
+- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
 
 Instructions are pre-defined by the subject and are the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
@@ -112,13 +112,12 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 
 ## Bonuses
 
-- [x] call and caller graphs of the project
 - [x] "advanced" parsing :  0 "4 2" 1 6"    3  7" 8
 - [x] option to clear up all redondant moves (ex : pb then pa)
-- [x] interactive display of both stacks at each step
-- [x] instructions display
 - [x] save instructions in a file
 - [x] short script to execute quickly push_swap then checker with random numbers and shows some info (OK / KO, time, initial list)
+- [x] interactive display
+![visual](/img/visual.png)
 
 #  Sources :bookmark_tabs: 
 
