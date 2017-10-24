@@ -119,7 +119,7 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 - [x] interactive display made with ncurse
 
 ![](/img/.png)
-<p align="center"><br>
+<p align="center">
 <img src="https://github.com/LineChan/push_swap/blob/master/img/visual.png"><br>
 </p>
 
@@ -158,5 +158,5 @@ This quicksort-like algorithm seems to share the advantages and disavantages wit
 Doxygen has to be installed : > brew install doxygen
 
 #  Result
-Peer evaluation not done yet.
+Project achived at 112%
 
