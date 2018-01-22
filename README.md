@@ -21,6 +21,8 @@ There are 4 types of instructions :
 
 Allowed functions : write, read, malloc, free, exit
 
+Find the subject [here](subject_push_swap.en.pdf)
+
 ### Libraries :books:
 - **libft** : personnal library with functions from libc.h (printf from stdio.h for instance)
 - **liblst** : personnal library with a set of tools to manipulate Linux-like linked lists
