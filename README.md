@@ -7,8 +7,8 @@
 #   Subject   :pushpin:
 
 Push_swap is a sorting game that requires *two programs* :
-- **push_swap** : You only have two stacks to sort. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the number sorted in increasing order in Stack A. The output of the program is a list of instructions.
-- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO"
+- **push_swap** : You only have two stacks to help you to sort. At first, a stack (called Stack A) contains a certain amount of unduplicated integers and a second one (Stack B) is empty. The goal is to have all the numbers sorted in increasing order in Stack A. The output of the program is a list of instructions.
+- **checker** : read the instructions and execute them. It checks if  Stack A is correctly sorted and Stack B empy. It sends "OK" to stdin if it is the case, otherwise it sends "KO".
 
 Instructions are pre-defined by the subject and are the only reference to measure the performance of both programs during the peer-evaluation. Of course the less, the better.
 There are 4 types of instructions :
@@ -31,9 +31,9 @@ Find the subject [here](subject_push_swap.en.pdf)
 #  Method 
 
 Different methods are used according to the number of elements to sort to reach the objectives asked by the correction.
-- **sort_three** sorts 3 element with less than 3 instructions
+- **sort_three** sorts 3 elements with less than 3 instructions
 - **insert_sort** sorts short lists (with less than 20 elements)
-- **quick_sort** is used for every other lists. Sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
+- **quick_sort** sort 100 elements with less than 900 instructions, and around 6600 for 500 elements. These are average numbers, see :arrow_down: for further details.
 
 ## Quicksort described step-by-step
 
@@ -55,7 +55,7 @@ void		ft_ps_quick_a(void)
 		pivot = DATA(HEAD_A.next);
 
 		/* It is also tagged as SORTED to indicate it will be pushed
-		   at its correct  location on Stack B */
+		   at its correct location on Stack B */
 		SORTED(HEAD_A.next) = 1;
 
 		left = TOP_A;
@@ -85,7 +85,7 @@ This process goes on until Stack A is sorted or if there is a single value remai
 
 We apply the same process to Stack B. However, two things are now different :
 
-1. Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is popped to Stack A until an untagged element is at the top. This latter element is tagged and used as a pivot. The process is repeated until a tagged element is met again or if Stack B is empty.
+1. Stack B now has a number of sections separated by tagged elements.These elements can not be selected as pivot again. Whenever there is a tagged element at the top of Stack B, it is popped to Stack A. The element at the top of Stack B is tagged and used as a pivot. The process is repeated until a tagged element is met again or if Stack B is empty.
 
 2. If the section has less than 30 elements (numbers of elements in Stack B between the new pivot and the next tagged element), there are sorted thanks to an selectsort based algorithm.
 ```C
